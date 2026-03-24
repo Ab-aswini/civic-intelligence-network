@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- HERO SVG BANNER -->
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="220" viewBox="0 0 800 220">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0a0c0f"/>
@@ -16,8 +16,8 @@
       <stop offset="100%" style="stop-color:#ff8c42;stop-opacity:0"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="200" fill="url(#bg)" rx="16"/>
-  <rect x="0" y="196" width="800" height="4" fill="url(#accent)" rx="2"/>
+  <rect width="800" height="220" fill="url(#bg)" rx="16"/>
+  <rect x="0" y="216" width="800" height="4" fill="url(#accent)" rx="2"/>
   <!-- Hex grid pattern -->
   <g opacity="0.06" fill="#ff4d1c">
     <polygon points="60,30 80,18 100,30 100,54 80,66 60,54"/>
@@ -30,27 +30,28 @@
     <polygon points="35,130 55,118 75,130 75,154 55,166 35,154"/>
   </g>
   <!-- Main hex icon -->
-  <polygon points="400,28 430,45 430,79 400,96 370,79 370,45" fill="url(#accent)"/>
-  <polygon points="400,38 422,50 422,74 400,86 378,74 378,50" fill="#0a0c0f"/>
-  <text x="400" y="70" font-family="monospace" font-size="18" fill="#ff4d1c" text-anchor="middle" font-weight="bold">CW</text>
+  <polygon points="400,24 434,43 434,81 400,100 366,81 366,43" fill="url(#accent)"/>
+  <polygon points="400,35 425,49 425,77 400,91 375,77 375,49" fill="#0a0c0f"/>
+  <text x="400" y="68" font-family="monospace" font-size="20" fill="#ff4d1c" text-anchor="middle" font-weight="bold">CW</text>
   <!-- Title -->
-  <text x="400" y="128" font-family="sans-serif" font-size="28" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="1">CIVIC INTELLIGENCE NETWORK</text>
+  <text x="400" y="132" font-family="sans-serif" font-size="30" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="2">CIVIC INTELLIGENCE NETWORK</text>
   <!-- Subtitle -->
-  <text x="400" y="156" font-family="sans-serif" font-size="13" fill="#8892a4" text-anchor="middle">Citizens sense. Journalists verify. AI analyzes. Governments act.</text>
+  <text x="400" y="158" font-family="sans-serif" font-size="14" fill="#8892a4" text-anchor="middle">Citizens sense. Journalists verify. AI analyzes. Governments act.</text>
   <!-- Location tag -->
-  <rect x="310" y="166" width="180" height="22" rx="11" fill="rgba(255,77,28,0.15)"/>
-  <text x="400" y="181" font-family="monospace" font-size="10" fill="#ff8c42" text-anchor="middle">BALANGIR, ODISHA, INDIA</text>
+  <rect x="290" y="172" width="220" height="26" rx="13" fill="rgba(255,77,28,0.15)"/>
+  <text x="400" y="189" font-family="monospace" font-size="11" fill="#ff8c42" text-anchor="middle">BALANGIR, ODISHA, INDIA</text>
 </svg>
 
 <br/>
 
 <!-- BADGES -->
 [![Live Demo](https://img.shields.io/badge/LIVE_DEMO-ff4d1c?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ab-aswini.github.io/civic-intelligence-network)
+[![Architecture](https://img.shields.io/badge/ARCHITECTURE-2196f3?style=for-the-badge&logo=blueprint&logoColor=white)](https://ab-aswini.github.io/civic-intelligence-network/architecture.html)
 [![License: MIT](https://img.shields.io/badge/LICENSE-MIT-00c853?style=for-the-badge)](./LICENSE)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)]()
-[![Zero Dependencies](https://img.shields.io/badge/ZERO_DEPENDENCIES-111318?style=for-the-badge)]()
+[![Zero Dependencies](https://img.shields.io/badge/ZERO_DEPS-111318?style=for-the-badge)]()
+[![Open Source](https://img.shields.io/badge/OPEN_SOURCE-ff8c42?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ab-aswini/civic-intelligence-network)
 
 </div>
 
@@ -62,13 +63,12 @@
 <tr>
 <td width="100" align="center">
 
-<!-- PROBLEM SVG -->
-<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
-  <circle cx="40" cy="40" r="38" fill="#1a0a0a" stroke="#ff1744" stroke-width="2"/>
-  <text x="40" y="32" font-size="28" text-anchor="middle">🔥</text>
-  <text x="40" y="56" font-family="monospace" font-size="11" fill="#ff1744" text-anchor="middle" font-weight="bold">₹2,500</text>
-  <line x1="22" y1="62" x2="58" y2="62" stroke="#ff1744" stroke-width="1" opacity="0.5"/>
-  <text x="40" y="73" font-family="monospace" font-size="9" fill="#8892a4" text-anchor="middle">MRP ₹939</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <circle cx="45" cy="45" r="42" fill="#1a0a0a" stroke="#ff1744" stroke-width="2"/>
+  <text x="45" y="35" font-size="28" text-anchor="middle">🔥</text>
+  <text x="45" y="58" font-family="monospace" font-size="13" fill="#ff1744" text-anchor="middle" font-weight="bold">₹2,500</text>
+  <line x1="24" y1="66" x2="66" y2="66" stroke="#ff1744" stroke-width="1" opacity="0.5"/>
+  <text x="45" y="79" font-family="monospace" font-size="10" fill="#8892a4" text-anchor="middle">MRP ₹939</text>
 </svg>
 
 </td>
@@ -86,45 +86,46 @@ Citizens have no fast, reliable way to verify real prices, report violations, or
 
 ---
 
-## How It Works
+## How It Works — End-to-End Pipeline
 
-<!-- PIPELINE SVG -->
+<!-- E2E PIPELINE SVG -->
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="750" height="100" viewBox="0 0 750 100">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
   <defs>
     <linearGradient id="pipe" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#ff4d1c"/>
       <stop offset="100%" style="stop-color:#00c853"/>
     </linearGradient>
+    <marker id="arr1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4a5568"/></marker>
   </defs>
-  <rect width="750" height="100" fill="#0a0c0f" rx="12"/>
+  <rect width="800" height="120" fill="#0a0c0f" rx="12"/>
   <!-- Connection line -->
-  <line x1="120" y1="42" x2="630" y2="42" stroke="url(#pipe)" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="130" y1="48" x2="680" y2="48" stroke="url(#pipe)" stroke-width="2" stroke-dasharray="6,4"/>
   <!-- Step 1 -->
-  <circle cx="75" cy="42" r="24" fill="#181c24" stroke="#ff4d1c" stroke-width="2"/>
-  <text x="75" y="48" font-size="20" text-anchor="middle">👤</text>
-  <text x="75" y="82" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">CITIZEN</text>
-  <text x="75" y="94" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Anonymous Report</text>
+  <circle cx="80" cy="48" r="28" fill="#181c24" stroke="#ff4d1c" stroke-width="2.5"/>
+  <text x="80" y="54" font-size="22" text-anchor="middle">👤</text>
+  <text x="80" y="92" font-family="sans-serif" font-size="11" fill="#e8eaf0" text-anchor="middle" font-weight="700">CITIZEN</text>
+  <text x="80" y="106" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Anonymous Report</text>
   <!-- Step 2 -->
-  <circle cx="225" cy="42" r="24" fill="#181c24" stroke="#ffd740" stroke-width="2"/>
-  <text x="225" y="48" font-size="20" text-anchor="middle">📰</text>
-  <text x="225" y="82" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">JOURNALIST</text>
-  <text x="225" y="94" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Field Verification</text>
+  <circle cx="240" cy="48" r="28" fill="#181c24" stroke="#ffd740" stroke-width="2.5"/>
+  <text x="240" y="54" font-size="22" text-anchor="middle">📰</text>
+  <text x="240" y="92" font-family="sans-serif" font-size="11" fill="#e8eaf0" text-anchor="middle" font-weight="700">JOURNALIST</text>
+  <text x="240" y="106" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Field Verification</text>
   <!-- Step 3 -->
-  <circle cx="375" cy="42" r="24" fill="#181c24" stroke="#2196f3" stroke-width="2"/>
-  <text x="375" y="48" font-size="20" text-anchor="middle">🤖</text>
-  <text x="375" y="82" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">AI ENGINE</text>
-  <text x="375" y="94" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Pattern Analysis</text>
+  <circle cx="400" cy="48" r="28" fill="#181c24" stroke="#2196f3" stroke-width="2.5"/>
+  <text x="400" y="54" font-size="22" text-anchor="middle">🤖</text>
+  <text x="400" y="92" font-family="sans-serif" font-size="11" fill="#e8eaf0" text-anchor="middle" font-weight="700">AI ENGINE</text>
+  <text x="400" y="106" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Pattern Analysis</text>
   <!-- Step 4 -->
-  <circle cx="525" cy="42" r="24" fill="#181c24" stroke="#ff4d1c" stroke-width="2"/>
-  <text x="525" y="48" font-size="20" text-anchor="middle">🔒</text>
-  <text x="525" y="82" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">ADMIN</text>
-  <text x="525" y="94" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Review & Authorize</text>
+  <circle cx="560" cy="48" r="28" fill="#181c24" stroke="#ff4d1c" stroke-width="2.5"/>
+  <text x="560" y="54" font-size="22" text-anchor="middle">🔒</text>
+  <text x="560" y="92" font-family="sans-serif" font-size="11" fill="#e8eaf0" text-anchor="middle" font-weight="700">ADMIN</text>
+  <text x="560" y="106" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Review &amp; Authorize</text>
   <!-- Step 5 -->
-  <circle cx="675" cy="42" r="24" fill="#181c24" stroke="#00c853" stroke-width="2"/>
-  <text x="675" y="48" font-size="20" text-anchor="middle">🏛</text>
-  <text x="675" y="82" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">AUTHORITY</text>
-  <text x="675" y="94" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Accountability</text>
+  <circle cx="720" cy="48" r="28" fill="#181c24" stroke="#00c853" stroke-width="2.5"/>
+  <text x="720" y="54" font-size="22" text-anchor="middle">🏛</text>
+  <text x="720" y="92" font-family="sans-serif" font-size="11" fill="#e8eaf0" text-anchor="middle" font-weight="700">AUTHORITY</text>
+  <text x="720" y="106" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">72hr Accountability</text>
 </svg>
 </div>
 
@@ -140,60 +141,487 @@ Citizens have no fast, reliable way to verify real prices, report violations, or
 
 ---
 
+## System Architecture — Governance Model
+
+> Inspired by multi-tier agent governance. Every data point flows through structured layers with clear accountability at each tier.
+
+<!-- GOVERNANCE MODEL SVG — Like the org chart screenshot -->
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="780" viewBox="0 0 800 780">
+  <defs>
+    <linearGradient id="gbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0c0f"/>
+      <stop offset="100%" style="stop-color:#0d1017"/>
+    </linearGradient>
+    <marker id="arrowDown" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 0, 5 7" fill="#4a5568"/>
+    </marker>
+    <marker id="arrowUp" markerWidth="10" markerHeight="7" refX="5" refY="0" orient="auto">
+      <polygon points="0 7, 10 7, 5 0" fill="#2196f3"/>
+    </marker>
+  </defs>
+  <rect width="800" height="780" fill="url(#gbg)" rx="16"/>
+
+  <!-- Title -->
+  <line x1="200" y1="30" x2="600" y2="30" stroke="#2a3040" stroke-width="1"/>
+  <text x="400" y="24" font-family="sans-serif" font-size="16" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="3">CIVICWATCH GOVERNANCE MODEL</text>
+  <line x1="200" y1="40" x2="600" y2="40" stroke="#2a3040" stroke-width="1"/>
+
+  <!-- ===== TOP: CITIZEN (Owner) ===== -->
+  <rect x="300" y="60" width="200" height="48" rx="24" fill="#00c853"/>
+  <text x="380" y="82" font-size="18" text-anchor="middle">👤</text>
+  <text x="420" y="90" font-family="sans-serif" font-size="15" fill="#fff" text-anchor="middle" font-weight="700">CITIZEN</text>
+  <text x="400" y="120" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle" font-style="italic">submits anonymous signal</text>
+
+  <!-- Arrow down from Citizen -->
+  <line x1="400" y1="108" x2="400" y2="145" stroke="#4a5568" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- ===== TIER 1 — CORE PIPELINE ===== -->
+  <rect x="40" y="148" width="720" height="100" rx="10" fill="none" stroke="#2a3040" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="70" y="168" font-family="monospace" font-size="10" fill="#8892a4" font-weight="600">TIER 1 — CORE PIPELINE</text>
+
+  <!-- Signal Engine -->
+  <rect x="60" y="180" width="150" height="50" rx="8" fill="#181c24" stroke="#ff4d1c" stroke-width="1.5"/>
+  <text x="88" y="200" font-family="sans-serif" font-size="10" fill="#e8eaf0" font-weight="600">Signal Engine</text>
+  <text x="135" y="220" font-family="monospace" font-size="9" fill="#ff4d1c" text-anchor="middle">DEDUP + INTAKE</text>
+
+  <!-- Verification -->
+  <rect x="230" y="180" width="150" height="50" rx="8" fill="#181c24" stroke="#ffd740" stroke-width="1.5"/>
+  <text x="258" y="200" font-family="sans-serif" font-size="10" fill="#e8eaf0" font-weight="600">Verification Hub</text>
+  <text x="305" y="220" font-family="monospace" font-size="9" fill="#ffd740" text-anchor="middle">TRUST SCORING</text>
+
+  <!-- AI Analyst -->
+  <rect x="400" y="180" width="150" height="50" rx="8" fill="#181c24" stroke="#2196f3" stroke-width="1.5"/>
+  <text x="428" y="200" font-family="sans-serif" font-size="10" fill="#e8eaf0" font-weight="600">AI Analyst</text>
+  <text x="475" y="220" font-family="monospace" font-size="9" fill="#2196f3" text-anchor="middle">PATTERN + DRAFT</text>
+
+  <!-- Case Manager -->
+  <rect x="570" y="180" width="170" height="50" rx="8" fill="#181c24" stroke="#ff1744" stroke-width="1.5"/>
+  <text x="598" y="200" font-family="sans-serif" font-size="10" fill="#e8eaf0" font-weight="600">Case Manager</text>
+  <text x="655" y="220" font-family="monospace" font-size="9" fill="#ff1744" text-anchor="middle">ADMIN + FILING</text>
+
+  <!-- Flow arrows between Tier 1 boxes -->
+  <text x="400" y="256" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">Signal → Dedup → Score → Verify → AI Draft → Admin Review → File → Track</text>
+
+  <!-- Arrow down to Tier 2 -->
+  <text x="400" y="278" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle" font-style="italic">delegates to specialized modules</text>
+  <line x1="400" y1="282" x2="400" y2="305" stroke="#4a5568" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- ===== TIER 2 — 8 SPECIALIZED MODULES ===== -->
+  <rect x="40" y="308" width="720" height="130" rx="10" fill="none" stroke="#2a3040" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="70" y="328" font-family="monospace" font-size="10" fill="#8892a4" font-weight="600">TIER 2 — 8 SPECIALIZED MODULES</text>
+
+  <!-- Row 1 of modules -->
+  <rect x="55" y="340" width="120" height="35" rx="6" fill="#ff4d1c" fill-opacity="0.15" stroke="#ff4d1c" stroke-width="1"/>
+  <text x="115" y="362" font-family="sans-serif" font-size="10" fill="#ff4d1c" text-anchor="middle" font-weight="600">Dedup Engine</text>
+
+  <rect x="185" y="340" width="120" height="35" rx="6" fill="#ff8c42" fill-opacity="0.15" stroke="#ff8c42" stroke-width="1"/>
+  <text x="245" y="362" font-family="sans-serif" font-size="10" fill="#ff8c42" text-anchor="middle" font-weight="600">Strength Scorer</text>
+
+  <rect x="315" y="340" width="120" height="35" rx="6" fill="#ffd740" fill-opacity="0.15" stroke="#ffd740" stroke-width="1"/>
+  <text x="375" y="362" font-family="sans-serif" font-size="10" fill="#ffd740" text-anchor="middle" font-weight="600">Rumor Buster</text>
+
+  <rect x="445" y="340" width="120" height="35" rx="6" fill="#2196f3" fill-opacity="0.15" stroke="#2196f3" stroke-width="1"/>
+  <text x="505" y="362" font-family="sans-serif" font-size="10" fill="#2196f3" text-anchor="middle" font-weight="600">Price Oracle</text>
+
+  <!-- Row 2 of modules -->
+  <rect x="55" y="385" width="148" height="35" rx="6" fill="#00c853" fill-opacity="0.15" stroke="#00c853" stroke-width="1"/>
+  <text x="129" y="407" font-family="sans-serif" font-size="10" fill="#00c853" text-anchor="middle" font-weight="600">Complaint Drafter</text>
+
+  <rect x="213" y="385" width="148" height="35" rx="6" fill="#9c27b0" fill-opacity="0.15" stroke="#9c27b0" stroke-width="1"/>
+  <text x="287" y="407" font-family="sans-serif" font-size="10" fill="#9c27b0" text-anchor="middle" font-weight="600">Blockchain Logger</text>
+
+  <rect x="371" y="385" width="115" height="35" rx="6" fill="#e91e63" fill-opacity="0.15" stroke="#e91e63" stroke-width="1"/>
+  <text x="428" y="407" font-family="sans-serif" font-size="10" fill="#e91e63" text-anchor="middle" font-weight="600">Notification</text>
+
+  <rect x="496" y="385" width="115" height="35" rx="6" fill="#00bcd4" fill-opacity="0.15" stroke="#00bcd4" stroke-width="1"/>
+  <text x="553" y="407" font-family="sans-serif" font-size="10" fill="#00bcd4" text-anchor="middle" font-weight="600">Analytics</text>
+
+  <rect x="621" y="340" width="120" height="35" rx="6" fill="#e8eaf0" fill-opacity="0.08" stroke="#8892a4" stroke-width="1"/>
+  <text x="681" y="362" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle" font-weight="600">i18n (EN/ଓଡ଼ିଆ)</text>
+
+  <!-- Bidirectional arrows -->
+  <line x1="200" y1="445" x2="200" y2="490" stroke="#2196f3" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowDown)"/>
+  <text x="220" y="470" font-family="sans-serif" font-size="8" fill="#2196f3" font-style="italic">context sync</text>
+
+  <line x1="600" y1="445" x2="600" y2="490" stroke="#ffd740" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowDown)"/>
+  <text x="620" y="470" font-family="sans-serif" font-size="8" fill="#ffd740" font-style="italic">data feed</text>
+
+  <!-- ===== TIER 3 — DATA + INTELLIGENCE ===== -->
+  <rect x="60" y="495" width="300" height="65" rx="10" fill="none" stroke="#2a3040" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="80" y="512" font-family="monospace" font-size="9" fill="#8892a4" font-weight="600">TIER 3 — META</text>
+  <rect x="75" y="520" width="270" height="30" rx="6" fill="#e91e63" fill-opacity="0.12" stroke="#e91e63" stroke-width="1"/>
+  <text x="210" y="540" font-family="sans-serif" font-size="10" fill="#e91e63" text-anchor="middle" font-weight="600">Blockchain + State + Audit Trail</text>
+
+  <rect x="440" y="495" width="300" height="65" rx="10" fill="none" stroke="#ffd740" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="460" y="512" font-family="monospace" font-size="9" fill="#ffd740" font-weight="600">SHARED INTELLIGENCE</text>
+  <rect x="455" y="520" width="270" height="30" rx="6" fill="#ffd740" fill-opacity="0.12" stroke="#ffd740" stroke-width="1"/>
+  <text x="590" y="540" font-family="sans-serif" font-size="10" fill="#ffd740" text-anchor="middle" font-weight="600">Gov APIs + Mandi + IOCL + FCI/PDS</text>
+
+  <!-- Arrow down to output -->
+  <line x1="400" y1="570" x2="400" y2="600" stroke="#4a5568" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- ===== OUTPUT LAYER — Authorities ===== -->
+  <rect x="100" y="605" width="600" height="55" rx="10" fill="none" stroke="#00c853" stroke-width="2"/>
+  <text x="400" y="624" font-family="monospace" font-size="9" fill="#00c853" text-anchor="middle" font-weight="700">OUTPUT — AUTHORITY ACCOUNTABILITY</text>
+  <rect x="120" y="632" width="170" height="22" rx="6" fill="#ff1744" fill-opacity="0.15" stroke="#ff1744" stroke-width="1"/>
+  <text x="205" y="647" font-family="sans-serif" font-size="9" fill="#ff1744" text-anchor="middle" font-weight="600">DC Balangir (31%)</text>
+  <rect x="310" y="632" width="180" height="22" rx="6" fill="#00c853" fill-opacity="0.15" stroke="#00c853" stroke-width="1"/>
+  <text x="400" y="647" font-family="sans-serif" font-size="9" fill="#00c853" text-anchor="middle" font-weight="600">CSO Balangir (72%)</text>
+  <rect x="510" y="632" width="170" height="22" rx="6" fill="#ffd740" fill-opacity="0.15" stroke="#ffd740" stroke-width="1"/>
+  <text x="595" y="647" font-family="sans-serif" font-size="9" fill="#ffd740" text-anchor="middle" font-weight="600">State Commissioner</text>
+
+  <!-- ===== BOTTOM STATS BAR ===== -->
+  <rect x="60" y="690" width="680" height="72" rx="10" fill="#111318" stroke="#2a3040" stroke-width="1"/>
+  <text x="400" y="714" font-family="sans-serif" font-size="12" fill="#e8eaf0" text-anchor="middle" font-weight="700">8 Commodities  ·  8 Areas  ·  4 Tiers  ·  8 Modules  ·  Blockchain Audit</text>
+
+  <rect x="100" y="726" width="120" height="24" rx="12" fill="#00c853" fill-opacity="0.15" stroke="#00c853" stroke-width="1"/>
+  <text x="160" y="742" font-family="sans-serif" font-size="9" fill="#00c853" text-anchor="middle" font-weight="600">Zero Login</text>
+
+  <rect x="240" y="726" width="120" height="24" rx="12" fill="#2196f3" fill-opacity="0.15" stroke="#2196f3" stroke-width="1"/>
+  <text x="300" y="742" font-family="sans-serif" font-size="9" fill="#2196f3" text-anchor="middle" font-weight="600">Tamper-Proof</text>
+
+  <rect x="380" y="726" width="120" height="24" rx="12" fill="#ff4d1c" fill-opacity="0.15" stroke="#ff4d1c" stroke-width="1"/>
+  <text x="440" y="742" font-family="sans-serif" font-size="9" fill="#ff4d1c" text-anchor="middle" font-weight="600">AI-Powered</text>
+
+  <rect x="520" y="726" width="120" height="24" rx="12" fill="#ffd740" fill-opacity="0.15" stroke="#ffd740" stroke-width="1"/>
+  <text x="580" y="742" font-family="sans-serif" font-size="9" fill="#ffd740" text-anchor="middle" font-weight="600">Open Source</text>
+</svg>
+</div>
+
+---
+
+## End-to-End Data Flow
+
+> Every signal follows a deterministic path from anonymous citizen report to formal government complaint.
+
+<!-- END-TO-END FLOW DIAGRAM -->
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="950" viewBox="0 0 800 950">
+  <defs>
+    <marker id="fArr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#ff4d1c"/></marker>
+    <marker id="fArrG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#00c853"/></marker>
+    <marker id="fArrY" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#ffd740"/></marker>
+    <marker id="fArrB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2196f3"/></marker>
+    <marker id="fArrR" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#ff1744"/></marker>
+  </defs>
+  <rect width="800" height="950" fill="#0a0c0f" rx="16"/>
+  <text x="400" y="30" font-family="sans-serif" font-size="15" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="2">END-TO-END DATA FLOW</text>
+  <text x="400" y="48" font-family="sans-serif" font-size="10" fill="#4a5568" text-anchor="middle">Every signal follows this deterministic path</text>
+
+  <!-- ===== STEP 1: CITIZEN SUBMITS ===== -->
+  <rect x="250" y="65" width="300" height="60" rx="12" fill="#181c24" stroke="#ff4d1c" stroke-width="2"/>
+  <text x="290" y="92" font-size="20" text-anchor="middle">👤</text>
+  <text x="400" y="88" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">1. CITIZEN SUBMITS SIGNAL</text>
+  <text x="400" y="108" font-family="monospace" font-size="9" fill="#ff4d1c" text-anchor="middle">Anonymous · No account · 30 seconds</text>
+  <line x1="400" y1="125" x2="400" y2="155" stroke="#ff4d1c" stroke-width="2" marker-end="url(#fArr)"/>
+
+  <!-- ===== STEP 2: DEDUP CHECK ===== -->
+  <!-- Diamond shape for decision -->
+  <polygon points="400,160 500,200 400,240 300,200" fill="#181c24" stroke="#ff8c42" stroke-width="2"/>
+  <text x="400" y="196" font-family="sans-serif" font-size="11" fill="#e8eaf0" text-anchor="middle" font-weight="700">2. DEDUP</text>
+  <text x="400" y="210" font-family="sans-serif" font-size="9" fill="#ff8c42" text-anchor="middle">CHECK</text>
+
+  <!-- YES branch (left) - existing signal found -->
+  <line x1="300" y1="200" x2="170" y2="200" stroke="#00c853" stroke-width="1.5" marker-end="url(#fArrG)"/>
+  <text x="235" y="193" font-family="sans-serif" font-size="9" fill="#00c853" font-weight="700">MATCH FOUND</text>
+  <rect x="60" y="178" width="110" height="44" rx="8" fill="#181c24" stroke="#00c853" stroke-width="1.5"/>
+  <text x="115" y="196" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle" font-weight="600">Merge into</text>
+  <text x="115" y="210" font-family="sans-serif" font-size="9" fill="#00c853" text-anchor="middle">existing signal</text>
+  <text x="115" y="232" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">Strength +3</text>
+
+  <!-- NO branch (down) - new signal -->
+  <line x1="400" y1="240" x2="400" y2="275" stroke="#ff4d1c" stroke-width="2" marker-end="url(#fArr)"/>
+  <text x="430" y="260" font-family="sans-serif" font-size="9" fill="#ff8c42" font-weight="700">NEW SIGNAL</text>
+
+  <!-- ===== STEP 3: SIGNAL CREATED ===== -->
+  <rect x="250" y="280" width="300" height="60" rx="12" fill="#181c24" stroke="#ff4d1c" stroke-width="2"/>
+  <text x="290" y="307" font-size="18" text-anchor="middle">📡</text>
+  <text x="400" y="303" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">3. SIGNAL CREATED</text>
+  <text x="400" y="323" font-family="monospace" font-size="9" fill="#ff4d1c" text-anchor="middle">CIN-2026-BLG-067-OIL · Strength: 1/100</text>
+  <!-- Blockchain entry -->
+  <rect x="590" y="287" width="170" height="44" rx="8" fill="#181c24" stroke="#9c27b0" stroke-width="1"/>
+  <text x="675" y="305" font-family="monospace" font-size="8" fill="#9c27b0" text-anchor="middle">BLOCKCHAIN ENTRY #1</text>
+  <text x="675" y="320" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">a3f9c2d1... ✓</text>
+  <line x1="550" y1="310" x2="590" y2="310" stroke="#9c27b0" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <line x1="400" y1="340" x2="400" y2="375" stroke="#ff4d1c" stroke-width="2" marker-end="url(#fArr)"/>
+
+  <!-- ===== STEP 4: CITIZEN CONFIRMATIONS ===== -->
+  <rect x="250" y="380" width="300" height="60" rx="12" fill="#181c24" stroke="#ff8c42" stroke-width="2"/>
+  <text x="290" y="407" font-size="18" text-anchor="middle">👥</text>
+  <text x="400" y="403" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">4. CITIZEN CONFIRMATIONS</text>
+  <text x="400" y="423" font-family="monospace" font-size="9" fill="#ff8c42" text-anchor="middle">47 confirmations → Strength: 35/100</text>
+  <rect x="590" y="387" width="170" height="44" rx="8" fill="#181c24" stroke="#9c27b0" stroke-width="1"/>
+  <text x="675" y="405" font-family="monospace" font-size="8" fill="#9c27b0" text-anchor="middle">BLOCKCHAIN ENTRY #2</text>
+  <text x="675" y="420" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">b7d4e1f2... ✓</text>
+  <line x1="550" y1="410" x2="590" y2="410" stroke="#9c27b0" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <line x1="400" y1="440" x2="400" y2="475" stroke="#ffd740" stroke-width="2" marker-end="url(#fArrY)"/>
+
+  <!-- ===== STEP 5: JOURNALIST VERIFICATION ===== -->
+  <rect x="250" y="480" width="300" height="70" rx="12" fill="#181c24" stroke="#ffd740" stroke-width="2"/>
+  <text x="290" y="509" font-size="18" text-anchor="middle">📰</text>
+  <text x="400" y="503" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">5. JOURNALIST VERIFIES</text>
+  <text x="400" y="520" font-family="sans-serif" font-size="9" fill="#ffd740" text-anchor="middle">Primary: Ramesh Panda (94% accuracy, ×1.6 weight)</text>
+  <text x="400" y="535" font-family="monospace" font-size="9" fill="#ffd740" text-anchor="middle">+28 strength → Total: 63/100</text>
+  <rect x="590" y="490" width="170" height="44" rx="8" fill="#181c24" stroke="#9c27b0" stroke-width="1"/>
+  <text x="675" y="508" font-family="monospace" font-size="8" fill="#9c27b0" text-anchor="middle">BLOCKCHAIN #3 + #4</text>
+  <text x="675" y="523" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">c2a8f789... ✓</text>
+  <line x1="550" y1="515" x2="590" y2="515" stroke="#9c27b0" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <line x1="400" y1="550" x2="400" y2="580" stroke="#00c853" stroke-width="2" marker-end="url(#fArrG)"/>
+
+  <!-- ===== STEP 6: NGO CO-SIGN ===== -->
+  <rect x="250" y="585" width="300" height="55" rx="12" fill="#181c24" stroke="#00c853" stroke-width="2"/>
+  <text x="290" y="610" font-size="18" text-anchor="middle">🏢</text>
+  <text x="400" y="607" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">6. NGO CO-SIGNATURE</text>
+  <text x="400" y="626" font-family="monospace" font-size="9" fill="#00c853" text-anchor="middle">PRADAN Balangir · +15 → Strength: 83/100</text>
+
+  <line x1="400" y1="640" x2="400" y2="670" stroke="#2196f3" stroke-width="2" marker-end="url(#fArrB)"/>
+
+  <!-- ===== STEP 7: AI ANALYSIS ===== -->
+  <rect x="250" y="675" width="300" height="55" rx="12" fill="#181c24" stroke="#2196f3" stroke-width="2"/>
+  <text x="290" y="700" font-size="18" text-anchor="middle">🤖</text>
+  <text x="400" y="697" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">7. AI DRAFTS COMPLAINT</text>
+  <text x="400" y="716" font-family="monospace" font-size="9" fill="#2196f3" text-anchor="middle">91% confidence · ECA 1955 violation · Formal letter</text>
+
+  <line x1="400" y1="730" x2="400" y2="760" stroke="#ff1744" stroke-width="2" marker-end="url(#fArrR)"/>
+
+  <!-- ===== STEP 8: ADMIN AUTHORIZES ===== -->
+  <rect x="250" y="765" width="300" height="55" rx="12" fill="#181c24" stroke="#ff1744" stroke-width="2"/>
+  <text x="290" y="790" font-size="18" text-anchor="middle">🔒</text>
+  <text x="400" y="787" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">8. ADMIN AUTHORIZES</text>
+  <text x="400" y="806" font-family="monospace" font-size="9" fill="#ff1744" text-anchor="middle">+6 strength → Total: 89/100 · Filed to DC Balangir</text>
+  <rect x="590" y="772" width="170" height="44" rx="8" fill="#181c24" stroke="#9c27b0" stroke-width="1"/>
+  <text x="675" y="790" font-family="monospace" font-size="8" fill="#9c27b0" text-anchor="middle">BLOCKCHAIN #6 + #7</text>
+  <text x="675" y="805" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">f3c7d9e1... ✓</text>
+  <line x1="550" y1="792" x2="590" y2="792" stroke="#9c27b0" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <line x1="400" y1="820" x2="400" y2="850" stroke="#00c853" stroke-width="2" marker-end="url(#fArrG)"/>
+
+  <!-- ===== STEP 9: AUTHORITY RESPONSE TRACKED ===== -->
+  <rect x="200" y="855" width="400" height="70" rx="12" fill="#181c24" stroke="#00c853" stroke-width="2.5"/>
+  <text x="250" y="884" font-size="22" text-anchor="middle">🏛</text>
+  <text x="400" y="880" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="800">9. AUTHORITY TRACKED</text>
+  <text x="400" y="900" font-family="sans-serif" font-size="10" fill="#00c853" text-anchor="middle">72-hour response window · Public accountability score</text>
+  <text x="400" y="916" font-family="monospace" font-size="9" fill="#8892a4" text-anchor="middle">No response? → Auto-escalate to State Commissioner</text>
+
+  <!-- Left sidebar: Blockchain chain visual -->
+  <text x="40" y="290" font-family="monospace" font-size="8" fill="#9c27b0" transform="rotate(-90,40,400)">BLOCKCHAIN AUDIT TRAIL — EVERY STEP LOGGED</text>
+</svg>
+</div>
+
+---
+
+## Case Lifecycle — State Machine
+
+<!-- CASE LIFECYCLE SVG -->
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <defs>
+    <marker id="lArr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4a5568"/></marker>
+  </defs>
+  <rect width="800" height="340" fill="#0a0c0f" rx="12"/>
+  <text x="400" y="28" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="2">CASE LIFECYCLE — STATE MACHINE</text>
+
+  <!-- State 1: SIGNAL -->
+  <rect x="30" y="60" width="120" height="50" rx="10" fill="#181c24" stroke="#ff4d1c" stroke-width="2"/>
+  <text x="90" y="82" font-family="sans-serif" font-size="11" fill="#ff4d1c" text-anchor="middle" font-weight="700">SIGNAL</text>
+  <text x="90" y="98" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">Strength 1-35</text>
+
+  <!-- Arrow -->
+  <line x1="150" y1="85" x2="195" y2="85" stroke="#4a5568" stroke-width="1.5" marker-end="url(#lArr)"/>
+  <text x="172" y="78" font-family="sans-serif" font-size="7" fill="#4a5568" text-anchor="middle">confirms</text>
+
+  <!-- State 2: INVESTIGATING -->
+  <rect x="200" y="60" width="140" height="50" rx="10" fill="#181c24" stroke="#ffd740" stroke-width="2"/>
+  <text x="270" y="82" font-family="sans-serif" font-size="11" fill="#ffd740" text-anchor="middle" font-weight="700">INVESTIGATING</text>
+  <text x="270" y="98" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">Journalist claimed</text>
+
+  <!-- Arrow -->
+  <line x1="340" y1="85" x2="385" y2="85" stroke="#4a5568" stroke-width="1.5" marker-end="url(#lArr)"/>
+  <text x="362" y="78" font-family="sans-serif" font-size="7" fill="#4a5568" text-anchor="middle">verified</text>
+
+  <!-- State 3: VERIFIED -->
+  <rect x="390" y="60" width="120" height="50" rx="10" fill="#181c24" stroke="#00c853" stroke-width="2"/>
+  <text x="450" y="82" font-family="sans-serif" font-size="11" fill="#00c853" text-anchor="middle" font-weight="700">VERIFIED</text>
+  <text x="450" y="98" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">Strength 70+</text>
+
+  <!-- Arrow -->
+  <line x1="510" y1="85" x2="555" y2="85" stroke="#4a5568" stroke-width="1.5" marker-end="url(#lArr)"/>
+  <text x="532" y="78" font-family="sans-serif" font-size="7" fill="#4a5568" text-anchor="middle">admin OK</text>
+
+  <!-- State 4: FILED -->
+  <rect x="560" y="60" width="100" height="50" rx="10" fill="#181c24" stroke="#2196f3" stroke-width="2"/>
+  <text x="610" y="82" font-family="sans-serif" font-size="11" fill="#2196f3" text-anchor="middle" font-weight="700">FILED</text>
+  <text x="610" y="98" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">72hr window</text>
+
+  <!-- Arrow -->
+  <line x1="660" y1="85" x2="695" y2="85" stroke="#4a5568" stroke-width="1.5" marker-end="url(#lArr)"/>
+  <text x="678" y="78" font-family="sans-serif" font-size="7" fill="#4a5568" text-anchor="middle">action</text>
+
+  <!-- State 5: RESOLVED -->
+  <rect x="700" y="60" width="80" height="50" rx="10" fill="#00c853" fill-opacity="0.2" stroke="#00c853" stroke-width="2"/>
+  <text x="740" y="90" font-family="sans-serif" font-size="11" fill="#00c853" text-anchor="middle" font-weight="700">RESOLVED</text>
+
+  <!-- Alternative paths -->
+  <!-- COUNTER-REPORTED from SIGNAL -->
+  <line x1="90" y1="110" x2="90" y2="155" stroke="#9c27b0" stroke-width="1.5" marker-end="url(#lArr)"/>
+  <rect x="30" y="160" width="120" height="45" rx="10" fill="#181c24" stroke="#9c27b0" stroke-width="1.5"/>
+  <text x="90" y="180" font-family="sans-serif" font-size="10" fill="#9c27b0" text-anchor="middle" font-weight="700">COUNTER</text>
+  <text x="90" y="194" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">Disputed signal</text>
+
+  <!-- ESCALATED from FILED (no response) -->
+  <line x1="610" y1="110" x2="610" y2="155" stroke="#ff1744" stroke-width="1.5" marker-end="url(#lArr)"/>
+  <text x="610" y="140" font-family="sans-serif" font-size="7" fill="#ff1744" text-anchor="middle">no response 96h</text>
+  <rect x="550" y="160" width="120" height="45" rx="10" fill="#181c24" stroke="#ff1744" stroke-width="2"/>
+  <text x="610" y="180" font-family="sans-serif" font-size="10" fill="#ff1744" text-anchor="middle" font-weight="700">ESCALATED</text>
+  <text x="610" y="194" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">State level</text>
+
+  <!-- Status badges legend -->
+  <rect x="100" y="240" width="600" height="80" rx="10" fill="#111318" stroke="#1e2530" stroke-width="1"/>
+  <text x="400" y="260" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle" font-weight="600">STATUS BADGES</text>
+  <rect x="130" y="270" width="100" height="22" rx="4" fill="#00c853" fill-opacity="0.15"/><text x="180" y="285" font-family="sans-serif" font-size="9" fill="#00c853" text-anchor="middle">VERIFIED ✓</text>
+  <rect x="245" y="270" width="120" height="22" rx="4" fill="#ffd740" fill-opacity="0.15"/><text x="305" y="285" font-family="sans-serif" font-size="9" fill="#ffd740" text-anchor="middle">INVESTIGATING</text>
+  <rect x="380" y="270" width="80" height="22" rx="4" fill="#8892a4" fill-opacity="0.15"/><text x="420" y="285" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">PENDING</text>
+  <rect x="475" y="270" width="80" height="22" rx="4" fill="#9c27b0" fill-opacity="0.15"/><text x="515" y="285" font-family="sans-serif" font-size="9" fill="#9c27b0" text-anchor="middle">COUNTER</text>
+  <rect x="570" y="270" width="100" height="22" rx="4" fill="#ff1744" fill-opacity="0.15"/><text x="620" y="285" font-family="sans-serif" font-size="9" fill="#ff1744" text-anchor="middle">ESCALATED</text>
+  <text x="400" y="308" font-family="monospace" font-size="8" fill="#4a5568" text-anchor="middle">Every state transition is blockchain-logged · Immutable · Publicly verifiable</text>
+</svg>
+</div>
+
+---
+
+## Trust &amp; Verification Model
+
+<!-- TRUST MODEL SVG -->
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#0a0c0f" rx="12"/>
+  <text x="400" y="28" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="2">TRUST &amp; VERIFICATION MODEL</text>
+
+  <!-- Signal Strength Composition -->
+  <text x="60" y="65" font-family="monospace" font-size="10" fill="#8892a4" font-weight="600">SIGNAL STRENGTH COMPOSITION</text>
+  <text x="60" y="80" font-family="sans-serif" font-size="9" fill="#4a5568">How a signal goes from 0 to 89/100 strength</text>
+
+  <!-- Citizens bar -->
+  <text x="60" y="110" font-family="sans-serif" font-size="10" fill="#8892a4">Citizens (47 confirms)</text>
+  <rect x="220" y="97" width="350" height="18" rx="4" fill="#181c24"/>
+  <rect x="220" y="97" width="210" height="18" rx="4" fill="#ff4d1c" fill-opacity="0.7"/>
+  <text x="440" y="110" font-family="monospace" font-size="10" fill="#ff4d1c" font-weight="700">+35 pts</text>
+  <text x="550" y="110" font-family="monospace" font-size="8" fill="#4a5568">max 35 · diminishing returns</text>
+
+  <!-- Primary Verifier bar -->
+  <text x="60" y="145" font-family="sans-serif" font-size="10" fill="#8892a4">Primary Verifier</text>
+  <rect x="220" y="132" width="350" height="18" rx="4" fill="#181c24"/>
+  <rect x="220" y="132" width="168" height="18" rx="4" fill="#ffd740" fill-opacity="0.7"/>
+  <text x="398" y="145" font-family="monospace" font-size="10" fill="#ffd740" font-weight="700">+28 pts</text>
+  <text x="550" y="145" font-family="monospace" font-size="8" fill="#4a5568">weight: accuracy × tier</text>
+
+  <!-- Supporting Verifier bar -->
+  <text x="60" y="180" font-family="sans-serif" font-size="10" fill="#8892a4">Supporting (independent)</text>
+  <rect x="220" y="167" width="350" height="18" rx="4" fill="#181c24"/>
+  <rect x="220" y="167" width="120" height="18" rx="4" fill="#2196f3" fill-opacity="0.7"/>
+  <text x="350" y="180" font-family="monospace" font-size="10" fill="#2196f3" font-weight="700">+20 pts</text>
+  <text x="550" y="180" font-family="monospace" font-size="8" fill="#4a5568">independent confirmation bonus</text>
+
+  <!-- NGO bar -->
+  <text x="60" y="215" font-family="sans-serif" font-size="10" fill="#8892a4">NGO + Admin</text>
+  <rect x="220" y="202" width="350" height="18" rx="4" fill="#181c24"/>
+  <rect x="220" y="202" width="36" height="18" rx="4" fill="#00c853" fill-opacity="0.7"/>
+  <text x="268" y="215" font-family="monospace" font-size="10" fill="#00c853" font-weight="700">+6 pts</text>
+  <text x="550" y="215" font-family="monospace" font-size="8" fill="#4a5568">institutional endorsement</text>
+
+  <line x1="60" y1="232" x2="740" y2="232" stroke="#1e2530" stroke-width="1"/>
+  <text x="550" y="248" font-family="monospace" font-size="12" fill="#00c853" font-weight="700">TOTAL: 89/100</text>
+  <text x="220" y="248" font-family="sans-serif" font-size="9" fill="#8892a4">Threshold for filing: 70/100</text>
+
+  <!-- Partner Tiers -->
+  <text x="60" y="285" font-family="monospace" font-size="10" fill="#8892a4" font-weight="600">PARTNER VERIFICATION TIERS</text>
+
+  <rect x="60" y="300" width="130" height="50" rx="8" fill="#181c24" stroke="#ff4d1c" stroke-width="1.5"/>
+  <text x="125" y="320" font-family="sans-serif" font-size="10" fill="#ff4d1c" text-anchor="middle" font-weight="700">MASTER ★</text>
+  <text x="125" y="338" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">200+ · 93%+ · ×1.6</text>
+
+  <rect x="210" y="300" width="130" height="50" rx="8" fill="#181c24" stroke="#ffd740" stroke-width="1.5"/>
+  <text x="275" y="320" font-family="sans-serif" font-size="10" fill="#ffd740" text-anchor="middle" font-weight="700">SENIOR</text>
+  <text x="275" y="338" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">50+ · 90%+ · ×1.3</text>
+
+  <rect x="360" y="300" width="130" height="50" rx="8" fill="#181c24" stroke="#00c853" stroke-width="1.5"/>
+  <text x="425" y="320" font-family="sans-serif" font-size="10" fill="#00c853" text-anchor="middle" font-weight="700">NGO PARTNER</text>
+  <text x="425" y="338" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">Institutional · ×1.2</text>
+
+  <rect x="510" y="300" width="130" height="50" rx="8" fill="#181c24" stroke="#2196f3" stroke-width="1.5"/>
+  <text x="575" y="320" font-family="sans-serif" font-size="10" fill="#2196f3" text-anchor="middle" font-weight="700">ACTIVE</text>
+  <text x="575" y="338" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">10+ · 85%+ · ×1.0</text>
+
+  <rect x="660" y="300" width="100" height="50" rx="8" fill="#181c24" stroke="#8892a4" stroke-width="1.5"/>
+  <text x="710" y="320" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle" font-weight="700">NEW</text>
+  <text x="710" y="338" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">&lt;10 · ×0.5</text>
+
+  <!-- MFI Formula -->
+  <rect x="60" y="370" width="680" height="35" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
+  <text x="70" y="392" font-family="monospace" font-size="9" fill="#ff4d1c" font-weight="700">MFI FORMULA:</text>
+  <text x="175" y="392" font-family="monospace" font-size="9" fill="#8892a4">Violation Rate (40%) + Avg Price Deviation (35%) + Severity Index (15%) + Report Volume (10%)</text>
+</svg>
+</div>
+
+---
+
 ## Platform Screens
 
-<!-- SCREENS GRID SVG -->
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="750" height="320" viewBox="0 0 750 320">
-  <rect width="750" height="320" fill="#0a0c0f" rx="12"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <rect width="800" height="340" fill="#0a0c0f" rx="12"/>
   <!-- Screen 1 -->
-  <rect x="20" y="20" width="225" height="120" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="20" y="20" width="225" height="4" rx="2" fill="#ff1744"/>
-  <text x="132" y="50" font-family="sans-serif" font-size="11" fill="#ff4d1c" text-anchor="middle" font-weight="700">01</text>
-  <text x="132" y="70" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">Dashboard</text>
-  <text x="132" y="88" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Crisis alerts, MFI scores</text>
-  <text x="132" y="102" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">AI insights, live signals</text>
-  <text x="132" y="130" font-family="monospace" font-size="9" fill="#ff1744" text-anchor="middle">MFI: 38/100 CRITICAL</text>
+  <rect x="20" y="20" width="240" height="130" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
+  <rect x="20" y="20" width="240" height="4" rx="2" fill="#ff1744"/>
+  <text x="140" y="52" font-family="sans-serif" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">01</text>
+  <text x="140" y="72" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="700">Dashboard</text>
+  <text x="140" y="90" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Crisis alerts, MFI scores, AI insights</text>
+  <text x="140" y="104" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Live signals, rumor buster, hotspots</text>
+  <text x="140" y="140" font-family="monospace" font-size="10" fill="#ff1744" text-anchor="middle" font-weight="700">MFI: 38/100 CRITICAL</text>
   <!-- Screen 2 -->
-  <rect x="262" y="20" width="225" height="120" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="262" y="20" width="225" height="4" rx="2" fill="#00c853"/>
-  <text x="374" y="50" font-family="sans-serif" font-size="11" fill="#ff4d1c" text-anchor="middle" font-weight="700">02</text>
-  <text x="374" y="70" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">Citizen Report</text>
-  <text x="374" y="88" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Anonymous, 30-second submit</text>
-  <text x="374" y="102" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Smart dedup, live diff calc</text>
-  <text x="374" y="130" font-family="monospace" font-size="9" fill="#00c853" text-anchor="middle">NO ACCOUNT REQUIRED</text>
+  <rect x="280" y="20" width="240" height="130" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
+  <rect x="280" y="20" width="240" height="4" rx="2" fill="#00c853"/>
+  <text x="400" y="52" font-family="sans-serif" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">02</text>
+  <text x="400" y="72" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="700">Citizen Report</text>
+  <text x="400" y="90" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Anonymous, 30-second submit</text>
+  <text x="400" y="104" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Smart dedup, live price diff</text>
+  <text x="400" y="140" font-family="monospace" font-size="10" fill="#00c853" text-anchor="middle" font-weight="700">NO ACCOUNT REQUIRED</text>
   <!-- Screen 3 -->
-  <rect x="505" y="20" width="225" height="120" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="505" y="20" width="225" height="4" rx="2" fill="#2196f3"/>
-  <text x="617" y="50" font-family="sans-serif" font-size="11" fill="#ff4d1c" text-anchor="middle" font-weight="700">03</text>
-  <text x="617" y="70" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">Case Board</text>
-  <text x="617" y="88" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Filtered cases, countdowns</text>
-  <text x="617" y="102" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Authority accountability scores</text>
-  <text x="617" y="130" font-family="monospace" font-size="9" fill="#2196f3" text-anchor="middle">DC RESPONSE: 31%</text>
+  <rect x="540" y="20" width="240" height="130" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
+  <rect x="540" y="20" width="240" height="4" rx="2" fill="#2196f3"/>
+  <text x="660" y="52" font-family="sans-serif" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">03</text>
+  <text x="660" y="72" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="700">Case Board</text>
+  <text x="660" y="90" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Filtered cases, live countdowns</text>
+  <text x="660" y="104" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Authority accountability scores</text>
+  <text x="660" y="140" font-family="monospace" font-size="10" fill="#2196f3" text-anchor="middle" font-weight="700">DC RESPONSE: 31%</text>
   <!-- Screen 4 -->
-  <rect x="20" y="170" width="225" height="120" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="20" y="170" width="225" height="4" rx="2" fill="#ff8c42"/>
-  <text x="132" y="200" font-family="sans-serif" font-size="11" fill="#ff4d1c" text-anchor="middle" font-weight="700">04</text>
-  <text x="132" y="220" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">Case Detail</text>
-  <text x="132" y="238" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Evidence timeline, contributors</text>
-  <text x="132" y="252" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Blockchain audit trail</text>
-  <text x="132" y="280" font-family="monospace" font-size="9" fill="#ff8c42" text-anchor="middle">7 CHAIN ENTRIES VERIFIED</text>
+  <rect x="20" y="180" width="240" height="130" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
+  <rect x="20" y="180" width="240" height="4" rx="2" fill="#ff8c42"/>
+  <text x="140" y="212" font-family="sans-serif" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">04</text>
+  <text x="140" y="232" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="700">Case Detail</text>
+  <text x="140" y="250" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Evidence timeline, contributors</text>
+  <text x="140" y="264" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Blockchain audit trail verification</text>
+  <text x="140" y="300" font-family="monospace" font-size="10" fill="#ff8c42" text-anchor="middle" font-weight="700">7 CHAIN ENTRIES VERIFIED</text>
   <!-- Screen 5 -->
-  <rect x="262" y="170" width="225" height="120" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="262" y="170" width="225" height="4" rx="2" fill="#ffd740"/>
-  <text x="374" y="200" font-family="sans-serif" font-size="11" fill="#ff4d1c" text-anchor="middle" font-weight="700">05</text>
-  <text x="374" y="220" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">Journalist Panel</text>
-  <text x="374" y="238" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Signal queue, sealed verification</text>
-  <text x="374" y="252" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Gamified badges, Track 2</text>
-  <text x="374" y="280" font-family="monospace" font-size="9" fill="#ffd740" text-anchor="middle">MASTER VERIFIER: 94%</text>
+  <rect x="280" y="180" width="240" height="130" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
+  <rect x="280" y="180" width="240" height="4" rx="2" fill="#ffd740"/>
+  <text x="400" y="212" font-family="sans-serif" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">05</text>
+  <text x="400" y="232" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="700">Journalist Panel</text>
+  <text x="400" y="250" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Signal queue, sealed verification</text>
+  <text x="400" y="264" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Gamified badges, Track 2 publishing</text>
+  <text x="400" y="300" font-family="monospace" font-size="10" fill="#ffd740" text-anchor="middle" font-weight="700">MASTER VERIFIER: 94%</text>
   <!-- Screen 6 -->
-  <rect x="505" y="170" width="225" height="120" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="505" y="170" width="225" height="4" rx="2" fill="#ff1744"/>
-  <text x="617" y="200" font-family="sans-serif" font-size="11" fill="#ff4d1c" text-anchor="middle" font-weight="700">06</text>
-  <text x="617" y="220" font-family="sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">Admin Dashboard</text>
-  <text x="617" y="238" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Critical alerts, AI drafting</text>
-  <text x="617" y="252" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Formal complaint filing</text>
-  <text x="617" y="280" font-family="monospace" font-size="9" fill="#ff1744" text-anchor="middle">AI CONFIDENCE: 91%</text>
+  <rect x="540" y="180" width="240" height="130" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
+  <rect x="540" y="180" width="240" height="4" rx="2" fill="#ff1744"/>
+  <text x="660" y="212" font-family="sans-serif" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">06</text>
+  <text x="660" y="232" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="700">Admin Dashboard</text>
+  <text x="660" y="250" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Critical alerts, AI complaint drafter</text>
+  <text x="660" y="264" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Formal filing, weekly digests</text>
+  <text x="660" y="300" font-family="monospace" font-size="10" fill="#ff1744" text-anchor="middle" font-weight="700">AI CONFIDENCE: 91%</text>
 </svg>
 </div>
 
@@ -201,119 +629,268 @@ Citizens have no fast, reliable way to verify real prices, report violations, or
 
 ## Live Market Data (Mock)
 
-<!-- MARKET DATA SVG -->
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="260" viewBox="0 0 700 260">
-  <rect width="700" height="260" fill="#0a0c0f" rx="12"/>
-  <text x="350" y="30" font-family="sans-serif" font-size="12" fill="#8892a4" text-anchor="middle" font-weight="600">OFFICIAL MRP vs BLACK MARKET — BALANGIR DISTRICT</text>
-  <!-- Header -->
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280">
+  <rect width="720" height="280" fill="#0a0c0f" rx="12"/>
+  <text x="360" y="30" font-family="sans-serif" font-size="12" fill="#8892a4" text-anchor="middle" font-weight="600">OFFICIAL MRP vs BLACK MARKET — BALANGIR DISTRICT</text>
   <text x="50" y="58" font-family="sans-serif" font-size="9" fill="#4a5568" font-weight="600">COMMODITY</text>
-  <text x="250" y="58" font-family="sans-serif" font-size="9" fill="#4a5568" font-weight="600">OFFICIAL</text>
-  <text x="350" y="58" font-family="sans-serif" font-size="9" fill="#4a5568" font-weight="600">MARKET</text>
-  <text x="470" y="58" font-family="sans-serif" font-size="9" fill="#4a5568" font-weight="600">DEVIATION</text>
-  <line x1="20" y1="65" x2="680" y2="65" stroke="#1e2530" stroke-width="1"/>
-  <!-- LPG -->
-  <text x="50" y="88" font-family="sans-serif" font-size="12" fill="#e8eaf0">🔥 LPG Cylinder</text>
-  <text x="250" y="88" font-family="monospace" font-size="12" fill="#8892a4">₹939</text>
-  <text x="350" y="88" font-family="monospace" font-size="12" fill="#ff1744" font-weight="700">₹2,500</text>
-  <rect x="450" y="76" width="120" height="16" rx="4" fill="#0a0c0f"/>
-  <rect x="450" y="76" width="120" height="16" rx="4" fill="#ff1744" fill-opacity="0.2"/>
-  <rect x="450" y="76" width="120" height="16" rx="4" fill="#ff1744" fill-opacity="0.6"/>
-  <text x="510" y="88" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">+166%</text>
-  <!-- Mustard Oil -->
-  <text x="50" y="118" font-family="sans-serif" font-size="12" fill="#e8eaf0">🫙 Mustard Oil</text>
-  <text x="250" y="118" font-family="monospace" font-size="12" fill="#8892a4">₹145</text>
-  <text x="350" y="118" font-family="monospace" font-size="12" fill="#ff8c42" font-weight="700">₹210</text>
-  <rect x="450" y="106" width="54" height="16" rx="4" fill="#ff8c42" fill-opacity="0.3"/>
-  <text x="477" y="118" font-family="monospace" font-size="10" fill="#ff8c42" text-anchor="middle" font-weight="700">+45%</text>
-  <!-- Toor Dal -->
-  <text x="50" y="148" font-family="sans-serif" font-size="12" fill="#e8eaf0">🫘 Toor Dal</text>
-  <text x="250" y="148" font-family="monospace" font-size="12" fill="#8892a4">₹155</text>
-  <text x="350" y="148" font-family="monospace" font-size="12" fill="#ff8c42" font-weight="700">₹220</text>
-  <rect x="450" y="136" width="50" height="16" rx="4" fill="#ff8c42" fill-opacity="0.3"/>
-  <text x="475" y="148" font-family="monospace" font-size="10" fill="#ff8c42" text-anchor="middle" font-weight="700">+42%</text>
-  <!-- Sugar -->
-  <text x="50" y="178" font-family="sans-serif" font-size="12" fill="#e8eaf0">🍚 Sugar</text>
-  <text x="250" y="178" font-family="monospace" font-size="12" fill="#8892a4">₹42</text>
-  <text x="350" y="178" font-family="monospace" font-size="12" fill="#ffd740" font-weight="700">₹58</text>
-  <rect x="450" y="166" width="46" height="16" rx="4" fill="#ffd740" fill-opacity="0.3"/>
-  <text x="473" y="178" font-family="monospace" font-size="10" fill="#ffd740" text-anchor="middle" font-weight="700">+38%</text>
-  <!-- Rice -->
-  <text x="50" y="208" font-family="sans-serif" font-size="12" fill="#e8eaf0">🌾 Rice</text>
-  <text x="250" y="208" font-family="monospace" font-size="12" fill="#8892a4">₹38</text>
-  <text x="350" y="208" font-family="monospace" font-size="12" fill="#00c853">₹38</text>
-  <rect x="450" y="196" width="28" height="16" rx="4" fill="#00c853" fill-opacity="0.3"/>
-  <text x="464" y="208" font-family="monospace" font-size="10" fill="#00c853" text-anchor="middle" font-weight="700">0%</text>
-  <!-- Petrol -->
-  <text x="50" y="238" font-family="sans-serif" font-size="12" fill="#e8eaf0">⛽ Petrol</text>
-  <text x="250" y="238" font-family="monospace" font-size="12" fill="#8892a4">₹105</text>
-  <text x="350" y="238" font-family="monospace" font-size="12" fill="#00c853">₹105</text>
-  <rect x="450" y="226" width="28" height="16" rx="4" fill="#00c853" fill-opacity="0.3"/>
-  <text x="464" y="238" font-family="monospace" font-size="10" fill="#00c853" text-anchor="middle" font-weight="700">0%</text>
+  <text x="260" y="58" font-family="sans-serif" font-size="9" fill="#4a5568" font-weight="600">OFFICIAL</text>
+  <text x="360" y="58" font-family="sans-serif" font-size="9" fill="#4a5568" font-weight="600">MARKET</text>
+  <text x="480" y="58" font-family="sans-serif" font-size="9" fill="#4a5568" font-weight="600">DEVIATION</text>
+  <line x1="20" y1="65" x2="700" y2="65" stroke="#1e2530" stroke-width="1"/>
+  <text x="50" y="88" font-family="sans-serif" font-size="12" fill="#e8eaf0">LPG Cylinder</text>
+  <text x="260" y="88" font-family="monospace" font-size="12" fill="#8892a4">₹939</text>
+  <text x="360" y="88" font-family="monospace" font-size="12" fill="#ff1744" font-weight="700">₹2,500</text>
+  <rect x="460" y="76" width="120" height="16" rx="4" fill="#ff1744" fill-opacity="0.4"/><text x="520" y="88" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">+166%</text>
+  <text x="50" y="118" font-family="sans-serif" font-size="12" fill="#e8eaf0">Toor Dal</text>
+  <text x="260" y="118" font-family="monospace" font-size="12" fill="#8892a4">₹155</text>
+  <text x="360" y="118" font-family="monospace" font-size="12" fill="#ff8c42" font-weight="700">₹220</text>
+  <rect x="460" y="106" width="54" height="16" rx="4" fill="#ff8c42" fill-opacity="0.3"/><text x="487" y="118" font-family="monospace" font-size="10" fill="#ff8c42" text-anchor="middle" font-weight="700">+42%</text>
+  <text x="50" y="148" font-family="sans-serif" font-size="12" fill="#e8eaf0">Mustard Oil</text>
+  <text x="260" y="148" font-family="monospace" font-size="12" fill="#8892a4">₹145</text>
+  <text x="360" y="148" font-family="monospace" font-size="12" fill="#ff8c42" font-weight="700">₹210</text>
+  <rect x="460" y="136" width="50" height="16" rx="4" fill="#ff8c42" fill-opacity="0.3"/><text x="485" y="148" font-family="monospace" font-size="10" fill="#ff8c42" text-anchor="middle" font-weight="700">+45%</text>
+  <text x="50" y="178" font-family="sans-serif" font-size="12" fill="#e8eaf0">Onion</text>
+  <text x="260" y="178" font-family="monospace" font-size="12" fill="#8892a4">₹40</text>
+  <text x="360" y="178" font-family="monospace" font-size="12" fill="#ffd740" font-weight="700">₹65</text>
+  <rect x="460" y="166" width="70" height="16" rx="4" fill="#ffd740" fill-opacity="0.3"/><text x="495" y="178" font-family="monospace" font-size="10" fill="#ffd740" text-anchor="middle" font-weight="700">+63%</text>
+  <text x="50" y="208" font-family="sans-serif" font-size="12" fill="#e8eaf0">Sugar</text>
+  <text x="260" y="208" font-family="monospace" font-size="12" fill="#8892a4">₹42</text>
+  <text x="360" y="208" font-family="monospace" font-size="12" fill="#ffd740" font-weight="700">₹58</text>
+  <rect x="460" y="196" width="46" height="16" rx="4" fill="#ffd740" fill-opacity="0.3"/><text x="483" y="208" font-family="monospace" font-size="10" fill="#ffd740" text-anchor="middle" font-weight="700">+38%</text>
+  <text x="50" y="238" font-family="sans-serif" font-size="12" fill="#e8eaf0">Rice</text>
+  <text x="260" y="238" font-family="monospace" font-size="12" fill="#8892a4">₹38</text>
+  <text x="360" y="238" font-family="monospace" font-size="12" fill="#00c853">₹38</text>
+  <rect x="460" y="226" width="28" height="16" rx="4" fill="#00c853" fill-opacity="0.3"/><text x="474" y="238" font-family="monospace" font-size="10" fill="#00c853" text-anchor="middle" font-weight="700">0%</text>
+  <text x="50" y="268" font-family="sans-serif" font-size="12" fill="#e8eaf0">Petrol</text>
+  <text x="260" y="268" font-family="monospace" font-size="12" fill="#8892a4">₹105</text>
+  <text x="360" y="268" font-family="monospace" font-size="12" fill="#00c853">₹105</text>
+  <rect x="460" y="256" width="28" height="16" rx="4" fill="#00c853" fill-opacity="0.3"/><text x="474" y="268" font-family="monospace" font-size="10" fill="#00c853" text-anchor="middle" font-weight="700">0%</text>
 </svg>
 </div>
 
 ---
 
-## Key Features
+## Ideation Journey
 
-<table>
-<tr>
-<td align="center" width="150">
+> From personal pain to civic platform — the story of how SupplySentinel became the Civic Intelligence Network.
 
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#181c24" stroke="#ff4d1c" stroke-width="2"/><text x="24" y="30" font-size="20" text-anchor="middle">👤</text></svg>
+<!-- IDEATION JOURNEY SVG -->
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#0a0c0f" rx="12"/>
+  <text x="400" y="30" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="2">FROM PERSONAL PAIN TO CIVIC PLATFORM</text>
+  <text x="400" y="48" font-family="sans-serif" font-size="10" fill="#4a5568" text-anchor="middle">The ideation arc — each phase solved a real problem discovered in the previous one</text>
 
-**Anonymous Reporting**<br/><sub>No account. No tracking. 30 seconds.</sub>
+  <!-- Timeline line -->
+  <line x1="80" y1="80" x2="80" y2="470" stroke="#1e2530" stroke-width="2"/>
 
-</td>
-<td align="center" width="150">
+  <!-- Phase 0 -->
+  <circle cx="80" cy="90" r="10" fill="#ff1744"/>
+  <text x="106" y="86" font-family="monospace" font-size="10" fill="#ff1744" font-weight="700">PHASE 0 — THE SPARK</text>
+  <text x="106" y="102" font-family="sans-serif" font-size="11" fill="#e8eaf0">Paid ₹2,500 for a ₹939 LPG cylinder in Balangir.</text>
+  <text x="106" y="118" font-family="sans-serif" font-size="10" fill="#8892a4">No system to verify, report, or fight back. Individual complaints = noise.</text>
+  <rect x="540" y="78" width="230" height="46" rx="6" fill="#181c24" stroke="#ff1744" stroke-width="1"/>
+  <text x="655" y="96" font-family="sans-serif" font-size="9" fill="#ff1744" text-anchor="middle" font-weight="600">INSIGHT</text>
+  <text x="655" y="112" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">One angry citizen = ignored.</text>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#181c24" stroke="#ffd740" stroke-width="2"/><text x="24" y="30" font-size="20" text-anchor="middle">📰</text></svg>
+  <!-- Phase 1 -->
+  <circle cx="80" cy="170" r="10" fill="#ff8c42"/>
+  <text x="106" y="166" font-family="monospace" font-size="10" fill="#ff8c42" font-weight="700">PHASE 1 — SUPPLYSSENTINEL (v0.1)</text>
+  <text x="106" y="182" font-family="sans-serif" font-size="11" fill="#e8eaf0">Built an LPG-only price tracker for Balangir.</text>
+  <text x="106" y="198" font-family="sans-serif" font-size="10" fill="#8892a4">Single commodity, single district. Citizen reports only — no verification.</text>
+  <rect x="540" y="158" width="230" height="46" rx="6" fill="#181c24" stroke="#ff8c42" stroke-width="1"/>
+  <text x="655" y="176" font-family="sans-serif" font-size="9" fill="#ff8c42" text-anchor="middle" font-weight="600">PROBLEM DISCOVERED</text>
+  <text x="655" y="192" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Citizen reports alone = unverifiable.</text>
 
-**Journalist Verified**<br/><sub>Independent field verification</sub>
+  <!-- Phase 2 -->
+  <circle cx="80" cy="250" r="10" fill="#ffd740"/>
+  <text x="106" y="246" font-family="monospace" font-size="10" fill="#ffd740" font-weight="700">PHASE 2 — VERIFICATION LAYER</text>
+  <text x="106" y="262" font-family="sans-serif" font-size="11" fill="#e8eaf0">Added journalist + NGO verification with trust scoring.</text>
+  <text x="106" y="278" font-family="sans-serif" font-size="10" fill="#8892a4">Signal Strength algorithm born: citizens + verifiers = credible evidence.</text>
+  <rect x="540" y="238" width="230" height="46" rx="6" fill="#181c24" stroke="#ffd740" stroke-width="1"/>
+  <text x="655" y="256" font-family="sans-serif" font-size="9" fill="#ffd740" text-anchor="middle" font-weight="600">BREAKTHROUGH</text>
+  <text x="655" y="272" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Structured evidence > angry emails.</text>
 
-</td>
-<td align="center" width="150">
+  <!-- Phase 3 -->
+  <circle cx="80" cy="330" r="10" fill="#2196f3"/>
+  <text x="106" y="326" font-family="monospace" font-size="10" fill="#2196f3" font-weight="700">PHASE 3 — AI + BLOCKCHAIN</text>
+  <text x="106" y="342" font-family="sans-serif" font-size="11" fill="#e8eaf0">AI drafts formal legal complaints. Blockchain makes records immutable.</text>
+  <text x="106" y="358" font-family="sans-serif" font-size="10" fill="#8892a4">Authority accountability scores become public, permanent records.</text>
+  <rect x="540" y="318" width="230" height="46" rx="6" fill="#181c24" stroke="#2196f3" stroke-width="1"/>
+  <text x="655" y="336" font-family="sans-serif" font-size="9" fill="#2196f3" text-anchor="middle" font-weight="600">KEY DECISION</text>
+  <text x="655" y="352" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Accountability, not confrontation.</text>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#181c24" stroke="#2196f3" stroke-width="2"/><text x="24" y="30" font-size="20" text-anchor="middle">🤖</text></svg>
+  <!-- Phase 4 -->
+  <circle cx="80" cy="410" r="10" fill="#00c853"/>
+  <text x="106" y="406" font-family="monospace" font-size="10" fill="#00c853" font-weight="700">PHASE 4 — CIVIC INTELLIGENCE NETWORK (NOW)</text>
+  <text x="106" y="422" font-family="sans-serif" font-size="11" fill="#e8eaf0">Multi-commodity, multi-area platform. 8 commodities. 8 areas.</text>
+  <text x="106" y="438" font-family="sans-serif" font-size="10" fill="#8892a4">Odia language support. Full 6-screen prototype. Open source.</text>
+  <rect x="540" y="398" width="230" height="46" rx="6" fill="#181c24" stroke="#00c853" stroke-width="1"/>
+  <text x="655" y="416" font-family="sans-serif" font-size="9" fill="#00c853" text-anchor="middle" font-weight="600">STATUS</text>
+  <text x="655" y="432" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Interactive prototype complete.</text>
 
-**AI-Powered**<br/><sub>Pattern analysis & legal drafting</sub>
-
-</td>
-<td align="center" width="150">
-
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#181c24" stroke="#00c853" stroke-width="2"/><text x="24" y="30" font-size="20" text-anchor="middle">🔗</text></svg>
-
-**Blockchain Trail**<br/><sub>Tamper-proof audit chain</sub>
-
-</td>
-<td align="center" width="150">
-
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#181c24" stroke="#ff1744" stroke-width="2"/><text x="24" y="30" font-size="20" text-anchor="middle">🏛</text></svg>
-
-**Accountability**<br/><sub>Public authority response tracking</sub>
-
-</td>
-</tr>
-</table>
+  <!-- Bottom summary -->
+  <rect x="100" y="460" width="600" height="28" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
+  <text x="400" y="479" font-family="monospace" font-size="9" fill="#ff4d1c" text-anchor="middle">SupplySentinel (LPG only) → Verification Layer → AI+Blockchain → Civic Intelligence Network</text>
+</svg>
+</div>
 
 ---
 
-## Tech Stack
+## Future Vision &amp; Roadmap
 
-```
-Pure HTML + CSS + Vanilla JavaScript
-No frameworks. No build step. No npm. Zero dependencies.
-Opens directly in any browser.
+> This is where the project is heading. Contributors welcome at every phase.
+
+<!-- ROADMAP SVG -->
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="680" viewBox="0 0 800 680">
+  <rect width="800" height="680" fill="#0a0c0f" rx="12"/>
+  <text x="400" y="30" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="2">ROADMAP — FROM PROTOTYPE TO PRODUCTION</text>
+  <text x="400" y="48" font-family="sans-serif" font-size="10" fill="#4a5568" text-anchor="middle">Every milestone is an opportunity to contribute</text>
+
+  <!-- Timeline line -->
+  <line x1="60" y1="70" x2="60" y2="650" stroke="#1e2530" stroke-width="3"/>
+
+  <!-- ===== Q2 2026 ===== -->
+  <rect x="50" y="70" width="20" height="20" rx="4" fill="#00c853"/>
+  <text x="85" y="84" font-family="monospace" font-size="11" fill="#00c853" font-weight="700">Q2 2026 — PROTOTYPE (CURRENT)</text>
+
+  <rect x="85" y="95" width="680" height="90" rx="8" fill="#111318" stroke="#00c853" stroke-width="1"/>
+  <text x="100" y="114" font-family="sans-serif" font-size="10" fill="#00c853" font-weight="600">✓ COMPLETED</text>
+  <text x="100" y="132" font-family="sans-serif" font-size="10" fill="#e8eaf0">Single-file interactive prototype · 6 screens · All interactions working</text>
+  <text x="100" y="148" font-family="sans-serif" font-size="10" fill="#e8eaf0">Mock data for Balangir · Odia language toggle · Dark intelligence theme</text>
+  <text x="100" y="164" font-family="sans-serif" font-size="10" fill="#e8eaf0">Blockchain audit trail visualization · AI complaint drafter · Authority scorecards</text>
+  <text x="100" y="178" font-family="monospace" font-size="8" fill="#8892a4">CONTRIBUTION: Bug reports, UX feedback, accessibility improvements</text>
+
+  <!-- ===== Q3 2026 ===== -->
+  <rect x="50" y="200" width="20" height="20" rx="4" fill="#ffd740"/>
+  <text x="85" y="214" font-family="monospace" font-size="11" fill="#ffd740" font-weight="700">Q3 2026 — BACKEND + REAL DATA</text>
+
+  <rect x="85" y="228" width="680" height="105" rx="8" fill="#111318" stroke="#ffd740" stroke-width="1"/>
+  <text x="100" y="248" font-family="sans-serif" font-size="10" fill="#ffd740" font-weight="600">PLANNED</text>
+  <text x="100" y="266" font-family="sans-serif" font-size="10" fill="#e8eaf0">Node.js/Python backend with PostgreSQL database</text>
+  <text x="100" y="282" font-family="sans-serif" font-size="10" fill="#e8eaf0">Real IOCL, FCI, PDS API integration for live prices</text>
+  <text x="100" y="298" font-family="sans-serif" font-size="10" fill="#e8eaf0">WhatsApp/SMS reporting via Twilio for low-connectivity areas</text>
+  <text x="100" y="314" font-family="sans-serif" font-size="10" fill="#e8eaf0">Actual blockchain logging (Polygon/Solana for low gas fees)</text>
+  <text x="100" y="328" font-family="monospace" font-size="8" fill="#8892a4">CONTRIBUTION: Backend devs, API integration, blockchain devs, DevOps</text>
+
+  <!-- ===== Q4 2026 ===== -->
+  <rect x="50" y="348" width="20" height="20" rx="4" fill="#2196f3"/>
+  <text x="85" y="362" font-family="monospace" font-size="11" fill="#2196f3" font-weight="700">Q4 2026 — AI + ML PIPELINE</text>
+
+  <rect x="85" y="376" width="680" height="105" rx="8" fill="#111318" stroke="#2196f3" stroke-width="1"/>
+  <text x="100" y="396" font-family="sans-serif" font-size="10" fill="#2196f3" font-weight="600">PLANNED</text>
+  <text x="100" y="414" font-family="sans-serif" font-size="10" fill="#e8eaf0">GPT/Claude-powered complaint drafting with legal templates (ECA 1955)</text>
+  <text x="100" y="430" font-family="sans-serif" font-size="10" fill="#e8eaf0">Anomaly detection for price spikes across commodities and areas</text>
+  <text x="100" y="446" font-family="sans-serif" font-size="10" fill="#e8eaf0">Predictive supply chain analysis — forecast shortages before they hit</text>
+  <text x="100" y="462" font-family="sans-serif" font-size="10" fill="#e8eaf0">Automated rumor classification using NLP on social media feeds</text>
+  <text x="100" y="476" font-family="monospace" font-size="8" fill="#8892a4">CONTRIBUTION: ML engineers, NLP specialists, data scientists</text>
+
+  <!-- ===== Q1 2027 ===== -->
+  <rect x="50" y="496" width="20" height="20" rx="4" fill="#ff4d1c"/>
+  <text x="85" y="510" font-family="monospace" font-size="11" fill="#ff4d1c" font-weight="700">Q1 2027 — MULTI-DISTRICT EXPANSION</text>
+
+  <rect x="85" y="524" width="680" height="90" rx="8" fill="#111318" stroke="#ff4d1c" stroke-width="1"/>
+  <text x="100" y="544" font-family="sans-serif" font-size="10" fill="#ff4d1c" font-weight="600">VISION</text>
+  <text x="100" y="562" font-family="sans-serif" font-size="10" fill="#e8eaf0">Expand from Balangir to all 30 districts of Odisha</text>
+  <text x="100" y="578" font-family="sans-serif" font-size="10" fill="#e8eaf0">Partner network with 100+ journalists and 50+ NGOs across the state</text>
+  <text x="100" y="594" font-family="sans-serif" font-size="10" fill="#e8eaf0">State-level authority accountability dashboard with public API</text>
+  <text x="100" y="608" font-family="monospace" font-size="8" fill="#8892a4">CONTRIBUTION: District coordinators, journalist partnerships, policy advisors</text>
+
+  <!-- ===== Q2 2027 ===== -->
+  <rect x="50" y="626" width="20" height="20" rx="4" fill="#9c27b0"/>
+  <text x="85" y="640" font-family="monospace" font-size="11" fill="#9c27b0" font-weight="700">Q2 2027+ — NATIONAL PLATFORM</text>
+  <text x="85" y="658" font-family="sans-serif" font-size="10" fill="#e8eaf0">Open-source civic intelligence for every district in India. Template system for any commodity in any region.</text>
+  <text x="85" y="673" font-family="monospace" font-size="8" fill="#8892a4">CONTRIBUTION: Localization, regional partnerships, government relations, funding</text>
+</svg>
+</div>
+
+---
+
+## How to Contribute
+
+We welcome contributors at every skill level. Here's how you can help make this project live:
+
+<!-- CONTRIBUTION FLOW SVG -->
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <rect width="800" height="340" fill="#0a0c0f" rx="12"/>
+  <text x="400" y="28" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="2">WAYS TO CONTRIBUTE</text>
+
+  <!-- Row 1 -->
+  <rect x="30" y="50" width="230" height="120" rx="10" fill="#111318" stroke="#ff4d1c" stroke-width="1.5"/>
+  <text x="145" y="75" font-family="sans-serif" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">Frontend Dev</text>
+  <text x="145" y="95" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Improve UI/UX, add animations</text>
+  <text x="145" y="110" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Mobile responsiveness</text>
+  <text x="145" y="125" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Accessibility (WCAG 2.1)</text>
+  <text x="145" y="145" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">PWA support for offline use</text>
+  <text x="145" y="162" font-family="monospace" font-size="8" fill="#ff4d1c" text-anchor="middle">HTML · CSS · JavaScript</text>
+
+  <rect x="285" y="50" width="230" height="120" rx="10" fill="#111318" stroke="#2196f3" stroke-width="1.5"/>
+  <text x="400" y="75" font-family="sans-serif" font-size="12" fill="#2196f3" text-anchor="middle" font-weight="700">Backend Dev</text>
+  <text x="400" y="95" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Build REST API + database</text>
+  <text x="400" y="110" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Government price API integration</text>
+  <text x="400" y="125" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Authentication for journalists</text>
+  <text x="400" y="145" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Blockchain logging service</text>
+  <text x="400" y="162" font-family="monospace" font-size="8" fill="#2196f3" text-anchor="middle">Node.js · Python · PostgreSQL</text>
+
+  <rect x="540" y="50" width="230" height="120" rx="10" fill="#111318" stroke="#ffd740" stroke-width="1.5"/>
+  <text x="655" y="75" font-family="sans-serif" font-size="12" fill="#ffd740" text-anchor="middle" font-weight="700">AI / ML Engineer</text>
+  <text x="655" y="95" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Price anomaly detection models</text>
+  <text x="655" y="110" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">NLP for rumor classification</text>
+  <text x="655" y="125" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Supply chain prediction</text>
+  <text x="655" y="145" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Complaint letter generation</text>
+  <text x="655" y="162" font-family="monospace" font-size="8" fill="#ffd740" text-anchor="middle">Python · Claude API · TensorFlow</text>
+
+  <!-- Row 2 -->
+  <rect x="30" y="195" width="230" height="120" rx="10" fill="#111318" stroke="#00c853" stroke-width="1.5"/>
+  <text x="145" y="220" font-family="sans-serif" font-size="12" fill="#00c853" text-anchor="middle" font-weight="700">Domain Expert</text>
+  <text x="145" y="240" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Legal framework (ECA 1955)</text>
+  <text x="145" y="255" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Government filing processes</text>
+  <text x="145" y="270" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Supply chain economics</text>
+  <text x="145" y="285" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Journalist verification protocols</text>
+  <text x="145" y="305" font-family="monospace" font-size="8" fill="#00c853" text-anchor="middle">Policy · Law · Economics</text>
+
+  <rect x="285" y="195" width="230" height="120" rx="10" fill="#111318" stroke="#9c27b0" stroke-width="1.5"/>
+  <text x="400" y="220" font-family="sans-serif" font-size="12" fill="#9c27b0" text-anchor="middle" font-weight="700">Localization</text>
+  <text x="400" y="240" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Translate to regional languages</text>
+  <text x="400" y="255" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Odia, Hindi, Telugu, Bengali</text>
+  <text x="400" y="270" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Cultural context adaptation</text>
+  <text x="400" y="285" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">RTL support for Urdu</text>
+  <text x="400" y="305" font-family="monospace" font-size="8" fill="#9c27b0" text-anchor="middle">i18n · Linguistics</text>
+
+  <rect x="540" y="195" width="230" height="120" rx="10" fill="#111318" stroke="#ff8c42" stroke-width="1.5"/>
+  <text x="655" y="220" font-family="sans-serif" font-size="12" fill="#ff8c42" text-anchor="middle" font-weight="700">Community</text>
+  <text x="655" y="240" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Report bugs and test features</text>
+  <text x="655" y="255" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Share with journalists/NGOs</text>
+  <text x="655" y="270" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Write about the project</text>
+  <text x="655" y="285" font-family="sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle">Connect us with authorities</text>
+  <text x="655" y="305" font-family="monospace" font-size="8" fill="#ff8c42" text-anchor="middle">Advocacy · Outreach</text>
+</svg>
+</div>
+
+### Getting Started
+
+```bash
+# 1. Fork the repository
+# 2. Clone your fork
+git clone https://github.com/YOUR-USERNAME/civic-intelligence-network.git
+
+# 3. Open directly in browser (no build step)
+open index.html
+
+# 4. Make your changes
+# 5. Submit a pull request
 ```
 
-| Layer | Technology |
-|:---|:---|
-| **Markup** | Semantic HTML5 |
-| **Styling** | Custom CSS with CSS Variables |
-| **Logic** | Vanilla JavaScript (ES6+) |
-| **Fonts** | Google Fonts CDN (Syne, IBM Plex Sans, Space Mono) |
-| **Hosting** | GitHub Pages |
+### Contribution Guidelines
+
+1. **Issues first** — Check existing issues or open a new one before starting work
+2. **Small PRs** — One feature or fix per pull request
+3. **No frameworks** — The prototype must remain a single HTML file with zero dependencies
+4. **Test locally** — Open `index.html` in browser and verify all 6 screens work
+5. **Odia support** — If adding text, include Odia translations in `data-or` attributes
 
 ---
 
@@ -343,42 +920,7 @@ MINUTE 5  ─  Case Board
 
 ---
 
-## Signal Strength Algorithm
-
-<!-- STRENGTH SVG -->
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="180" viewBox="0 0 500 180">
-  <rect width="500" height="180" fill="#0a0c0f" rx="12"/>
-  <text x="250" y="25" font-family="monospace" font-size="10" fill="#8892a4" text-anchor="middle">SIGNAL STRENGTH COMPOSITION — CIN-2026-BLG-047-LPG</text>
-  <!-- Bars -->
-  <text x="20" y="55" font-family="sans-serif" font-size="10" fill="#8892a4">Citizens (47)</text>
-  <rect x="140" y="43" width="210" height="16" rx="4" fill="#ff4d1c" fill-opacity="0.3"/>
-  <rect x="140" y="43" width="210" height="16" rx="4" fill="#ff4d1c" fill-opacity="0.6"/>
-  <text x="360" y="55" font-family="monospace" font-size="10" fill="#ff4d1c" font-weight="700">+35</text>
-
-  <text x="20" y="85" font-family="sans-serif" font-size="10" fill="#8892a4">Primary Verifier</text>
-  <rect x="140" y="73" width="168" height="16" rx="4" fill="#ffd740" fill-opacity="0.3"/>
-  <rect x="140" y="73" width="168" height="16" rx="4" fill="#ffd740" fill-opacity="0.6"/>
-  <text x="318" y="85" font-family="monospace" font-size="10" fill="#ffd740" font-weight="700">+28</text>
-
-  <text x="20" y="115" font-family="sans-serif" font-size="10" fill="#8892a4">Supporting (indep.)</text>
-  <rect x="140" y="103" width="120" height="16" rx="4" fill="#2196f3" fill-opacity="0.3"/>
-  <rect x="140" y="103" width="120" height="16" rx="4" fill="#2196f3" fill-opacity="0.6"/>
-  <text x="270" y="115" font-family="monospace" font-size="10" fill="#2196f3" font-weight="700">+20</text>
-
-  <text x="20" y="145" font-family="sans-serif" font-size="10" fill="#8892a4">NGO + Admin</text>
-  <rect x="140" y="133" width="60" height="16" rx="4" fill="#00c853" fill-opacity="0.3"/>
-  <rect x="140" y="133" width="60" height="16" rx="4" fill="#00c853" fill-opacity="0.6"/>
-  <text x="210" y="145" font-family="monospace" font-size="10" fill="#00c853" font-weight="700">+6</text>
-
-  <line x1="20" y1="160" x2="480" y2="160" stroke="#1e2530" stroke-width="1"/>
-  <text x="380" y="175" font-family="monospace" font-size="12" fill="#00c853" font-weight="700">TOTAL: 89/100</text>
-</svg>
-</div>
-
----
-
-## Hotspot Areas
+## Hotspot Areas — Balangir District
 
 | Area | Active Signals | Threat Level |
 |:---|:---:|:---|
@@ -393,13 +935,31 @@ MINUTE 5  ─  Case Board
 
 ---
 
+## Tech Stack
+
+```
+Pure HTML + CSS + Vanilla JavaScript
+No frameworks. No build step. No npm. Zero dependencies.
+Opens directly in any browser.
+```
+
+| Layer | Technology |
+|:---|:---|
+| **Markup** | Semantic HTML5 |
+| **Styling** | Custom CSS with CSS Variables |
+| **Logic** | Vanilla JavaScript (ES6+) |
+| **Fonts** | Google Fonts CDN (Syne, IBM Plex Sans, Space Mono) |
+| **Hosting** | GitHub Pages |
+
+---
+
 ## Project Structure
 
 ```
 civic-intelligence-network/
 ├── index.html          # Complete single-file application (all 6 screens)
 ├── architecture.html   # Interactive architecture & data flow diagrams
-├── README.md           # This file
+├── README.md           # This file — with all SVG diagrams
 ├── LICENSE             # MIT License
 └── .claude/
     └── launch.json     # Dev server configuration
@@ -425,528 +985,27 @@ python -m http.server 8000
 
 ---
 
-## Ideation Journey
-
-<!-- IDEATION JOURNEY SVG -->
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
-  <rect width="800" height="380" fill="#0a0c0f" rx="12"/>
-  <text x="400" y="28" font-family="sans-serif" font-size="13" fill="#8892a4" text-anchor="middle" font-weight="600">FROM PERSONAL PAIN TO CIVIC PLATFORM — THE IDEATION ARC</text>
-
-  <!-- Central timeline line -->
-  <line x1="80" y1="70" x2="80" y2="350" stroke="#1e2530" stroke-width="2"/>
-
-  <!-- Phase 1 -->
-  <circle cx="80" cy="80" r="8" fill="#ff1744"/>
-  <text x="100" y="76" font-family="monospace" font-size="9" fill="#ff1744" font-weight="700">PHASE 0 — THE SPARK</text>
-  <text x="100" y="92" font-family="sans-serif" font-size="11" fill="#e8eaf0">Paid ₹2,500 for a ₹939 LPG cylinder in Balangir.</text>
-  <text x="100" y="106" font-family="sans-serif" font-size="10" fill="#8892a4">Realized: there is no system to verify, report, or fight back.</text>
-  <rect x="520" y="68" width="250" height="42" rx="6" fill="#181c24" stroke="#ff1744" stroke-width="1"/>
-  <text x="645" y="84" font-family="sans-serif" font-size="9" fill="#ff1744" text-anchor="middle" font-weight="600">INSIGHT</text>
-  <text x="645" y="100" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Individual complaints = noise.</text>
-
-  <!-- Phase 2 -->
-  <circle cx="80" cy="140" r="8" fill="#ff8c42"/>
-  <text x="100" y="136" font-family="monospace" font-size="9" fill="#ff8c42" font-weight="700">PHASE 1 — SUPPLYSSENTINEL (v0.1)</text>
-  <text x="100" y="152" font-family="sans-serif" font-size="11" fill="#e8eaf0">Built an LPG price tracker for Balangir only.</text>
-  <text x="100" y="166" font-family="sans-serif" font-size="10" fill="#8892a4">Single commodity. Single district. Citizen reports only.</text>
-  <rect x="520" y="128" width="250" height="42" rx="6" fill="#181c24" stroke="#ff8c42" stroke-width="1"/>
-  <text x="645" y="144" font-family="sans-serif" font-size="9" fill="#ff8c42" text-anchor="middle" font-weight="600">PROBLEM DISCOVERED</text>
-  <text x="645" y="160" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Citizen reports alone = unverifiable.</text>
-
-  <!-- Phase 3 -->
-  <circle cx="80" cy="200" r="8" fill="#ffd740"/>
-  <text x="100" y="196" font-family="monospace" font-size="9" fill="#ffd740" font-weight="700">PHASE 2 — VERIFICATION LAYER</text>
-  <text x="100" y="212" font-family="sans-serif" font-size="11" fill="#e8eaf0">Added journalist + NGO verification with trust scoring.</text>
-  <text x="100" y="226" font-family="sans-serif" font-size="10" fill="#8892a4">Signal Strength algorithm born: citizens + verifiers = credibility.</text>
-  <rect x="520" y="188" width="250" height="42" rx="6" fill="#181c24" stroke="#ffd740" stroke-width="1"/>
-  <text x="645" y="204" font-family="sans-serif" font-size="9" fill="#ffd740" text-anchor="middle" font-weight="600">BREAKTHROUGH</text>
-  <text x="645" y="220" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Structured evidence > angry emails.</text>
-
-  <!-- Phase 4 -->
-  <circle cx="80" cy="260" r="8" fill="#2196f3"/>
-  <text x="100" y="256" font-family="monospace" font-size="9" fill="#2196f3" font-weight="700">PHASE 3 — AI + BLOCKCHAIN</text>
-  <text x="100" y="272" font-family="sans-serif" font-size="11" fill="#e8eaf0">AI drafts legal complaints. Blockchain makes records immutable.</text>
-  <text x="100" y="286" font-family="sans-serif" font-size="10" fill="#8892a4">Authority accountability scores become public, permanent records.</text>
-  <rect x="520" y="248" width="250" height="42" rx="6" fill="#181c24" stroke="#2196f3" stroke-width="1"/>
-  <text x="645" y="264" font-family="sans-serif" font-size="9" fill="#2196f3" text-anchor="middle" font-weight="600">KEY DECISION</text>
-  <text x="645" y="280" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Accountability, not confrontation.</text>
-
-  <!-- Phase 5 -->
-  <circle cx="80" cy="320" r="8" fill="#00c853"/>
-  <text x="100" y="316" font-family="monospace" font-size="9" fill="#00c853" font-weight="700">PHASE 4 — CIVIC INTELLIGENCE NETWORK (NOW)</text>
-  <text x="100" y="332" font-family="sans-serif" font-size="11" fill="#e8eaf0">Multi-commodity, multi-area platform. 8 commodities. 8 areas.</text>
-  <text x="100" y="346" font-family="sans-serif" font-size="10" fill="#8892a4">Odia language support. Full 6-screen prototype. Open source.</text>
-  <rect x="520" y="308" width="250" height="42" rx="6" fill="#181c24" stroke="#00c853" stroke-width="1"/>
-  <text x="645" y="324" font-family="sans-serif" font-size="9" fill="#00c853" text-anchor="middle" font-weight="600">STATUS</text>
-  <text x="645" y="340" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Interactive prototype complete.</text>
-</svg>
-</div>
-
----
-
-## System Architecture
-
-<!-- FULL ARCHITECTURE FLOW SVG -->
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
-  <rect width="800" height="520" fill="#0a0c0f" rx="12"/>
-  <text x="400" y="28" font-family="sans-serif" font-size="13" fill="#8892a4" text-anchor="middle" font-weight="600">SYSTEM ARCHITECTURE — END-TO-END DATA FLOW</text>
-
-  <!-- ===== INPUT LAYER ===== -->
-  <rect x="20" y="45" width="760" height="85" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <text x="40" y="62" font-family="monospace" font-size="9" fill="#ff4d1c" font-weight="700">INPUT LAYER</text>
-
-  <!-- Citizen -->
-  <rect x="40" y="72" width="130" height="48" rx="6" fill="#181c24" stroke="#ff4d1c" stroke-width="1"/>
-  <text x="105" y="90" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Citizen Report</text>
-  <text x="105" y="104" font-family="monospace" font-size="8" fill="#ff4d1c" text-anchor="middle">Anonymous Signal</text>
-  <!-- Journalist -->
-  <rect x="190" y="72" width="130" height="48" rx="6" fill="#181c24" stroke="#ffd740" stroke-width="1"/>
-  <text x="255" y="90" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Journalist</text>
-  <text x="255" y="104" font-family="monospace" font-size="8" fill="#ffd740" text-anchor="middle">Field Verification</text>
-  <!-- NGO -->
-  <rect x="340" y="72" width="130" height="48" rx="6" fill="#181c24" stroke="#00c853" stroke-width="1"/>
-  <text x="405" y="90" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">NGO Partner</text>
-  <text x="405" y="104" font-family="monospace" font-size="8" fill="#00c853" text-anchor="middle">Co-Signature</text>
-  <!-- Gov Data -->
-  <rect x="490" y="72" width="130" height="48" rx="6" fill="#181c24" stroke="#2196f3" stroke-width="1"/>
-  <text x="555" y="90" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Gov Price APIs</text>
-  <text x="555" y="104" font-family="monospace" font-size="8" fill="#2196f3" text-anchor="middle">IOCL / FCI / PDS</text>
-  <!-- Mandi -->
-  <rect x="640" y="72" width="120" height="48" rx="6" fill="#181c24" stroke="#8892a4" stroke-width="1"/>
-  <text x="700" y="90" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Market Feeds</text>
-  <text x="700" y="104" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">Mandi Prices</text>
-
-  <!-- Arrow down -->
-  <line x1="400" y1="130" x2="400" y2="155" stroke="#ff4d1c" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <defs><marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#ff4d1c"/></marker></defs>
-
-  <!-- ===== PROCESSING LAYER ===== -->
-  <rect x="20" y="155" width="760" height="120" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <text x="40" y="172" font-family="monospace" font-size="9" fill="#2196f3" font-weight="700">INTELLIGENCE LAYER</text>
-
-  <!-- Dedup Engine -->
-  <rect x="40" y="182" width="145" height="80" rx="6" fill="#181c24" stroke="#2196f3" stroke-width="1"/>
-  <text x="112" y="200" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Dedup Engine</text>
-  <text x="112" y="215" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Area + Commodity match</text>
-  <text x="112" y="228" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Merges into existing</text>
-  <text x="112" y="241" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">signals or creates new</text>
-  <text x="112" y="256" font-family="monospace" font-size="8" fill="#2196f3" text-anchor="middle">→ Strength +3 on merge</text>
-
-  <!-- Signal Strength -->
-  <rect x="205" y="182" width="145" height="80" rx="6" fill="#181c24" stroke="#ff8c42" stroke-width="1"/>
-  <text x="277" y="200" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Strength Scorer</text>
-  <text x="277" y="215" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Citizens: up to 35 pts</text>
-  <text x="277" y="228" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Journalists: up to 48 pts</text>
-  <text x="277" y="241" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">NGO: up to 15 pts</text>
-  <text x="277" y="256" font-family="monospace" font-size="8" fill="#ff8c42" text-anchor="middle">Threshold: 70/100 → Case</text>
-
-  <!-- AI Analysis -->
-  <rect x="370" y="182" width="145" height="80" rx="6" fill="#181c24" stroke="#ffd740" stroke-width="1"/>
-  <text x="442" y="200" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">AI Analysis</text>
-  <text x="442" y="215" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Pattern detection</text>
-  <text x="442" y="228" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Hoarding identification</text>
-  <text x="442" y="241" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Complaint letter drafting</text>
-  <text x="442" y="256" font-family="monospace" font-size="8" fill="#ffd740" text-anchor="middle">Confidence: 91%</text>
-
-  <!-- Rumor Buster -->
-  <rect x="535" y="182" width="110" height="80" rx="6" fill="#181c24" stroke="#ff1744" stroke-width="1"/>
-  <text x="590" y="200" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Rumor Filter</text>
-  <text x="590" y="218" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Cross-reference</text>
-  <text x="590" y="231" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">official sources</text>
-  <text x="590" y="256" font-family="monospace" font-size="8" fill="#ff1744" text-anchor="middle">TRUE / FALSE / PARTIAL</text>
-
-  <!-- Blockchain -->
-  <rect x="665" y="182" width="96" height="80" rx="6" fill="#181c24" stroke="#00c853" stroke-width="1"/>
-  <text x="713" y="200" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Blockchain</text>
-  <text x="713" y="218" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Every action</text>
-  <text x="713" y="231" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">chained &amp;</text>
-  <text x="713" y="244" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">immutable</text>
-  <text x="713" y="256" font-family="monospace" font-size="8" fill="#00c853" text-anchor="middle">a3f9c2d1...</text>
-
-  <!-- Arrow down -->
-  <line x1="400" y1="275" x2="400" y2="300" stroke="#ff4d1c" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- ===== OUTPUT LAYER ===== -->
-  <rect x="20" y="300" width="760" height="85" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <text x="40" y="317" font-family="monospace" font-size="9" fill="#00c853" font-weight="700">OUTPUT LAYER</text>
-
-  <!-- Case File -->
-  <rect x="40" y="327" width="130" height="48" rx="6" fill="#181c24" stroke="#ff4d1c" stroke-width="1"/>
-  <text x="105" y="345" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Case File</text>
-  <text x="105" y="359" font-family="monospace" font-size="8" fill="#ff4d1c" text-anchor="middle">ECA 1955 Complaint</text>
-  <!-- Authority Filing -->
-  <rect x="190" y="327" width="130" height="48" rx="6" fill="#181c24" stroke="#ff1744" stroke-width="1"/>
-  <text x="255" y="345" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Filed to Authority</text>
-  <text x="255" y="359" font-family="monospace" font-size="8" fill="#ff1744" text-anchor="middle">72-hr Response Timer</text>
-  <!-- Public Dashboard -->
-  <rect x="340" y="327" width="130" height="48" rx="6" fill="#181c24" stroke="#2196f3" stroke-width="1"/>
-  <text x="405" y="345" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Public Dashboard</text>
-  <text x="405" y="359" font-family="monospace" font-size="8" fill="#2196f3" text-anchor="middle">MFI + Signals + Heat</text>
-  <!-- Accountability -->
-  <rect x="490" y="327" width="130" height="48" rx="6" fill="#181c24" stroke="#00c853" stroke-width="1"/>
-  <text x="555" y="345" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Accountability Score</text>
-  <text x="555" y="359" font-family="monospace" font-size="8" fill="#00c853" text-anchor="middle">DC: 31% Response</text>
-  <!-- Weekly Digest -->
-  <rect x="640" y="327" width="120" height="48" rx="6" fill="#181c24" stroke="#ffd740" stroke-width="1"/>
-  <text x="700" y="345" font-family="sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="600">Weekly Digest</text>
-  <text x="700" y="359" font-family="monospace" font-size="8" fill="#ffd740" text-anchor="middle">Auto AI Summary</text>
-
-  <!-- ===== FEEDBACK LOOP ===== -->
-  <line x1="750" y1="375" x2="750" y2="420" stroke="#8892a4" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="750" y1="420" x2="50" y2="420" stroke="#8892a4" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="50" y1="420" x2="50" y2="500" stroke="#8892a4" stroke-width="1" stroke-dasharray="4,3"/>
-
-  <rect x="150" y="405" width="500" height="34" rx="6" fill="#181c24" stroke="#8892a4" stroke-width="1" stroke-dasharray="4,3"/>
-  <text x="400" y="418" font-family="monospace" font-size="9" fill="#8892a4" text-anchor="middle">FEEDBACK LOOP</text>
-  <text x="400" y="432" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">Authority response (or silence) feeds back into accountability scores, escalation triggers, and public records</text>
-
-  <!-- Legend -->
-  <rect x="20" y="450" width="760" height="55" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <text x="40" y="470" font-family="monospace" font-size="9" fill="#4a5568" font-weight="700">LEGEND</text>
-  <circle cx="140" cy="467" r="4" fill="#ff4d1c"/><text x="150" y="470" font-family="sans-serif" font-size="9" fill="#8892a4">Citizen Layer</text>
-  <circle cx="260" cy="467" r="4" fill="#ffd740"/><text x="270" y="470" font-family="sans-serif" font-size="9" fill="#8892a4">Journalist</text>
-  <circle cx="360" cy="467" r="4" fill="#00c853"/><text x="370" y="470" font-family="sans-serif" font-size="9" fill="#8892a4">NGO / Blockchain</text>
-  <circle cx="490" cy="467" r="4" fill="#2196f3"/><text x="500" y="470" font-family="sans-serif" font-size="9" fill="#8892a4">AI / Intelligence</text>
-  <circle cx="620" cy="467" r="4" fill="#ff1744"/><text x="630" y="470" font-family="sans-serif" font-size="9" fill="#8892a4">Critical / Authority</text>
-  <text x="400" y="496" font-family="monospace" font-size="8" fill="#4a5568" text-anchor="middle">Solid lines = data flow · Dashed lines = feedback loops · All actions logged to blockchain</text>
-</svg>
-</div>
-
----
-
-## Case Lifecycle Flow
-
-<!-- CASE LIFECYCLE SVG -->
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
-  <rect width="800" height="300" fill="#0a0c0f" rx="12"/>
-  <text x="400" y="24" font-family="sans-serif" font-size="12" fill="#8892a4" text-anchor="middle" font-weight="600">CASE LIFECYCLE — FROM ANONYMOUS SIGNAL TO GOVERNMENT ACTION</text>
-
-  <!-- Stage boxes with connecting arrows -->
-  <!-- Row 1 -->
-  <rect x="30" y="45" width="120" height="60" rx="8" fill="#181c24" stroke="#ff4d1c" stroke-width="2"/>
-  <text x="90" y="68" font-family="sans-serif" font-size="10" fill="#ff4d1c" text-anchor="middle" font-weight="700">SIGNAL</text>
-  <text x="90" y="82" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Citizen submits</text>
-  <text x="90" y="94" font-family="monospace" font-size="8" fill="#4a5568" text-anchor="middle">Strength: 1</text>
-
-  <line x1="150" y1="75" x2="180" y2="75" stroke="#ff8c42" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <rect x="180" y="45" width="120" height="60" rx="8" fill="#181c24" stroke="#ff8c42" stroke-width="2"/>
-  <text x="240" y="68" font-family="sans-serif" font-size="10" fill="#ff8c42" text-anchor="middle" font-weight="700">CONFIRMING</text>
-  <text x="240" y="82" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Citizens pile on</text>
-  <text x="240" y="94" font-family="monospace" font-size="8" fill="#4a5568" text-anchor="middle">Strength: 1→35</text>
-
-  <line x1="300" y1="75" x2="330" y2="75" stroke="#ffd740" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <rect x="330" y="45" width="120" height="60" rx="8" fill="#181c24" stroke="#ffd740" stroke-width="2"/>
-  <text x="390" y="68" font-family="sans-serif" font-size="10" fill="#ffd740" text-anchor="middle" font-weight="700">VERIFYING</text>
-  <text x="390" y="82" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Journalists investigate</text>
-  <text x="390" y="94" font-family="monospace" font-size="8" fill="#4a5568" text-anchor="middle">Strength: 35→83</text>
-
-  <line x1="450" y1="75" x2="480" y2="75" stroke="#2196f3" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <rect x="480" y="45" width="120" height="60" rx="8" fill="#181c24" stroke="#2196f3" stroke-width="2"/>
-  <text x="540" y="68" font-family="sans-serif" font-size="10" fill="#2196f3" text-anchor="middle" font-weight="700">CASE FILE</text>
-  <text x="540" y="82" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">AI drafts complaint</text>
-  <text x="540" y="94" font-family="monospace" font-size="8" fill="#4a5568" text-anchor="middle">Strength: 83→89</text>
-
-  <line x1="600" y1="75" x2="630" y2="75" stroke="#00c853" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <rect x="630" y="45" width="140" height="60" rx="8" fill="#181c24" stroke="#00c853" stroke-width="2"/>
-  <text x="700" y="68" font-family="sans-serif" font-size="10" fill="#00c853" text-anchor="middle" font-weight="700">FILED</text>
-  <text x="700" y="82" font-family="sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Sent to DC / CSO</text>
-  <text x="700" y="94" font-family="monospace" font-size="8" fill="#4a5568" text-anchor="middle">72-hr timer starts</text>
-
-  <!-- Row 2 — Outcomes -->
-  <text x="400" y="135" font-family="sans-serif" font-size="10" fill="#4a5568" text-anchor="middle">POSSIBLE OUTCOMES</text>
-
-  <!-- Outcome: Resolved -->
-  <line x1="200" y1="145" x2="200" y2="165" stroke="#00c853" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <rect x="100" y="165" width="200" height="55" rx="8" fill="rgba(0,200,83,0.06)" stroke="#00c853" stroke-width="1.5"/>
-  <text x="200" y="184" font-family="sans-serif" font-size="10" fill="#00c853" text-anchor="middle" font-weight="700">RESOLVED</text>
-  <text x="200" y="198" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Authority inspected, FIR filed</text>
-  <text x="200" y="211" font-family="monospace" font-size="8" fill="#00c853" text-anchor="middle">Response time logged permanently</text>
-
-  <!-- Outcome: Escalated -->
-  <line x1="500" y1="145" x2="500" y2="165" stroke="#ff1744" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <rect x="380" y="165" width="240" height="55" rx="8" fill="rgba(255,23,68,0.06)" stroke="#ff1744" stroke-width="1.5"/>
-  <text x="500" y="184" font-family="sans-serif" font-size="10" fill="#ff1744" text-anchor="middle" font-weight="700">ESCALATED (No Response)</text>
-  <text x="500" y="198" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Auto-escalated to State Commissioner</text>
-  <text x="500" y="211" font-family="monospace" font-size="8" fill="#ff1744" text-anchor="middle">Ignored count +1 on authority record</text>
-
-  <!-- Outcome: Counter -->
-  <line x1="720" y1="145" x2="720" y2="165" stroke="#ce93d8" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <rect x="650" y="165" width="130" height="55" rx="8" fill="rgba(156,39,176,0.06)" stroke="#ce93d8" stroke-width="1.5"/>
-  <text x="715" y="184" font-family="sans-serif" font-size="10" fill="#ce93d8" text-anchor="middle" font-weight="700">COUNTER</text>
-  <text x="715" y="198" font-family="sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Market price confirmed</text>
-  <text x="715" y="211" font-family="monospace" font-size="8" fill="#ce93d8" text-anchor="middle">Signal debunked</text>
-
-  <!-- Bottom: Key metrics -->
-  <rect x="30" y="240" width="740" height="48" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <text x="130" y="260" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle" font-weight="600">TIMELINE</text>
-  <text x="130" y="276" font-family="monospace" font-size="10" fill="#ff8c42" text-anchor="middle">~48 hrs signal→filed</text>
-  <line x1="240" y1="248" x2="240" y2="280" stroke="#1e2530" stroke-width="1"/>
-  <text x="350" y="260" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle" font-weight="600">THRESHOLD</text>
-  <text x="350" y="276" font-family="monospace" font-size="10" fill="#ffd740" text-anchor="middle">70/100 strength to file</text>
-  <line x1="460" y1="248" x2="460" y2="280" stroke="#1e2530" stroke-width="1"/>
-  <text x="570" y="260" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle" font-weight="600">RESPONSE WINDOW</text>
-  <text x="570" y="276" font-family="monospace" font-size="10" fill="#ff1744" text-anchor="middle">72 hrs or auto-escalate</text>
-  <line x1="680" y1="248" x2="680" y2="280" stroke="#1e2530" stroke-width="1"/>
-  <text x="730" y="260" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle" font-weight="600">AUDIT</text>
-  <text x="730" y="276" font-family="monospace" font-size="10" fill="#00c853" text-anchor="middle">100% on-chain</text>
-</svg>
-</div>
-
----
-
-## Trust & Verification Model
-
-<!-- TRUST MODEL SVG -->
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="280" viewBox="0 0 700 280">
-  <rect width="700" height="280" fill="#0a0c0f" rx="12"/>
-  <text x="350" y="24" font-family="sans-serif" font-size="12" fill="#8892a4" text-anchor="middle" font-weight="600">MULTI-LAYER TRUST ARCHITECTURE</text>
-
-  <!-- Layer 1: Citizens -->
-  <rect x="30" y="45" width="640" height="40" rx="6" fill="rgba(255,77,28,0.08)" stroke="rgba(255,77,28,0.3)" stroke-width="1"/>
-  <text x="50" y="69" font-family="sans-serif" font-size="11" fill="#ff4d1c" font-weight="700">LAYER 1: CITIZENS</text>
-  <text x="350" y="69" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">Anonymous reports · Volume-based credibility · Max weight: ×1.0</text>
-  <text x="640" y="69" font-family="monospace" font-size="10" fill="#ff4d1c" text-anchor="middle">up to 35 pts</text>
-
-  <!-- Layer 2: Journalists -->
-  <rect x="30" y="95" width="640" height="40" rx="6" fill="rgba(255,215,64,0.08)" stroke="rgba(255,215,64,0.3)" stroke-width="1"/>
-  <text x="50" y="119" font-family="sans-serif" font-size="11" fill="#ffd740" font-weight="700">LAYER 2: JOURNALISTS</text>
-  <text x="350" y="119" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">Verified identity · Accuracy-scored · Tiered: New → Active → Senior → Master</text>
-  <text x="640" y="119" font-family="monospace" font-size="10" fill="#ffd740" text-anchor="middle">up to 48 pts</text>
-
-  <!-- Layer 3: NGOs -->
-  <rect x="30" y="145" width="640" height="40" rx="6" fill="rgba(0,200,83,0.08)" stroke="rgba(0,200,83,0.3)" stroke-width="1"/>
-  <text x="50" y="169" font-family="sans-serif" font-size="11" fill="#00c853" font-weight="700">LAYER 3: NGO PARTNERS</text>
-  <text x="350" y="169" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">Organizational co-signatures · Household-level data · Community trust</text>
-  <text x="640" y="169" font-family="monospace" font-size="10" fill="#00c853" text-anchor="middle">up to 15 pts</text>
-
-  <!-- Layer 4: AI -->
-  <rect x="30" y="195" width="640" height="40" rx="6" fill="rgba(33,150,243,0.08)" stroke="rgba(33,150,243,0.3)" stroke-width="1"/>
-  <text x="50" y="219" font-family="sans-serif" font-size="11" fill="#2196f3" font-weight="700">LAYER 4: AI ENGINE</text>
-  <text x="350" y="219" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">Cross-reference patterns · Supply chain analysis · Confidence scoring</text>
-  <text x="640" y="219" font-family="monospace" font-size="10" fill="#2196f3" text-anchor="middle">0-100% conf.</text>
-
-  <!-- Total bar -->
-  <rect x="30" y="248" width="640" height="24" rx="4" fill="#181c24" stroke="#1e2530" stroke-width="1"/>
-  <rect x="30" y="248" width="228" height="24" rx="4" fill="rgba(255,77,28,0.4)"/>
-  <rect x="258" y="248" width="195" height="24" rx="0" fill="rgba(255,215,64,0.4)"/>
-  <rect x="453" y="248" width="97" height="24" rx="0" fill="rgba(0,200,83,0.4)"/>
-  <rect x="550" y="248" width="40" height="24" rx="0" fill="rgba(33,150,243,0.4)"/>
-  <text x="144" y="264" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">35 Citizens</text>
-  <text x="355" y="264" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">48 Journalists</text>
-  <text x="501" y="264" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">15 NGO</text>
-  <text x="570" y="264" font-family="monospace" font-size="8" fill="#fff" text-anchor="middle">AI</text>
-  <text x="640" y="264" font-family="monospace" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="700">= 100</text>
-</svg>
-</div>
-
----
-
-## Future Vision & Roadmap
-
-<!-- ROADMAP SVG -->
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
-  <rect width="800" height="560" fill="#0a0c0f" rx="12"/>
-  <text x="400" y="28" font-family="sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="800">ROADMAP — FROM PROTOTYPE TO NATIONAL PLATFORM</text>
-  <text x="400" y="46" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">Open source. Open for contributions. Every milestone is an invitation.</text>
-
-  <!-- Timeline center line -->
-  <line x1="100" y1="70" x2="100" y2="540" stroke="#1e2530" stroke-width="3"/>
-
-  <!-- Q2 2026 -->
-  <circle cx="100" cy="85" r="10" fill="#ff4d1c" stroke="#ff8c42" stroke-width="2"/>
-  <text x="100" y="89" font-family="sans-serif" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">Q2</text>
-  <rect x="130" y="65" width="640" height="75" rx="8" fill="#111318" stroke="#ff4d1c" stroke-width="1.5"/>
-  <text x="150" y="84" font-family="monospace" font-size="10" fill="#ff4d1c" font-weight="700">Q2 2026 — FOUNDATION</text>
-  <text x="690" y="84" font-family="monospace" font-size="9" fill="#ff4d1c" text-anchor="end">WE ARE HERE</text>
-  <text x="150" y="100" font-family="sans-serif" font-size="10" fill="#e8eaf0">Backend API (Node.js + PostgreSQL) · User auth with anonymous mode</text>
-  <text x="150" y="114" font-family="sans-serif" font-size="10" fill="#e8eaf0">Real government price API integration (IOCL, FCI, PDS, Mandi)</text>
-  <text x="150" y="128" font-family="sans-serif" font-size="10" fill="#8892a4">Odia SMS reporting via Twilio · WhatsApp bot for non-smartphone users</text>
-
-  <!-- Q3 2026 -->
-  <circle cx="100" cy="175" r="10" fill="#ffd740" stroke="#ffd740" stroke-width="2"/>
-  <text x="100" y="179" font-family="sans-serif" font-size="8" fill="#000" text-anchor="middle" font-weight="700">Q3</text>
-  <rect x="130" y="155" width="640" height="75" rx="8" fill="#111318" stroke="#ffd740" stroke-width="1.5"/>
-  <text x="150" y="174" font-family="monospace" font-size="10" fill="#ffd740" font-weight="700">Q3 2026 — INTELLIGENCE</text>
-  <text x="150" y="190" font-family="sans-serif" font-size="10" fill="#e8eaf0">AI engine: GPT-powered pattern detection + auto complaint drafting</text>
-  <text x="150" y="204" font-family="sans-serif" font-size="10" fill="#e8eaf0">Real blockchain audit trail (Polygon/Solana for low gas fees)</text>
-  <text x="150" y="218" font-family="sans-serif" font-size="10" fill="#8892a4">Journalist mobile app (React Native) · Offline-first verification</text>
-
-  <!-- Q4 2026 -->
-  <circle cx="100" cy="265" r="10" fill="#2196f3" stroke="#2196f3" stroke-width="2"/>
-  <text x="100" y="269" font-family="sans-serif" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">Q4</text>
-  <rect x="130" y="245" width="640" height="75" rx="8" fill="#111318" stroke="#2196f3" stroke-width="1.5"/>
-  <text x="150" y="264" font-family="monospace" font-size="10" fill="#2196f3" font-weight="700">Q4 2026 — SCALE TO ODISHA</text>
-  <text x="150" y="280" font-family="sans-serif" font-size="10" fill="#e8eaf0">Expand to all 30 districts of Odisha · District-level dashboards</text>
-  <text x="150" y="294" font-family="sans-serif" font-size="10" fill="#e8eaf0">Government API integration: direct filing to CM Grievance Portal</text>
-  <text x="150" y="308" font-family="sans-serif" font-size="10" fill="#8892a4">Partnership with Odisha Press Club · Onboard 50+ journalist verifiers</text>
-
-  <!-- 2027 H1 -->
-  <circle cx="100" cy="355" r="10" fill="#00c853" stroke="#00c853" stroke-width="2"/>
-  <text x="100" y="359" font-family="sans-serif" font-size="8" fill="#000" text-anchor="middle" font-weight="700">H1</text>
-  <rect x="130" y="335" width="640" height="75" rx="8" fill="#111318" stroke="#00c853" stroke-width="1.5"/>
-  <text x="150" y="354" font-family="monospace" font-size="10" fill="#00c853" font-weight="700">H1 2027 — NATIONAL EXPANSION</text>
-  <text x="150" y="370" font-family="sans-serif" font-size="10" fill="#e8eaf0">Multi-state deployment: Bihar, Jharkhand, Chhattisgarh, MP</text>
-  <text x="150" y="384" font-family="sans-serif" font-size="10" fill="#e8eaf0">Hindi + 8 regional language support · Voice-based reporting</text>
-  <text x="150" y="398" font-family="sans-serif" font-size="10" fill="#8892a4">Open data API for researchers · Academic partnership program</text>
-
-  <!-- 2027 H2 -->
-  <circle cx="100" cy="445" r="10" fill="#ce93d8" stroke="#ce93d8" stroke-width="2"/>
-  <text x="100" y="449" font-family="sans-serif" font-size="8" fill="#000" text-anchor="middle" font-weight="700">H2</text>
-  <rect x="130" y="425" width="640" height="75" rx="8" fill="#111318" stroke="#ce93d8" stroke-width="1.5"/>
-  <text x="150" y="444" font-family="monospace" font-size="10" fill="#ce93d8" font-weight="700">H2 2027 — PLATFORM VISION</text>
-  <text x="150" y="460" font-family="sans-serif" font-size="10" fill="#e8eaf0">Beyond price gouging: water supply, electricity, ration distribution</text>
-  <text x="150" y="474" font-family="sans-serif" font-size="10" fill="#e8eaf0">Civic Intelligence SDK — let any district deploy their own instance</text>
-  <text x="150" y="488" font-family="sans-serif" font-size="10" fill="#8892a4">International pilot: adapt model for Sub-Saharan Africa, SE Asia</text>
-
-  <!-- Bottom vision -->
-  <rect x="130" y="515" width="640" height="30" rx="6" fill="rgba(255,77,28,0.1)" stroke="#ff4d1c" stroke-width="1"/>
-  <text x="450" y="534" font-family="sans-serif" font-size="11" fill="#ff4d1c" text-anchor="middle" font-weight="700">LONG-TERM: Every citizen is a sensor. Every market is transparent. Every authority is accountable.</text>
-</svg>
-</div>
-
----
-
-## How to Contribute
-
-We need contributors across **every skill level** to make this real. Here's what's open:
-
-### Immediate Needs (Good First Issues)
-
-| Area | Task | Skills Needed |
-|:---|:---|:---|
-| **Backend** | Build REST API for signals, cases, users | Node.js / Python / Go |
-| **Database** | Design schema for signals, verifications, cases | PostgreSQL / MongoDB |
-| **Auth** | Anonymous reporting + journalist identity verification | OAuth / JWT |
-| **AI** | Price anomaly detection model | Python / ML / NLP |
-| **AI** | Auto-draft complaint letters from evidence | LLM integration |
-| **Blockchain** | Implement audit trail on Polygon/Solana | Solidity / Rust |
-| **Mobile** | Journalist verification app | React Native / Flutter |
-| **SMS/WhatsApp** | Reporting for non-smartphone users | Twilio / WhatsApp API |
-| **i18n** | Odia, Hindi, and regional language support | Translation |
-| **Design** | UX research with Balangir citizens | UX / User Research |
-| **Data** | Scrape government price APIs (IOCL, FCI, PDS) | Python / Scraping |
-| **DevOps** | CI/CD, hosting, monitoring | Docker / AWS / Vercel |
-| **Legal** | ECA 1955 compliance review | Indian consumer law |
-| **Testing** | End-to-end test suite | Playwright / Cypress |
-
-### Contributing Guidelines
-
-```bash
-# 1. Fork the repository
-# 2. Create your feature branch
-git checkout -b feature/your-feature-name
-
-# 3. Make your changes
-# 4. Commit with a clear message
-git commit -m "feat: Add signal deduplication API endpoint"
-
-# 5. Push and create a Pull Request
-git push origin feature/your-feature-name
-```
-
-**Principles:**
-- **Citizen safety first** — never compromise anonymity
-- **Evidence over opinion** — every claim needs verification
-- **Transparency** — all platform actions are public and auditable
-- **Accessibility** — must work on ₹5,000 Android phones over 2G networks
-- **Odia-first** — primary interface language for Balangir deployment
-
----
-
-## Why This Matters
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="750" height="160" viewBox="0 0 750 160">
-  <rect width="750" height="160" fill="#0a0c0f" rx="12"/>
-
-  <rect x="20" y="20" width="170" height="120" rx="8" fill="#111318" stroke="#ff1744" stroke-width="1"/>
-  <text x="105" y="48" font-family="sans-serif" font-size="34" fill="#ff1744" text-anchor="middle" font-weight="800">166%</text>
-  <text x="105" y="68" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">Above MRP</text>
-  <text x="105" y="90" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">LPG black market markup</text>
-  <text x="105" y="104" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">in Balangir right now</text>
-  <text x="105" y="128" font-family="monospace" font-size="9" fill="#ff1744" text-anchor="middle">₹939 → ₹2,500</text>
-
-  <rect x="205" y="20" width="170" height="120" rx="8" fill="#111318" stroke="#ff8c42" stroke-width="1"/>
-  <text x="290" y="48" font-family="sans-serif" font-size="34" fill="#ff8c42" text-anchor="middle" font-weight="800">31%</text>
-  <text x="290" y="68" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">Response Rate</text>
-  <text x="290" y="90" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">District Collector Balangir</text>
-  <text x="290" y="104" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">responds to only 14 of 47</text>
-  <text x="290" y="128" font-family="monospace" font-size="9" fill="#ff8c42" text-anchor="middle">33 cases ignored</text>
-
-  <rect x="390" y="20" width="170" height="120" rx="8" fill="#111318" stroke="#ffd740" stroke-width="1"/>
-  <text x="475" y="48" font-family="sans-serif" font-size="34" fill="#ffd740" text-anchor="middle" font-weight="800">0</text>
-  <text x="475" y="68" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">Platforms</text>
-  <text x="475" y="90" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">exist for citizens to</text>
-  <text x="475" y="104" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">verify prices, report, and</text>
-  <text x="475" y="118" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">track government response</text>
-  <text x="475" y="132" font-family="monospace" font-size="9" fill="#ffd740" text-anchor="middle">until now</text>
-
-  <rect x="575" y="20" width="155" height="120" rx="8" fill="#111318" stroke="#00c853" stroke-width="1"/>
-  <text x="652" y="48" font-family="sans-serif" font-size="30" fill="#00c853" text-anchor="middle" font-weight="800">1.4B</text>
-  <text x="652" y="68" font-family="sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">Citizens</text>
-  <text x="652" y="90" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">in India deserve market</text>
-  <text x="652" y="104" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">transparency and</text>
-  <text x="652" y="118" font-family="sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">government accountability</text>
-  <text x="652" y="132" font-family="monospace" font-size="9" fill="#00c853" text-anchor="middle">this is for them</text>
-</svg>
-</div>
-
-> **This is not a tech project. This is a civic infrastructure project.**
-> The code is the easy part. The hard part is getting Balangir's citizens to trust it, journalists to use it, and the District Collector to respond to it. That's why we're open source — because this only works if it belongs to the community.
-
----
-
 ## Author
-
-<table>
-<tr>
-<td>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
-  <circle cx="30" cy="30" r="28" fill="#181c24" stroke="#ff4d1c" stroke-width="2"/>
-  <text x="30" y="36" font-family="sans-serif" font-size="18" fill="#ff4d1c" text-anchor="middle" font-weight="800">AB</text>
-</svg>
-
-</td>
-<td>
 
 **Aswini Behera**
 Balangir, Odisha, India
 [aswinibehera666@gmail.com](mailto:aswinibehera666@gmail.com)
-[github.com/Ab-aswini](https://github.com/Ab-aswini)
+[GitHub: @Ab-aswini](https://github.com/Ab-aswini)
 
-</td>
-</tr>
-</table>
+---
+
+## License
+
+MIT License — Copyright 2026 Aswini Behera
+
+See [LICENSE](./LICENSE) for details.
 
 ---
 
 <div align="center">
 
-<sub>
+<sub>Built for Balangir, Odisha. Designed for the world. Open source forever.</sub>
 
-**MIT License** | Copyright 2026 Aswini Behera
-
-Built for the citizens of Balangir, Odisha
-
-*Because paying ₹2,500 for a ₹939 LPG cylinder is not a market — it's a crime.*
-
-</sub>
-
-<!-- FOOTER SVG -->
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="30" viewBox="0 0 400 30">
-  <rect width="400" height="30" fill="#0a0c0f" rx="6"/>
-  <rect x="0" y="26" width="400" height="4" rx="2" fill="#ff4d1c" fill-opacity="0.5"/>
-  <text x="200" y="18" font-family="monospace" font-size="10" fill="#4a5568" text-anchor="middle">PROTOTYPE — MOCK DATA — OPEN SOURCE</text>
-</svg>
+<sub>Because citizens in Balangir are paying ₹2,500 for a ₹939 LPG cylinder right now.</sub>
 
 </div>
