@@ -398,11 +398,14 @@ MINUTE 5  ─  Case Board
 ```
 civic-intelligence-network/
 ├── index.html          # Complete single-file application (all 6 screens)
+├── architecture.html   # Interactive architecture & data flow diagrams
 ├── README.md           # This file
 ├── LICENSE             # MIT License
 └── .claude/
     └── launch.json     # Dev server configuration
 ```
+
+**[View Interactive Architecture Diagram →](https://ab-aswini.github.io/civic-intelligence-network/architecture.html)**
 
 ---
 

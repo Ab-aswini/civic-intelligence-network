@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CivicWatch — System Architecture</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: #0a0c0f;
+  color: #e8eaf0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+.page-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: #8892a4;
+  margin-bottom: 32px;
+  padding-left: 20px;
+}
+.page-title span { color: #ff4d1c; }
+
+/* MAIN CONTAINER */
+.arch-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(17,19,24,0.9), rgba(10,12,15,0.95));
+  border: 1px solid #1e2530;
+  border-radius: 20px;
+  padding: 40px 36px;
+  position: relative;
+  overflow: hidden;
+}
+.arch-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,77,28,0.3), rgba(33,150,243,0.1), rgba(0,200,83,0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* SECTION TITLE */
+.arch-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.arch-subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: #4a5568;
+  margin-bottom: 36px;
+  font-family: 'Space Mono', monospace;
+}
+
+/* TOP NODE */
+.top-node {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.node-citizen {
+  background: linear-gradient(135deg, #00c853, #00a844);
+  border-radius: 50px;
+  padding: 14px 36px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 30px rgba(0,200,83,0.25);
+}
+.node-citizen .icon {
+  width: 28px; height: 28px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+
+/* ARROWS */
+.arrow-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 0;
+}
+.arrow-line {
+  width: 2px;
+  height: 28px;
+  background: linear-gradient(to bottom, #4a5568, #2a3040);
+}
+.arrow-head {
+  width: 0; height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #4a5568;
+}
+.arrow-label {
+  font-size: 12px;
+  color: #4a5568;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* TIER BOXES */
+.tier-box {
+  border: 1px dashed #2a3040;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 8px;
+  position: relative;
+}
+.tier-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: #4a5568;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* ROLE CARDS (Tier 1) */
+.tier1-grid {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.role-card {
+  border-radius: 10px;
+  padding: 10px 18px;
+  text-align: center;
+  min-width: 150px;
+  position: relative;
+}
+.role-card .role-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 4px;
+}
+.role-card .role-id {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* TIER 1 colors */
+.role-signal   { background: linear-gradient(135deg, #ff4d1c, #e8431a); color: #fff; box-shadow: 0 4px 20px rgba(255,77,28,0.3); }
+.role-verify   { background: linear-gradient(135deg, #ffd740, #f5c400); color: #000; box-shadow: 0 4px 20px rgba(255,215,64,0.3); }
+.role-ai       { background: linear-gradient(135deg, #2196f3, #1976d2); color: #fff; box-shadow: 0 4px 20px rgba(33,150,243,0.3); }
+.role-admin    { background: linear-gradient(135deg, #7c4dff, #651fff); color: #fff; box-shadow: 0 4px 20px rgba(124,77,255,0.3); }
+.role-case     { background: linear-gradient(135deg, #00c853, #00a844); color: #fff; box-shadow: 0 4px 20px rgba(0,200,83,0.3); }
+
+/* TIER 2 Department pills */
+.dept-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.dept-pill {
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  min-width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.dept-pill .dept-icon { font-size: 14px; }
+.dept-pill .dept-name { font-size: 12px; font-weight: 700; }
+.dept-pill .dept-sub { font-size: 10px; opacity: 0.8; }
+
+.dept-dedup     { background: rgba(255,77,28,0.15); color: #ff8c42; border: 1px solid rgba(255,77,28,0.3); }
+.dept-strength  { background: rgba(255,140,66,0.15); color: #ff8c42; border: 1px solid rgba(255,140,66,0.3); }
+.dept-rumor     { background: rgba(255,23,68,0.15); color: #ff1744; border: 1px solid rgba(255,23,68,0.3); }
+.dept-price     { background: rgba(33,150,243,0.15); color: #2196f3; border: 1px solid rgba(33,150,243,0.3); }
+.dept-draft     { background: rgba(124,77,255,0.15); color: #b388ff; border: 1px solid rgba(124,77,255,0.3); }
+.dept-chain     { background: rgba(0,200,83,0.15); color: #00c853; border: 1px solid rgba(0,200,83,0.3); }
+.dept-notify    { background: rgba(255,215,64,0.15); color: #ffd740; border: 1px solid rgba(255,215,64,0.3); }
+.dept-analytics { background: rgba(0,188,212,0.15); color: #00bcd4; border: 1px solid rgba(0,188,212,0.3); }
+.dept-i18n      { background: rgba(206,147,216,0.15); color: #ce93d8; border: 1px solid rgba(206,147,216,0.3); }
+
+/* FLOW STRIP */
+.flow-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(17,19,24,0.6);
+  border-radius: 10px;
+  border: 1px solid #1e2530;
+  flex-wrap: wrap;
+}
+.flow-step {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.flow-arrow { color: #4a5568; font-size: 12px; }
+.flow-citizen  { background: rgba(0,200,83,0.15); color: #00c853; }
+.flow-signal   { background: rgba(255,77,28,0.15); color: #ff4d1c; }
+.flow-verify   { background: rgba(255,215,64,0.15); color: #ffd740; }
+.flow-ai       { background: rgba(33,150,243,0.15); color: #2196f3; }
+.flow-admin    { background: rgba(124,77,255,0.15); color: #b388ff; }
+.flow-file     { background: rgba(255,23,68,0.15); color: #ff1744; }
+.flow-track    { background: rgba(0,200,83,0.15); color: #00c853; }
+
+.flow-tagline {
+  font-size: 11px;
+  color: #4a5568;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* TIER 3 — DATA + EXTERNAL */
+.tier3-flex {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tier3-box {
+  border-radius: 12px;
+  padding: 16px 24px;
+  text-align: center;
+  flex: 1;
+  max-width: 400px;
+  min-width: 280px;
+}
+.tier3-state {
+  background: rgba(33,150,243,0.06);
+  border: 1px dashed rgba(33,150,243,0.3);
+}
+.tier3-external {
+  background: rgba(255,215,64,0.06);
+  border: 1px dashed rgba(255,215,64,0.3);
+}
+.tier3-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+.tier3-pill {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.pill-state { background: rgba(33,150,243,0.2); color: #2196f3; border: 1px solid rgba(33,150,243,0.3); }
+.pill-external { background: rgba(255,215,64,0.2); color: #ffd740; border: 1px solid rgba(255,215,64,0.3); }
+
+/* SYNC LABELS */
+.sync-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 4px 40px;
+}
+.sync-label {
+  font-size: 11px;
+  color: #4a5568;
+  font-style: italic;
+  position: relative;
+}
+.sync-label::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background: #2a3040;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* OUTPUT TIER */
+.output-grid {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.output-card {
+  background: #111318;
+  border: 1px solid #1e2530;
+  border-radius: 10px;
+  padding: 14px 18px;
+  text-align: center;
+  min-width: 140px;
+  flex: 1;
+  max-width: 180px;
+}
+.output-card .out-icon { font-size: 24px; margin-bottom: 6px; }
+.output-card .out-title { font-size: 12px; font-weight: 700; margin-bottom: 2px; }
+.output-card .out-sub { font-size: 10px; color: #4a5568; font-family: 'Space Mono', monospace; }
+
+/* BOTTOM STATS */
+.stats-bar {
+  margin-top: 28px;
+  border: 1px solid #1e2530;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(17,19,24,0.8);
+}
+.stats-headline {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+.stats-pills {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.stat-pill {
+  border-radius: 50px;
+  padding: 8px 22px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+.sp-green  { background: rgba(0,200,83,0.15); color: #00c853; border: 1px solid rgba(0,200,83,0.3); }
+.sp-blue   { background: rgba(33,150,243,0.15); color: #2196f3; border: 1px solid rgba(33,150,243,0.3); }
+.sp-orange { background: rgba(255,140,66,0.15); color: #ff8c42; border: 1px solid rgba(255,140,66,0.3); }
+.sp-gold   { background: rgba(255,215,64,0.12); color: #ffd740; border: 1px solid rgba(255,215,64,0.3); }
+.sp-red    { background: rgba(255,23,68,0.15); color: #ff1744; border: 1px solid rgba(255,23,68,0.3); }
+.sp-purple { background: rgba(124,77,255,0.15); color: #b388ff; border: 1px solid rgba(124,77,255,0.3); }
+
+/* FEEDBACK LOOP */
+.feedback-loop {
+  margin-top: 20px;
+  border: 1px dashed #2a3040;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  position: relative;
+}
+.feedback-loop::before {
+  content: '↺';
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #4a5568;
+}
+.fl-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #4a5568;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.fl-text {
+  font-size: 12px;
+  color: #8892a4;
+}
+
+/* RESPONSIVE */
+@media(max-width:700px) {
+  .arch-container { padding: 24px 16px; }
+  .tier1-grid { gap: 8px; }
+  .role-card { min-width: 120px; padding: 8px 12px; }
+  .dept-pill { min-width: 90px; }
+  .output-card { min-width: 100px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-title">Civic<span>Watch</span> — System Architecture</div>
+
+<div class="arch-container">
+
+  <!-- TITLE -->
+  <div class="arch-title">CIVICWATCH GOVERNANCE MODEL</div>
+  <div class="arch-subtitle">Citizens sense &middot; Journalists verify &middot; AI analyzes &middot; Governments act</div>
+
+  <!-- ===== TOP: CITIZEN ===== -->
+  <div class="top-node">
+    <div class="node-citizen">
+      <div class="icon">👤</div>
+      CITIZEN (Anonymous)
+    </div>
+  </div>
+
+  <div class="arrow-down">
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+    <div class="arrow-label">submits anonymous signal</div>
+  </div>
+
+  <!-- ===== TIER 1: CORE PIPELINE ===== -->
+  <div class="tier-box">
+    <div class="tier-label">TIER 1 — CORE PIPELINE</div>
+    <div class="tier1-grid">
+      <div class="role-card role-signal">
+        <div class="role-title">Signal Engine</div>
+        <div class="role-id">📡 SE-001</div>
+      </div>
+      <div class="role-card role-verify">
+        <div class="role-title">Verification Hub</div>
+        <div class="role-id">📰 VH-001</div>
+      </div>
+      <div class="role-card role-ai">
+        <div class="role-title">AI Analyst</div>
+        <div class="role-id">🤖 AI-001</div>
+      </div>
+      <div class="role-card role-admin">
+        <div class="role-title">Admin Gateway</div>
+        <div class="role-id">🔒 AG-001</div>
+      </div>
+      <div class="role-card role-case">
+        <div class="role-title">Case Manager</div>
+        <div class="role-id">📋 CM-001</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow-down">
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+    <div class="arrow-label">delegates to specialized modules</div>
+  </div>
+
+  <!-- ===== TIER 2: SPECIALIZED MODULES ===== -->
+  <div class="tier-box">
+    <div class="tier-label">TIER 2 — 9 SPECIALIZED MODULES</div>
+    <div class="dept-grid">
+      <div class="dept-pill dept-dedup">
+        <span class="dept-icon">🔍</span>
+        <span class="dept-name">Dedup</span>
+        <span class="dept-sub">Signal merging</span>
+      </div>
+      <div class="dept-pill dept-strength">
+        <span class="dept-icon">💪</span>
+        <span class="dept-name">Strength</span>
+        <span class="dept-sub">0-100 scorer</span>
+      </div>
+      <div class="dept-pill dept-rumor">
+        <span class="dept-icon">🛡</span>
+        <span class="dept-name">Rumor Filter</span>
+        <span class="dept-sub">Fact checker</span>
+      </div>
+      <div class="dept-pill dept-price">
+        <span class="dept-icon">💰</span>
+        <span class="dept-name">Price Oracle</span>
+        <span class="dept-sub">Gov API sync</span>
+      </div>
+      <div class="dept-pill dept-draft">
+        <span class="dept-icon">📝</span>
+        <span class="dept-name">Complaint AI</span>
+        <span class="dept-sub">ECA drafting</span>
+      </div>
+      <div class="dept-pill dept-chain">
+        <span class="dept-icon">🔗</span>
+        <span class="dept-name">Blockchain</span>
+        <span class="dept-sub">Audit logger</span>
+      </div>
+      <div class="dept-pill dept-notify">
+        <span class="dept-icon">🔔</span>
+        <span class="dept-name">Notify</span>
+        <span class="dept-sub">SMS + Email</span>
+      </div>
+      <div class="dept-pill dept-analytics">
+        <span class="dept-icon">📊</span>
+        <span class="dept-name">Analytics</span>
+        <span class="dept-sub">MFI engine</span>
+      </div>
+      <div class="dept-pill dept-i18n">
+        <span class="dept-icon">🌐</span>
+        <span class="dept-name">i18n</span>
+        <span class="dept-sub">EN + ଓଡ଼ିଆ</span>
+      </div>
+    </div>
+
+    <!-- FLOW STRIP -->
+    <div class="flow-strip">
+      <span class="flow-step flow-citizen">👤 Citizen</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step flow-signal">📡 Signal</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step flow-signal" style="background:rgba(255,140,66,0.15);color:#ff8c42">🔍 Dedup</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step flow-verify">📰 Verify</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step flow-ai">🤖 AI Score</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step flow-admin">🔒 Admin</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step flow-file">📧 File</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step flow-track">🏛 Authority</span>
+    </div>
+    <div class="flow-tagline">Every signal flows: Citizen → Dedup → Score → Verify → AI Analyze → Admin Review → File → Track Response</div>
+  </div>
+
+  <!-- SYNC LABELS -->
+  <div class="sync-row">
+    <div class="sync-label" style="color:#2196f3">state sync ↑</div>
+    <div class="sync-label" style="color:#ffd740">price data ↑</div>
+    <div class="sync-label" style="color:#00c853">chain writes ↑</div>
+  </div>
+
+  <!-- ===== TIER 3: DATA + EXTERNAL ===== -->
+  <div class="tier3-flex">
+    <div class="tier3-box tier3-state">
+      <div class="tier3-title">TIER 3 — STATE MANAGEMENT</div>
+      <div class="tier3-pill pill-state">🧠 Signal DB + Case State + User Sessions + Countdown Timers</div>
+    </div>
+    <div class="tier3-box tier3-external">
+      <div class="tier3-title">EXTERNAL INTEGRATIONS</div>
+      <div class="tier3-pill pill-external">🌐 IOCL + FCI + PDS + Mandi APIs + CM Grievance Portal</div>
+    </div>
+  </div>
+
+  <div class="arrow-down" style="margin-top:8px;">
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+    <div class="arrow-label">produces outputs</div>
+  </div>
+
+  <!-- ===== OUTPUT LAYER ===== -->
+  <div class="tier-box" style="border-color: rgba(0,200,83,0.3);">
+    <div class="tier-label" style="color:#00c853;">OUTPUT — PUBLIC ACCOUNTABILITY LAYER</div>
+    <div class="output-grid">
+      <div class="output-card">
+        <div class="out-icon">📋</div>
+        <div class="out-title" style="color:#ff4d1c">Case Files</div>
+        <div class="out-sub">ECA 1955 complaints</div>
+      </div>
+      <div class="output-card">
+        <div class="out-icon">📧</div>
+        <div class="out-title" style="color:#ff1744">Authority Filing</div>
+        <div class="out-sub">DC + CSO + State</div>
+      </div>
+      <div class="output-card">
+        <div class="out-icon">📊</div>
+        <div class="out-title" style="color:#2196f3">Public Dashboard</div>
+        <div class="out-sub">MFI + Heat Map</div>
+      </div>
+      <div class="output-card">
+        <div class="out-icon">🏛</div>
+        <div class="out-title" style="color:#ffd740">Accountability</div>
+        <div class="out-sub">DC: 31% response</div>
+      </div>
+      <div class="output-card">
+        <div class="out-icon">📰</div>
+        <div class="out-title" style="color:#00c853">Weekly Digest</div>
+        <div class="out-sub">AI-generated report</div>
+      </div>
+      <div class="output-card">
+        <div class="out-icon">🔗</div>
+        <div class="out-title" style="color:#b388ff">Audit Trail</div>
+        <div class="out-sub">Blockchain proof</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEEDBACK LOOP -->
+  <div class="feedback-loop">
+    <div class="fl-title">FEEDBACK LOOP</div>
+    <div class="fl-text">Authority response (or <strong style="color:#ff1744">silence</strong>) feeds back → accountability score updated → auto-escalation triggered → public record permanent</div>
+  </div>
+
+  <!-- ===== BOTTOM STATS ===== -->
+  <div class="stats-bar">
+    <div class="stats-headline">5 Core Engines &middot; 9 Modules &middot; 3 Tiers &middot; 8 Commodities &middot; 8 Areas &middot; 2 Languages</div>
+    <div class="stats-pills">
+      <span class="stat-pill sp-green">Zero Backend (Prototype)</span>
+      <span class="stat-pill sp-blue">Blockchain Audit</span>
+      <span class="stat-pill sp-orange">AI Complaint Drafting</span>
+      <span class="stat-pill sp-gold">72-hr Auto-Escalation</span>
+      <span class="stat-pill sp-red">ECA 1955 Compliance</span>
+      <span class="stat-pill sp-purple">100% Anonymous</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- SECOND DIAGRAM: DATA FLOW -->
+<div style="height:40px"></div>
+
+<div class="page-title">Data Flow — <span>Signal Lifecycle</span></div>
+
+<div class="arch-container">
+
+  <div class="arch-title" style="font-size:20px;">SIGNAL-TO-ACTION DATA FLOW</div>
+  <div class="arch-subtitle">How a ₹2,500 LPG report becomes a formal government complaint in 48 hours</div>
+
+  <!-- PHASE TIMELINE -->
+  <div style="display:flex;flex-direction:column;gap:0;">
+
+    <!-- Phase 1 -->
+    <div style="display:flex;gap:20px;align-items:flex-start;">
+      <div style="display:flex;flex-direction:column;align-items:center;min-width:60px;">
+        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff4d1c,#e8431a);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;font-family:'Syne',sans-serif;">1</div>
+        <div style="width:2px;height:60px;background:linear-gradient(to bottom,#ff4d1c,#ff8c42);"></div>
+      </div>
+      <div style="flex:1;padding-bottom:16px;">
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:#ff4d1c;margin-bottom:4px;">SIGNAL CREATION</div>
+        <div style="font-size:13px;color:#e8eaf0;margin-bottom:6px;">Citizen opens CivicWatch. Selects <strong>LPG + Gandhi Chowk</strong>. Enters ₹2,500. Hits submit.</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;background:rgba(255,77,28,0.15);color:#ff8c42;padding:3px 10px;border-radius:4px;">Anonymous</span>
+          <span style="font-size:11px;background:rgba(255,77,28,0.15);color:#ff8c42;padding:3px 10px;border-radius:4px;">30 seconds</span>
+          <span style="font-size:11px;background:rgba(255,77,28,0.15);color:#ff8c42;padding:3px 10px;border-radius:4px;">Strength: 1/100</span>
+          <span style="font-size:11px;background:rgba(0,200,83,0.15);color:#00c853;padding:3px 10px;border-radius:4px;font-family:'Space Mono',monospace;">→ Blockchain entry #1</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div style="display:flex;gap:20px;align-items:flex-start;">
+      <div style="display:flex;flex-direction:column;align-items:center;min-width:60px;">
+        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff8c42,#ff6d00);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;font-family:'Syne',sans-serif;">2</div>
+        <div style="width:2px;height:60px;background:linear-gradient(to bottom,#ff8c42,#ffd740);"></div>
+      </div>
+      <div style="flex:1;padding-bottom:16px;">
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:#ff8c42;margin-bottom:4px;">DEDUP + CROWD CONFIRMATION</div>
+        <div style="font-size:13px;color:#e8eaf0;margin-bottom:6px;">Dedup engine matches area+commodity. 47 more citizens confirm over 8 hours. Each adds +0.7 strength.</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;background:rgba(255,140,66,0.15);color:#ff8c42;padding:3px 10px;border-radius:4px;">47 confirmations</span>
+          <span style="font-size:11px;background:rgba(255,140,66,0.15);color:#ff8c42;padding:3px 10px;border-radius:4px;">Strength: 1→35</span>
+          <span style="font-size:11px;background:rgba(0,200,83,0.15);color:#00c853;padding:3px 10px;border-radius:4px;font-family:'Space Mono',monospace;">→ Blockchain entry #2</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 3 -->
+    <div style="display:flex;gap:20px;align-items:flex-start;">
+      <div style="display:flex;flex-direction:column;align-items:center;min-width:60px;">
+        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ffd740,#f5c400);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#000;font-family:'Syne',sans-serif;">3</div>
+        <div style="width:2px;height:60px;background:linear-gradient(to bottom,#ffd740,#2196f3);"></div>
+      </div>
+      <div style="flex:1;padding-bottom:16px;">
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:#ffd740;margin-bottom:4px;">JOURNALIST VERIFICATION</div>
+        <div style="font-size:13px;color:#e8eaf0;margin-bottom:6px;">Ramesh Panda (Master Verifier, 94% accuracy) claims signal. Visits 3 dealers. All at ₹2,200-₹2,500. Sunita Kar (OTV) independently confirms. PRADAN NGO co-signs.</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;background:rgba(255,215,64,0.15);color:#ffd740;padding:3px 10px;border-radius:4px;">2 journalists + 1 NGO</span>
+          <span style="font-size:11px;background:rgba(255,215,64,0.15);color:#ffd740;padding:3px 10px;border-radius:4px;">Strength: 35→83</span>
+          <span style="font-size:11px;background:rgba(255,215,64,0.15);color:#ffd740;padding:3px 10px;border-radius:4px;">×1.6 trust weight</span>
+          <span style="font-size:11px;background:rgba(0,200,83,0.15);color:#00c853;padding:3px 10px;border-radius:4px;font-family:'Space Mono',monospace;">→ Entries #3 #4 #5</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 4 -->
+    <div style="display:flex;gap:20px;align-items:flex-start;">
+      <div style="display:flex;flex-direction:column;align-items:center;min-width:60px;">
+        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#2196f3,#1976d2);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;font-family:'Syne',sans-serif;">4</div>
+        <div style="width:2px;height:60px;background:linear-gradient(to bottom,#2196f3,#7c4dff);"></div>
+      </div>
+      <div style="flex:1;padding-bottom:16px;">
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:#2196f3;margin-bottom:4px;">AI ANALYSIS + COMPLAINT DRAFTING</div>
+        <div style="font-size:13px;color:#e8eaf0;margin-bottom:6px;">AI engine detects coordinated hoarding pattern. Confidence: 91%. Auto-drafts formal complaint under Essential Commodities Act 1955, Section 7.</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;background:rgba(33,150,243,0.15);color:#2196f3;padding:3px 10px;border-radius:4px;">91% AI confidence</span>
+          <span style="font-size:11px;background:rgba(33,150,243,0.15);color:#2196f3;padding:3px 10px;border-radius:4px;">ECA complaint ready</span>
+          <span style="font-size:11px;background:rgba(33,150,243,0.15);color:#2196f3;padding:3px 10px;border-radius:4px;">Strength: 83→89</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 5 -->
+    <div style="display:flex;gap:20px;align-items:flex-start;">
+      <div style="display:flex;flex-direction:column;align-items:center;min-width:60px;">
+        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#7c4dff,#651fff);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;font-family:'Syne',sans-serif;">5</div>
+        <div style="width:2px;height:60px;background:linear-gradient(to bottom,#7c4dff,#ff1744);"></div>
+      </div>
+      <div style="flex:1;padding-bottom:16px;">
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:#b388ff;margin-bottom:4px;">ADMIN REVIEW & AUTHORIZATION</div>
+        <div style="font-size:13px;color:#e8eaf0;margin-bottom:6px;">Platform admin reviews AI draft, verification evidence, photos. Authorizes as CRITICAL ALERT. Complaint finalized.</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;background:rgba(124,77,255,0.15);color:#b388ff;padding:3px 10px;border-radius:4px;">Admin authorized</span>
+          <span style="font-size:11px;background:rgba(124,77,255,0.15);color:#b388ff;padding:3px 10px;border-radius:4px;">Strength: 89/100</span>
+          <span style="font-size:11px;background:rgba(0,200,83,0.15);color:#00c853;padding:3px 10px;border-radius:4px;font-family:'Space Mono',monospace;">→ Blockchain entry #6</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 6 -->
+    <div style="display:flex;gap:20px;align-items:flex-start;">
+      <div style="display:flex;flex-direction:column;align-items:center;min-width:60px;">
+        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff1744,#d50000);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;font-family:'Syne',sans-serif;">6</div>
+        <div style="width:2px;height:60px;background:linear-gradient(to bottom,#ff1744,#00c853);"></div>
+      </div>
+      <div style="flex:1;padding-bottom:16px;">
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:#ff1744;margin-bottom:4px;">FILED TO AUTHORITY</div>
+        <div style="font-size:13px;color:#e8eaf0;margin-bottom:6px;">Formal complaint sent to District Collector, Balangir. CC: Civil Supplies Officer. Email read receipt confirmed. <strong>72-hour countdown begins.</strong></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;background:rgba(255,23,68,0.15);color:#ff1744;padding:3px 10px;border-radius:4px;">Sent to DC Balangir</span>
+          <span style="font-size:11px;background:rgba(255,23,68,0.15);color:#ff1744;padding:3px 10px;border-radius:4px;">72-hr timer live</span>
+          <span style="font-size:11px;background:rgba(0,200,83,0.15);color:#00c853;padding:3px 10px;border-radius:4px;font-family:'Space Mono',monospace;">→ Blockchain entry #7</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 7 -->
+    <div style="display:flex;gap:20px;align-items:flex-start;">
+      <div style="display:flex;flex-direction:column;align-items:center;min-width:60px;">
+        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#00c853,#00a844);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;font-family:'Syne',sans-serif;">7</div>
+      </div>
+      <div style="flex:1;">
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:#00c853;margin-bottom:4px;">PUBLIC ACCOUNTABILITY</div>
+        <div style="font-size:13px;color:#e8eaf0;margin-bottom:6px;">Case publicly tracked. Authority response rate updated. If no response in 72 hours: auto-escalated to State Commissioner. Silence is permanently recorded.</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;background:rgba(0,200,83,0.15);color:#00c853;padding:3px 10px;border-radius:4px;">Public record</span>
+          <span style="font-size:11px;background:rgba(0,200,83,0.15);color:#00c853;padding:3px 10px;border-radius:4px;">Permanent</span>
+          <span style="font-size:11px;background:rgba(0,200,83,0.15);color:#00c853;padding:3px 10px;border-radius:4px;">Irrefutable</span>
+          <span style="font-size:11px;background:rgba(0,200,83,0.15);color:#00c853;padding:3px 10px;border-radius:4px;font-family:'Space Mono',monospace;">→ Chain complete ✓</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM SUMMARY -->
+  <div class="stats-bar" style="margin-top:28px;">
+    <div class="stats-headline">1 Citizen Report → 47 Confirmations → 2 Journalists → 1 NGO → 1 AI Draft → 1 Formal Complaint → 1 Accountable Official</div>
+    <div style="font-size:12px;color:#4a5568;font-family:'Space Mono',monospace;margin-top:6px;">Total time: ~48 hours &middot; Total blockchain entries: 7 &middot; Authority response window: 72 hours &middot; All anonymous. All public. All permanent.</div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div style="text-align:center;padding:32px 16px;font-size:12px;color:#4a5568;">
+  <a href="index.html" style="color:#ff4d1c;text-decoration:none;">← Back to CivicWatch Prototype</a>
+  &nbsp;&middot;&nbsp; github.com/Ab-aswini/civic-intelligence-network &middot; MIT License &middot; Built for Balangir, Odisha 🇮🇳
+</div>
+
+</body>
+</html>
