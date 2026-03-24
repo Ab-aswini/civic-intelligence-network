@@ -1,880 +1,146 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/🏛_CIVICWATCH-Civic_Intelligence_Network-ff4d1c?style=for-the-badge&labelColor=0a0c0f" alt="CivicWatch" />
+</p>
+
+<h1 align="center">
+  <br>
+  <code>47 Citizens. 2 Journalists. 1 AI. Zero Tolerance.</code>
+  <br>
+</h1>
+
+<p align="center">
+  <strong>Turn scattered citizen complaints into structured, AI-drafted, blockchain-logged formal cases<br>that authorities must publicly respond to — or be permanently scored.</strong><br>
+  <sub>The civic intelligence platform for market integrity — starting in Balangir, Odisha</sub>
+</p>
+
+<p align="center">
+  <a href="https://ab-aswini.github.io/civic-intelligence-network"><img src="https://img.shields.io/badge/▶_LIVE_DEMO-ff4d1c?style=flat-square&logo=google-chrome&logoColor=white" alt="Live Demo" /></a>
+  <a href="https://ab-aswini.github.io/civic-intelligence-network/architecture.html"><img src="https://img.shields.io/badge/🏗_ARCHITECTURE-2196f3?style=flat-square" alt="Architecture" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-00c853?style=flat-square&logo=opensourceinitiative&logoColor=white" alt="MIT License" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/screens-6-ff8c42?style=flat-square&logo=windowsterminal&logoColor=white" alt="6 Screens" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/commodities-8-ffd740?style=flat-square" alt="8 Commodities" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/blockchain-audit_trail-9c27b0?style=flat-square" alt="Blockchain" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/dependencies-zero-00c853?style=flat-square" alt="Zero Dependencies" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/login-not_required-2196f3?style=flat-square" alt="No Login" /></a>
+</p>
+
+<br>
+
 <div align="center">
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- HERO BANNER -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="240" viewBox="0 0 840 240">
-  <defs>
-    <linearGradient id="hbg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0c0f"/>
-      <stop offset="100%" style="stop-color:#111318"/>
-    </linearGradient>
-    <linearGradient id="hac" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ff4d1c"/>
-      <stop offset="100%" style="stop-color:#ff8c42"/>
-    </linearGradient>
-  </defs>
-  <rect width="840" height="240" fill="url(#hbg)" rx="16"/>
-  <rect x="0" y="236" width="840" height="4" fill="url(#hac)" rx="2"/>
-  <g opacity="0.05" fill="#ff4d1c">
-    <polygon points="60,30 80,18 100,30 100,54 80,66 60,54"/>
-    <polygon points="110,30 130,18 150,30 150,54 130,66 110,54"/>
-    <polygon points="85,60 105,48 125,60 125,84 105,96 85,84"/>
-    <polygon points="680,130 700,118 720,130 720,154 700,166 680,154"/>
-    <polygon points="730,130 750,118 770,130 770,154 750,166 730,154"/>
-    <polygon points="750,30 770,18 790,30 790,54 770,66 750,54"/>
-    <polygon points="35,140 55,128 75,140 75,164 55,176 35,164"/>
-  </g>
-  <!-- Hex icon -->
-  <polygon points="420,20 458,42 458,86 420,108 382,86 382,42" fill="url(#hac)"/>
-  <polygon points="420,32 448,49 448,83 420,100 392,83 392,49" fill="#0a0c0f"/>
-  <text x="420" y="73" font-family="monospace" font-size="22" fill="#ff4d1c" text-anchor="middle" font-weight="bold">CW</text>
-  <!-- Title -->
-  <text x="420" y="140" font-family="Arial,Helvetica,sans-serif" font-size="28" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="3">CIVIC INTELLIGENCE NETWORK</text>
-  <!-- Subtitle -->
-  <text x="420" y="168" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#8892a4" text-anchor="middle" letter-spacing="1">The Balangir District Civic AI Platform for Market Integrity &amp; Citizen Protection</text>
-  <!-- Tagline -->
-  <rect x="250" y="182" width="340" height="24" rx="12" fill="rgba(255,77,28,0.1)" stroke="#ff4d1c" stroke-width="0.5"/>
-  <text x="420" y="198" font-family="monospace" font-size="10" fill="#ff8c42" text-anchor="middle" letter-spacing="1">citizens sense · journalists verify · AI analyzes · governments act</text>
-  <!-- Version -->
-  <rect x="700" y="14" width="120" height="22" rx="11" fill="rgba(0,200,83,0.12)" stroke="#00c853" stroke-width="0.5"/>
-  <text x="760" y="29" font-family="monospace" font-size="9" fill="#00c853" text-anchor="middle">v1.0 PROTOTYPE</text>
-</svg>
-
-<br/>
-
-<!-- BADGE ROW 1 -->
-[![Live Demo](https://img.shields.io/badge/▶_LIVE_DEMO-ff4d1c?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ab-aswini.github.io/civic-intelligence-network)
-[![Architecture](https://img.shields.io/badge/🏗_ARCHITECTURE-2196f3?style=for-the-badge)](https://ab-aswini.github.io/civic-intelligence-network/architecture.html)
-[![MIT License](https://img.shields.io/badge/📄_MIT_LICENSE-00c853?style=for-the-badge)](./LICENSE)
-
-<!-- BADGE ROW 2 -->
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Zero Dependencies](https://img.shields.io/badge/Zero_Dependencies-111318?style=flat-square)
-![Single File](https://img.shields.io/badge/Single_File_App-ff8c42?style=flat-square)
-![Open Source](https://img.shields.io/badge/Open_Source-00c853?style=flat-square&logo=github&logoColor=white)
-![Balangir](https://img.shields.io/badge/Balangir,_Odisha-ff4d1c?style=flat-square)
-
-<br/>
-
-**LPG cylinders at ₹939 MRP are sold for ₹2,500 in Balangir. Citizens can't verify, report, or fight back.**
-**CivicWatch is the civic intelligence layer that turns scattered complaints into structured, blockchain-logged,**
-**AI-drafted formal complaints that authorities must publicly respond to — or be permanently scored.**
+```
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║                                                                  ║
+  ║   🔥  LPG Cylinder MRP: ₹939   →   Black Market: ₹2,500        ║
+  ║                                                                  ║
+  ║   47 citizens confirmed. 2 journalists verified.                 ║
+  ║   AI drafted the complaint. Admin filed it.                      ║
+  ║   DC Balangir has 72 hours to respond.                           ║
+  ║                                                                  ║
+  ║   📡 Signal Strength: 89/100  ·  🔗 7 Blockchain Entries         ║
+  ║   🤖 AI Confidence: 91%  ·  🏛 Response Rate: 31%               ║
+  ║                                                                  ║
+  ╚══════════════════════════════════════════════════════════════════╝
+```
 
 </div>
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- TABLE OF CONTENTS -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+<details>
+<summary><h2>📋 Table of Contents</h2></summary>
 
-## 📑 Table of Contents
-
-| | Section | Description |
+| # | Section | What You'll Learn |
 |:---:|:---|:---|
-| 🔥 | [The Problem](#-the-problem) | Why this exists — the Balangir crisis |
-| 🧠 | [How It Works](#-how-it-works) | The 5-actor pipeline from citizen to authority |
-| 🏛 | [System Architecture](#-system-architecture--governance-model) | Multi-tier governance model with data flow |
-| 🔄 | [End-to-End Flow](#-end-to-end-data-flow) | 9-step signal-to-authority pipeline |
-| 📊 | [Case Lifecycle](#-case-lifecycle--state-machine) | State machine for case progression |
-| 🛡 | [Trust Model](#-trust--verification-model) | Signal strength algorithm and partner tiers |
-| 🖥 | [6 Screens](#-platform-screens--6-views) | All platform views explained |
-| 💰 | [Market Data](#-live-market-data) | Commodity prices: official vs black market |
-| 💡 | [Ideation Journey](#-ideation-journey) | From SupplySentinel to Civic Intelligence Network |
-| 🗺 | [Roadmap](#-future-vision--roadmap) | Q2 2026 → Q2 2027+ development plan |
-| ⚡ | [Quick Start](#-quick-start) | Run locally in 10 seconds |
-| 🤝 | [Contributing](#-how-to-contribute) | 6 ways to help — all skill levels welcome |
-| 🔒 | [Security & Privacy](#-security--privacy) | Anonymity architecture and data protection |
-| 📜 | [License](#-license) | MIT — free forever |
+| 1 | [The Pitch](#-the-pitch--why-civicwatch) | Why this exists — the 30-second story |
+| 2 | [Quick Start](#-quick-start) | Open `index.html` and you're live |
+| 3 | [How It Works](#%EF%B8%8F-how-it-works--architecture) | The 5-actor pipeline and governance model |
+| 4 | [Meet Your Actors](#-meet-your-actors--5-roles) | Every role, every responsibility, every trust tier |
+| 5 | [End-to-End Flow](#-end-to-end-data-flow--9-steps) | The complete signal-to-authority pipeline |
+| 6 | [Case Lifecycle](#-case-lifecycle--state-machine) | How cases progress through 7 states |
+| 7 | [Trust & Verification](#-trust--verification-model) | Signal strength algorithm and partner tiers |
+| 8 | [The 6 Screens](#-the-6-screens) | Every platform view explained |
+| 9 | [Market Intelligence](#-market-intelligence--balangir) | Live commodity data and hotspot areas |
+| 10 | [Ideation Journey](#-ideation-journey) | From SupplySentinel to Civic Intelligence Network |
+| 11 | [Roadmap](#%EF%B8%8F-roadmap) | What's coming: Q2 2026 → Q2 2027+ |
+| 12 | [Tech Stack](#%EF%B8%8F-tech-stack) | What's under the hood |
+| 13 | [Security & Privacy](#%EF%B8%8F-security--privacy) | Anonymity architecture and data protection |
+| 14 | [Contributing](#-contributing) | 7 ways to help — all skill levels |
+| 15 | [License](#-license) | MIT — free forever |
+
+</details>
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- THE PROBLEM -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 🔥 The Problem
+## 🎯 The Pitch — Why CivicWatch?
 
 <table>
 <tr>
-<td width="120" align="center">
+<td width="50%">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-  <rect width="100" height="100" fill="#0a0c0f" rx="14"/>
-  <circle cx="50" cy="42" r="30" fill="none" stroke="#ff1744" stroke-width="2.5" stroke-dasharray="4,3"/>
-  <text x="50" y="36" font-size="24" text-anchor="middle">🔥</text>
-  <text x="50" y="56" font-family="monospace" font-size="14" fill="#ff1744" text-anchor="middle" font-weight="bold">₹2,500</text>
-  <line x1="28" y1="72" x2="72" y2="72" stroke="#ff1744" stroke-width="1" opacity="0.4"/>
-  <text x="50" y="86" font-family="monospace" font-size="10" fill="#4a5568" text-anchor="middle">MRP ₹939</text>
-  <text x="50" y="96" font-family="monospace" font-size="8" fill="#ff1744" text-anchor="middle">+166%</text>
-</svg>
+### 😰 Without CivicWatch
+
+```
+Citizen:   "LPG is ₹2,500!"
+           → posts on WhatsApp
+           → calls helpline
+           → writes angry email
+
+Authority: *ignores all 47 individually*
+           *no structured evidence*
+           *no public accountability*
+           *nothing changes*
+```
 
 </td>
-<td>
+<td width="50%">
 
-### The Balangir LPG Crisis
+### 🏛 With CivicWatch
 
-**LPG cylinders with an official MRP of ₹939 are being sold at ₹2,500 on the black market** in Balangir, Odisha — a 166% markup affecting thousands of families.
-
-The same pattern repeats across commodities: mustard oil (+45%), toor dal (+42%), onions (+63%).
-
-**Why nothing works today:**
-- Individual complaints = noise. Authorities ignore them.
-- No way to verify if prices are actually inflated or rumored.
-- Evidence is scattered across WhatsApp groups, phone calls, verbal reports.
-- Zero public accountability for government response (or lack of it).
-
-> **CivicWatch turns 47 scattered complaints into 1 structured, AI-drafted, blockchain-logged formal case** that the District Collector must respond to within 72 hours — or his 31% response rate becomes a permanent public record.
+```
+Citizen:   "LPG is ₹2,500!"
+           → 30-second anonymous signal
+           → 46 others confirm (auto-merged)
+           → Journalist verifies on ground
+           → AI drafts ECA 1955 complaint
+           → Admin files to DC Balangir
+           → 72-hour public response timer ⏱
+           → 31% response rate = permanent record
+```
 
 </td>
 </tr>
 </table>
 
----
+**CivicWatch gives citizens something they never had: a structured intelligence pipeline.**
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- HOW IT WORKS -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+> You report anonymously. Journalists verify independently. AI analyzes patterns and drafts formal complaints. Authorities receive one structured case — not 47 scattered calls. And their response rate? **Public. Permanent. Irrefutable.**
 
-## 🧠 How It Works
+### The Key Insight
 
-> **5 actors. 1 pipeline. Every step verified. Every action logged.**
+Citizens already have the evidence (they see the prices every day). What they **don't** have is:
 
-<div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="140" viewBox="0 0 840 140">
-  <rect width="840" height="140" fill="#0a0c0f" rx="14"/>
-  <!-- Flow line -->
-  <line x1="130" y1="52" x2="720" y2="52" stroke="#1e2530" stroke-width="2"/>
-  <line x1="130" y1="52" x2="720" y2="52" stroke="url(#pipeGrad)" stroke-width="2" stroke-dasharray="8,4"/>
-  <defs>
-    <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ff4d1c"/><stop offset="50%" style="stop-color:#ffd740"/><stop offset="100%" style="stop-color:#00c853"/>
-    </linearGradient>
-  </defs>
-  <!-- 1 Citizen -->
-  <circle cx="84" cy="52" r="32" fill="#181c24" stroke="#ff4d1c" stroke-width="2.5"/>
-  <text x="84" y="50" font-size="20" text-anchor="middle">👤</text>
-  <text x="84" y="64" font-family="monospace" font-size="7" fill="#ff4d1c" text-anchor="middle">STEP 1</text>
-  <text x="84" y="104" font-family="Arial,sans-serif" font-size="11" fill="#e8eaf0" text-anchor="middle" font-weight="700">CITIZEN</text>
-  <text x="84" y="118" font-family="Arial,sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Anonymous Signal</text>
-  <text x="84" y="130" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">30 sec · no login</text>
-  <!-- Arrow label -->
-  <text x="168" y="46" font-family="Arial,sans-serif" font-size="7" fill="#4a5568" text-anchor="middle">confirms pile up →</text>
-  <!-- 2 Journalist -->
-  <circle cx="252" cy="52" r="32" fill="#181c24" stroke="#ffd740" stroke-width="2.5"/>
-  <text x="252" y="50" font-size="20" text-anchor="middle">📰</text>
-  <text x="252" y="64" font-family="monospace" font-size="7" fill="#ffd740" text-anchor="middle">STEP 2</text>
-  <text x="252" y="104" font-family="Arial,sans-serif" font-size="11" fill="#e8eaf0" text-anchor="middle" font-weight="700">JOURNALIST</text>
-  <text x="252" y="118" font-family="Arial,sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Field Verification</text>
-  <text x="252" y="130" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">sealed · independent</text>
-  <text x="336" y="46" font-family="Arial,sans-serif" font-size="7" fill="#4a5568" text-anchor="middle">strength grows →</text>
-  <!-- 3 AI -->
-  <circle cx="420" cy="52" r="32" fill="#181c24" stroke="#2196f3" stroke-width="2.5"/>
-  <text x="420" y="50" font-size="20" text-anchor="middle">🤖</text>
-  <text x="420" y="64" font-family="monospace" font-size="7" fill="#2196f3" text-anchor="middle">STEP 3</text>
-  <text x="420" y="104" font-family="Arial,sans-serif" font-size="11" fill="#e8eaf0" text-anchor="middle" font-weight="700">AI ENGINE</text>
-  <text x="420" y="118" font-family="Arial,sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Pattern + Draft</text>
-  <text x="420" y="130" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">ECA 1955 · 91% conf</text>
-  <text x="504" y="46" font-family="Arial,sans-serif" font-size="7" fill="#4a5568" text-anchor="middle">complaint ready →</text>
-  <!-- 4 Admin -->
-  <circle cx="588" cy="52" r="32" fill="#181c24" stroke="#ff4d1c" stroke-width="2.5"/>
-  <text x="588" y="50" font-size="20" text-anchor="middle">🔒</text>
-  <text x="588" y="64" font-family="monospace" font-size="7" fill="#ff4d1c" text-anchor="middle">STEP 4</text>
-  <text x="588" y="104" font-family="Arial,sans-serif" font-size="11" fill="#e8eaf0" text-anchor="middle" font-weight="700">ADMIN</text>
-  <text x="588" y="118" font-family="Arial,sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">Review &amp; Authorize</text>
-  <text x="588" y="130" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">blockchain logged</text>
-  <text x="672" y="46" font-family="Arial,sans-serif" font-size="7" fill="#4a5568" text-anchor="middle">filed to govt →</text>
-  <!-- 5 Authority -->
-  <circle cx="756" cy="52" r="32" fill="#181c24" stroke="#00c853" stroke-width="2.5"/>
-  <text x="756" y="50" font-size="20" text-anchor="middle">🏛</text>
-  <text x="756" y="64" font-family="monospace" font-size="7" fill="#00c853" text-anchor="middle">STEP 5</text>
-  <text x="756" y="104" font-family="Arial,sans-serif" font-size="11" fill="#e8eaf0" text-anchor="middle" font-weight="700">AUTHORITY</text>
-  <text x="756" y="118" font-family="Arial,sans-serif" font-size="8" fill="#8892a4" text-anchor="middle">72hr Response</text>
-  <text x="756" y="130" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">public scorecard</text>
-</svg>
-
-</div>
-
-<br/>
-
-> Every task flows: **Citizen → Dedup Gate → Score → Verify → AI Draft → Admin Review → File → Track**
-
-| Step | Actor | What Happens | Output |
-|:---:|:---:|:---|:---|
-| `1` | **Citizen** | Anonymously reports an overpriced commodity in their area | Signal with tracking ID (e.g. `CIN-2026-BLG-067-OIL`) |
-| `2` | **Journalist** | Claims signal, visits location, verifies prices independently | Strength score jumps (+28 pts for Master verifier) |
-| `3` | **AI Engine** | Detects hoarding patterns, drafts formal ECA 1955 complaint | Legal letter with evidence summary |
-| `4` | **Admin** | Reviews AI draft, edits if needed, authorizes filing | Case filed to District Collector |
-| `5` | **Authority** | Receives complaint, 72-hour public response timer starts | Action taken — or escalation to State level |
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- ARCHITECTURE — THE ORG CHART -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 🏛 System Architecture — Governance Model
-
-<div align="center">
-
-### The CivicWatch Org Chart
-
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="860" viewBox="0 0 840 860">
-  <defs>
-    <linearGradient id="obg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0c0f"/>
-      <stop offset="100%" style="stop-color:#0d1017"/>
-    </linearGradient>
-    <marker id="ad" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto"><polygon points="0 0, 10 0, 5 7" fill="#4a5568"/></marker>
-    <marker id="au" markerWidth="10" markerHeight="7" refX="5" refY="0" orient="auto"><polygon points="0 7, 10 7, 5 0" fill="#2196f3"/></marker>
-  </defs>
-  <rect width="840" height="860" fill="url(#obg)" rx="16"/>
-  <rect x="1" y="1" width="838" height="858" fill="none" rx="16" stroke="#1e2530" stroke-width="1"/>
-
-  <!-- ═══ TITLE ═══ -->
-  <line x1="220" y1="32" x2="620" y2="32" stroke="#2a3040" stroke-width="1"/>
-  <text x="420" y="26" font-family="Arial,sans-serif" font-size="15" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="4">CIVICWATCH GOVERNANCE MODEL</text>
-  <line x1="220" y1="42" x2="620" y2="42" stroke="#2a3040" stroke-width="1"/>
-
-  <!-- ═══ TOP: CITIZEN (Owner) ═══ -->
-  <rect x="310" y="62" width="220" height="52" rx="26" fill="#00c853"/>
-  <text x="396" y="86" font-size="18" text-anchor="middle">👤</text>
-  <text x="436" y="94" font-family="Arial,sans-serif" font-size="16" fill="#fff" text-anchor="middle" font-weight="800">CITIZEN (Reporter)</text>
-
-  <!-- Arrow down -->
-  <line x1="420" y1="114" x2="420" y2="148" stroke="#4a5568" stroke-width="2" marker-end="url(#ad)"/>
-  <text x="460" y="136" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" font-style="italic">submits a signal</text>
-
-  <!-- ═══ TIER 1 — CORE PIPELINE ═══ -->
-  <rect x="40" y="152" width="760" height="110" rx="12" fill="none" stroke="#2a3040" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="66" y="172" font-family="monospace" font-size="10" fill="#8892a4" font-weight="700" letter-spacing="2">TIER 1 — CORE PIPELINE</text>
-
-  <!-- 4 boxes -->
-  <rect x="60" y="186" width="160" height="58" rx="10" fill="#181c24" stroke="#ff4d1c" stroke-width="1.5"/>
-  <text x="140" y="207" font-family="Arial,sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">Signal Engine</text>
-  <text x="140" y="225" font-family="monospace" font-size="11" fill="#ff4d1c" text-anchor="middle" font-weight="700">SE-001</text>
-  <text x="140" y="239" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">DEDUP + INTAKE</text>
-
-  <rect x="240" y="186" width="160" height="58" rx="10" fill="#181c24" stroke="#ffd740" stroke-width="1.5"/>
-  <text x="320" y="207" font-family="Arial,sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">Verification Hub</text>
-  <text x="320" y="225" font-family="monospace" font-size="11" fill="#ffd740" text-anchor="middle" font-weight="700">VH-001</text>
-  <text x="320" y="239" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">TRUST + SCORING</text>
-
-  <rect x="420" y="186" width="160" height="58" rx="10" fill="#181c24" stroke="#2196f3" stroke-width="1.5"/>
-  <text x="500" y="207" font-family="Arial,sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">AI Analyst</text>
-  <text x="500" y="225" font-family="monospace" font-size="11" fill="#2196f3" text-anchor="middle" font-weight="700">AI-001</text>
-  <text x="500" y="239" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">PATTERN + DRAFT</text>
-
-  <rect x="600" y="186" width="180" height="58" rx="10" fill="#181c24" stroke="#ff1744" stroke-width="1.5"/>
-  <text x="690" y="207" font-family="Arial,sans-serif" font-size="10" fill="#8892a4" text-anchor="middle">Case Manager</text>
-  <text x="690" y="225" font-family="monospace" font-size="11" fill="#ff1744" text-anchor="middle" font-weight="700">CM-001</text>
-  <text x="690" y="239" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">ADMIN + FILE + TRACK</text>
-
-  <!-- Arrow down + label -->
-  <line x1="420" y1="262" x2="420" y2="295" stroke="#4a5568" stroke-width="2" marker-end="url(#ad)"/>
-  <text x="460" y="282" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" font-style="italic">delegates work</text>
-
-  <!-- ═══ TIER 2 — 9 SPECIALIZED MODULES ═══ -->
-  <rect x="40" y="298" width="760" height="155" rx="12" fill="none" stroke="#2a3040" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="66" y="318" font-family="monospace" font-size="10" fill="#8892a4" font-weight="700" letter-spacing="2">TIER 2 — 9 SPECIALIZED MODULES</text>
-
-  <!-- Row 1: 5 modules -->
-  <rect x="55" y="332" width="126" height="38" rx="8" fill="#ff4d1c" fill-opacity="0.2" stroke="#ff4d1c" stroke-width="1"/>
-  <text x="68" y="352" font-size="10">📡</text>
-  <text x="84" y="357" font-family="Arial,sans-serif" font-size="10" fill="#ff4d1c" font-weight="600">Dedup</text>
-  <text x="160" y="357" font-family="monospace" font-size="7" fill="#8892a4">engine</text>
-
-  <rect x="193" y="332" width="126" height="38" rx="8" fill="#ff8c42" fill-opacity="0.2" stroke="#ff8c42" stroke-width="1"/>
-  <text x="206" y="352" font-size="10">⚡</text>
-  <text x="222" y="357" font-family="Arial,sans-serif" font-size="10" fill="#ff8c42" font-weight="600">Strength</text>
-  <text x="298" y="357" font-family="monospace" font-size="7" fill="#8892a4">scorer</text>
-
-  <rect x="331" y="332" width="126" height="38" rx="8" fill="#ffd740" fill-opacity="0.2" stroke="#ffd740" stroke-width="1"/>
-  <text x="344" y="352" font-size="10">🛡</text>
-  <text x="360" y="357" font-family="Arial,sans-serif" font-size="10" fill="#ffd740" font-weight="600">Rumor</text>
-  <text x="436" y="357" font-family="monospace" font-size="7" fill="#8892a4">buster</text>
-
-  <rect x="469" y="332" width="126" height="38" rx="8" fill="#2196f3" fill-opacity="0.2" stroke="#2196f3" stroke-width="1"/>
-  <text x="482" y="352" font-size="10">💰</text>
-  <text x="498" y="357" font-family="Arial,sans-serif" font-size="10" fill="#2196f3" font-weight="600">Price</text>
-  <text x="574" y="357" font-family="monospace" font-size="7" fill="#8892a4">oracle</text>
-
-  <rect x="607" y="332" width="180" height="38" rx="8" fill="#00c853" fill-opacity="0.2" stroke="#00c853" stroke-width="1"/>
-  <text x="620" y="352" font-size="10">📝</text>
-  <text x="636" y="357" font-family="Arial,sans-serif" font-size="10" fill="#00c853" font-weight="600">Complaint</text>
-  <text x="766" y="357" font-family="monospace" font-size="7" fill="#8892a4">drafter</text>
-
-  <!-- Row 2: 4 modules -->
-  <rect x="55" y="380" width="160" height="38" rx="8" fill="#9c27b0" fill-opacity="0.2" stroke="#9c27b0" stroke-width="1"/>
-  <text x="68" y="400" font-size="10">🔗</text>
-  <text x="84" y="405" font-family="Arial,sans-serif" font-size="10" fill="#9c27b0" font-weight="600">Blockchain</text>
-  <text x="196" y="405" font-family="monospace" font-size="7" fill="#8892a4">logger</text>
-
-  <rect x="227" y="380" width="140" height="38" rx="8" fill="#e91e63" fill-opacity="0.2" stroke="#e91e63" stroke-width="1"/>
-  <text x="240" y="400" font-size="10">🔔</text>
-  <text x="256" y="405" font-family="Arial,sans-serif" font-size="10" fill="#e91e63" font-weight="600">Notification</text>
-  <text x="346" y="405" font-family="monospace" font-size="7" fill="#8892a4">svc</text>
-
-  <rect x="379" y="380" width="140" height="38" rx="8" fill="#00bcd4" fill-opacity="0.2" stroke="#00bcd4" stroke-width="1"/>
-  <text x="392" y="400" font-size="10">📊</text>
-  <text x="408" y="405" font-family="Arial,sans-serif" font-size="10" fill="#00bcd4" font-weight="600">Analytics</text>
-  <text x="498" y="405" font-family="monospace" font-size="7" fill="#8892a4">dash</text>
-
-  <rect x="531" y="380" width="140" height="38" rx="8" fill="#8892a4" fill-opacity="0.15" stroke="#8892a4" stroke-width="1"/>
-  <text x="544" y="400" font-size="10">🌐</text>
-  <text x="560" y="405" font-family="Arial,sans-serif" font-size="10" fill="#8892a4" font-weight="600">i18n</text>
-  <text x="650" y="405" font-family="monospace" font-size="7" fill="#4a5568">EN / ଓଡ଼ିଆ</text>
-
-  <!-- Processing flow -->
-  <rect x="120" y="430" width="600" height="16" rx="4" fill="#111318"/>
-  <text x="420" y="441" font-family="monospace" font-size="8" fill="#4a5568" text-anchor="middle">📡 Submit → ✅ Dedup → ⚡ Score → 📰 Verify → 🤖 AI Draft → 🔒 Admin → 📧 File → 📊 Track</text>
-
-  <!-- Bidirectional arrows to Tier 3 -->
-  <line x1="220" y1="458" x2="220" y2="510" stroke="#2196f3" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ad)"/>
-  <text x="240" y="488" font-family="Arial,sans-serif" font-size="8" fill="#2196f3" font-style="italic">context sync ↕</text>
-
-  <line x1="620" y1="458" x2="620" y2="510" stroke="#ffd740" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ad)"/>
-  <text x="640" y="488" font-family="Arial,sans-serif" font-size="8" fill="#ffd740" font-style="italic">design data ↕</text>
-
-  <!-- ═══ TIER 3 — META + SHARED INTELLIGENCE ═══ -->
-  <rect x="60" y="515" width="320" height="72" rx="12" fill="none" stroke="#2a3040" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="80" y="532" font-family="monospace" font-size="9" fill="#8892a4" font-weight="700" letter-spacing="1">TIER 3 — META</text>
-  <rect x="76" y="540" width="290" height="35" rx="8" fill="#e91e63" fill-opacity="0.12" stroke="#e91e63" stroke-width="1"/>
-  <text x="86" y="558" font-size="10">🔗</text>
-  <text x="100" y="563" font-family="Arial,sans-serif" font-size="10" fill="#e91e63" font-weight="600">Blockchain + State + Audit Trail + Permissions</text>
-
-  <rect x="460" y="515" width="320" height="72" rx="12" fill="none" stroke="#ffd740" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="480" y="532" font-family="monospace" font-size="9" fill="#ffd740" font-weight="700" letter-spacing="1">SHARED INTELLIGENCE</text>
-  <rect x="476" y="540" width="290" height="35" rx="8" fill="#ffd740" fill-opacity="0.12" stroke="#ffd740" stroke-width="1"/>
-  <text x="486" y="558" font-size="10">🌐</text>
-  <text x="500" y="563" font-family="Arial,sans-serif" font-size="10" fill="#ffd740" font-weight="600">Gov APIs + IOCL + FCI/PDS + Mandi (8 sources)</text>
-
-  <!-- Arrow to Output -->
-  <line x1="420" y1="592" x2="420" y2="625" stroke="#4a5568" stroke-width="2" marker-end="url(#ad)"/>
-
-  <!-- ═══ OUTPUT: AUTHORITY ACCOUNTABILITY ═══ -->
-  <rect x="100" y="630" width="640" height="62" rx="12" fill="none" stroke="#00c853" stroke-width="2"/>
-  <text x="420" y="650" font-family="monospace" font-size="9" fill="#00c853" text-anchor="middle" font-weight="700" letter-spacing="2">OUTPUT — AUTHORITY ACCOUNTABILITY LAYER</text>
-  <rect x="120" y="660" width="175" height="24" rx="8" fill="#ff1744" fill-opacity="0.12" stroke="#ff1744" stroke-width="1"/>
-  <text x="207" y="676" font-family="Arial,sans-serif" font-size="9" fill="#ff1744" text-anchor="middle" font-weight="600">DC Balangir — 31% ❌</text>
-  <rect x="310" y="660" width="220" height="24" rx="8" fill="#00c853" fill-opacity="0.12" stroke="#00c853" stroke-width="1"/>
-  <text x="420" y="676" font-family="Arial,sans-serif" font-size="9" fill="#00c853" text-anchor="middle" font-weight="600">CSO Balangir — 72% ✓</text>
-  <rect x="545" y="660" width="180" height="24" rx="8" fill="#ffd740" fill-opacity="0.12" stroke="#ffd740" stroke-width="1"/>
-  <text x="635" y="676" font-family="Arial,sans-serif" font-size="9" fill="#ffd740" text-anchor="middle" font-weight="600">State Commissioner ⏳</text>
-
-  <!-- ═══ BOTTOM STATS BAR ═══ -->
-  <rect x="60" y="720" width="720" height="120" rx="14" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-
-  <text x="420" y="748" font-family="Arial,sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="800">8 Commodities · 8 Areas · 3 Tiers · 9 Modules · 5 Actors</text>
-  <text x="420" y="768" font-family="Arial,sans-serif" font-size="10" fill="#4a5568" text-anchor="middle">Every signal flows: Citizen → Dedup → Score → Verify → AI → Admin → File → Track</text>
-
-  <!-- Feature pills -->
-  <rect x="100" y="785" width="130" height="30" rx="15" fill="#00c853" fill-opacity="0.1" stroke="#00c853" stroke-width="1"/>
-  <text x="165" y="804" font-family="Arial,sans-serif" font-size="10" fill="#00c853" text-anchor="middle" font-weight="600">Zero Login</text>
-
-  <rect x="250" y="785" width="130" height="30" rx="15" fill="#9c27b0" fill-opacity="0.1" stroke="#9c27b0" stroke-width="1"/>
-  <text x="315" y="804" font-family="Arial,sans-serif" font-size="10" fill="#9c27b0" text-anchor="middle" font-weight="600">Tamper-Proof</text>
-
-  <rect x="400" y="785" width="130" height="30" rx="15" fill="#2196f3" fill-opacity="0.1" stroke="#2196f3" stroke-width="1"/>
-  <text x="465" y="804" font-family="Arial,sans-serif" font-size="10" fill="#2196f3" text-anchor="middle" font-weight="600">AI-Powered</text>
-
-  <rect x="550" y="785" width="150" height="30" rx="15" fill="#ffd740" fill-opacity="0.1" stroke="#ffd740" stroke-width="1"/>
-  <text x="625" y="804" font-family="Arial,sans-serif" font-size="10" fill="#ffd740" text-anchor="middle" font-weight="600">Open Source</text>
-</svg>
-
-</div>
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- END-TO-END DATA FLOW -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 🔄 End-to-End Data Flow
-
-> Every signal follows a **9-step deterministic path** from anonymous citizen report to formal government complaint. Every step is blockchain-logged.
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="1060" viewBox="0 0 840 1060">
-  <defs>
-    <marker id="fa" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#ff4d1c"/></marker>
-    <marker id="fg" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#00c853"/></marker>
-    <marker id="fy" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#ffd740"/></marker>
-    <marker id="fb" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2196f3"/></marker>
-    <marker id="fr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#ff1744"/></marker>
-  </defs>
-  <rect width="840" height="1060" fill="#0a0c0f" rx="16"/>
-  <text x="420" y="32" font-family="Arial,sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="2">END-TO-END SIGNAL PROCESSING PIPELINE</text>
-  <text x="420" y="50" font-family="Arial,sans-serif" font-size="9" fill="#4a5568" text-anchor="middle">Every step is blockchain-logged · Deterministic flow · No manual gaps</text>
-
-  <!-- Blockchain sidebar label -->
-  <text x="34" y="550" font-family="monospace" font-size="8" fill="#9c27b0" text-anchor="middle" transform="rotate(-90 34 550)" letter-spacing="3">BLOCKCHAIN AUDIT TRAIL — EVERY STEP CRYPTOGRAPHICALLY CHAINED</text>
-
-  <!-- ═══ STEP 1 ═══ -->
-  <rect x="260" y="70" width="320" height="65" rx="14" fill="#181c24" stroke="#ff4d1c" stroke-width="2"/>
-  <circle cx="290" cy="96" r="14" fill="#ff4d1c" fill-opacity="0.2"/><text x="290" y="101" font-size="14" text-anchor="middle">👤</text>
-  <text x="420" y="92" font-family="Arial,sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">1. CITIZEN SUBMITS SIGNAL</text>
-  <text x="420" y="112" font-family="monospace" font-size="9" fill="#ff4d1c" text-anchor="middle">Anonymous · No account · 30 seconds</text>
-  <text x="420" y="124" font-family="monospace" font-size="8" fill="#4a5568" text-anchor="middle">Select area + commodity + price seen → submit</text>
-
-  <line x1="420" y1="135" x2="420" y2="168" stroke="#ff4d1c" stroke-width="2" marker-end="url(#fa)"/>
-
-  <!-- ═══ STEP 2: DEDUP ═══ -->
-  <polygon points="420,175 530,215 420,255 310,215" fill="#181c24" stroke="#ff8c42" stroke-width="2"/>
-  <text x="420" y="210" font-family="Arial,sans-serif" font-size="11" fill="#e8eaf0" text-anchor="middle" font-weight="700">2. DEDUP CHECK</text>
-  <text x="420" y="224" font-family="monospace" font-size="8" fill="#ff8c42" text-anchor="middle">area + commodity match?</text>
-
-  <!-- YES branch -->
-  <line x1="310" y1="215" x2="175" y2="215" stroke="#00c853" stroke-width="1.5" marker-end="url(#fg)"/>
-  <text x="242" y="207" font-family="Arial,sans-serif" font-size="8" fill="#00c853" font-weight="700">MATCH</text>
-  <rect x="65" y="193" width="110" height="46" rx="8" fill="#181c24" stroke="#00c853" stroke-width="1.5"/>
-  <text x="120" y="212" font-family="Arial,sans-serif" font-size="9" fill="#e8eaf0" text-anchor="middle" font-weight="600">Merge Signal</text>
-  <text x="120" y="228" font-family="monospace" font-size="9" fill="#00c853" text-anchor="middle">Strength +3</text>
-
-  <!-- NO branch -->
-  <line x1="420" y1="255" x2="420" y2="290" stroke="#ff4d1c" stroke-width="2" marker-end="url(#fa)"/>
-  <text x="450" y="276" font-family="Arial,sans-serif" font-size="8" fill="#ff8c42" font-weight="700">NEW</text>
-
-  <!-- ═══ STEP 3 ═══ -->
-  <rect x="260" y="295" width="320" height="65" rx="14" fill="#181c24" stroke="#ff4d1c" stroke-width="2"/>
-  <circle cx="290" cy="321" r="14" fill="#ff4d1c" fill-opacity="0.2"/><text x="290" y="326" font-size="14" text-anchor="middle">📡</text>
-  <text x="420" y="317" font-family="Arial,sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">3. SIGNAL CREATED</text>
-  <text x="420" y="337" font-family="monospace" font-size="9" fill="#ff4d1c" text-anchor="middle">CIN-2026-BLG-067-OIL · Strength: 1/100</text>
-  <text x="420" y="350" font-family="monospace" font-size="8" fill="#4a5568" text-anchor="middle">Tracking ID assigned · Timeline started</text>
-  <!-- Blockchain -->
-  <rect x="620" y="302" width="180" height="48" rx="8" fill="#111318" stroke="#9c27b0" stroke-width="1"/>
-  <text x="710" y="320" font-family="monospace" font-size="8" fill="#9c27b0" text-anchor="middle" font-weight="600">BLOCKCHAIN #1</text>
-  <text x="710" y="336" font-family="monospace" font-size="9" fill="#8892a4" text-anchor="middle">a3f9c2d1... ✓</text>
-  <text x="710" y="346" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">Signal created</text>
-  <line x1="580" y1="327" x2="620" y2="327" stroke="#9c27b0" stroke-width="1" stroke-dasharray="3,2"/>
-
-  <line x1="420" y1="360" x2="420" y2="395" stroke="#ff8c42" stroke-width="2" marker-end="url(#fa)"/>
-
-  <!-- ═══ STEP 4 ═══ -->
-  <rect x="260" y="400" width="320" height="55" rx="14" fill="#181c24" stroke="#ff8c42" stroke-width="2"/>
-  <circle cx="290" cy="421" r="14" fill="#ff8c42" fill-opacity="0.2"/><text x="290" y="426" font-size="14" text-anchor="middle">👥</text>
-  <text x="420" y="420" font-family="Arial,sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">4. CITIZEN CONFIRMATIONS</text>
-  <text x="420" y="440" font-family="monospace" font-size="9" fill="#ff8c42" text-anchor="middle">47 confirms over 8 hours → Strength: 35/100</text>
-  <rect x="620" y="405" width="180" height="40" rx="8" fill="#111318" stroke="#9c27b0" stroke-width="1"/>
-  <text x="710" y="422" font-family="monospace" font-size="8" fill="#9c27b0" text-anchor="middle" font-weight="600">BLOCKCHAIN #2</text>
-  <text x="710" y="438" font-family="monospace" font-size="9" fill="#8892a4" text-anchor="middle">b7d4e1f2... ✓</text>
-  <line x1="580" y1="427" x2="620" y2="427" stroke="#9c27b0" stroke-width="1" stroke-dasharray="3,2"/>
-
-  <line x1="420" y1="455" x2="420" y2="490" stroke="#ffd740" stroke-width="2" marker-end="url(#fy)"/>
-
-  <!-- ═══ STEP 5 ═══ -->
-  <rect x="240" y="495" width="360" height="72" rx="14" fill="#181c24" stroke="#ffd740" stroke-width="2"/>
-  <circle cx="270" cy="524" r="14" fill="#ffd740" fill-opacity="0.2"/><text x="270" y="529" font-size="14" text-anchor="middle">📰</text>
-  <text x="420" y="518" font-family="Arial,sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">5. JOURNALIST VERIFIES</text>
-  <text x="420" y="536" font-family="Arial,sans-serif" font-size="9" fill="#ffd740" text-anchor="middle">Ramesh Panda (Master · 94% accuracy · ×1.6 weight)</text>
-  <text x="420" y="552" font-family="monospace" font-size="9" fill="#ffd740" text-anchor="middle">+28 strength → Total: 63/100</text>
-  <rect x="620" y="505" width="180" height="48" rx="8" fill="#111318" stroke="#9c27b0" stroke-width="1"/>
-  <text x="710" y="522" font-family="monospace" font-size="8" fill="#9c27b0" text-anchor="middle" font-weight="600">BLOCKCHAIN #3-4</text>
-  <text x="710" y="538" font-family="monospace" font-size="9" fill="#8892a4" text-anchor="middle">c2a8f789... ✓</text>
-  <text x="710" y="548" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">Primary + Supporting</text>
-  <line x1="600" y1="530" x2="620" y2="530" stroke="#9c27b0" stroke-width="1" stroke-dasharray="3,2"/>
-
-  <line x1="420" y1="567" x2="420" y2="598" stroke="#00c853" stroke-width="2" marker-end="url(#fg)"/>
-
-  <!-- ═══ STEP 6 ═══ -->
-  <rect x="260" y="603" width="320" height="55" rx="14" fill="#181c24" stroke="#00c853" stroke-width="2"/>
-  <circle cx="290" cy="624" r="14" fill="#00c853" fill-opacity="0.2"/><text x="290" y="629" font-size="14" text-anchor="middle">🏢</text>
-  <text x="420" y="623" font-family="Arial,sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">6. NGO CO-SIGNATURE</text>
-  <text x="420" y="643" font-family="monospace" font-size="9" fill="#00c853" text-anchor="middle">PRADAN Balangir · 14 households · +15 → 83/100</text>
-  <rect x="620" y="608" width="180" height="40" rx="8" fill="#111318" stroke="#9c27b0" stroke-width="1"/>
-  <text x="710" y="625" font-family="monospace" font-size="8" fill="#9c27b0" text-anchor="middle" font-weight="600">BLOCKCHAIN #5</text>
-  <text x="710" y="641" font-family="monospace" font-size="9" fill="#8892a4" text-anchor="middle">e5f1a2b3... ✓</text>
-  <line x1="580" y1="628" x2="620" y2="628" stroke="#9c27b0" stroke-width="1" stroke-dasharray="3,2"/>
-
-  <line x1="420" y1="658" x2="420" y2="690" stroke="#2196f3" stroke-width="2" marker-end="url(#fb)"/>
-
-  <!-- ═══ STEP 7 ═══ -->
-  <rect x="260" y="695" width="320" height="55" rx="14" fill="#181c24" stroke="#2196f3" stroke-width="2"/>
-  <circle cx="290" cy="716" r="14" fill="#2196f3" fill-opacity="0.2"/><text x="290" y="721" font-size="14" text-anchor="middle">🤖</text>
-  <text x="420" y="715" font-family="Arial,sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">7. AI DRAFTS COMPLAINT</text>
-  <text x="420" y="735" font-family="monospace" font-size="9" fill="#2196f3" text-anchor="middle">91% confidence · ECA 1955 · Formal complaint letter</text>
-
-  <line x1="420" y1="750" x2="420" y2="782" stroke="#ff1744" stroke-width="2" marker-end="url(#fr)"/>
-
-  <!-- ═══ STEP 8 ═══ -->
-  <rect x="260" y="787" width="320" height="55" rx="14" fill="#181c24" stroke="#ff1744" stroke-width="2"/>
-  <circle cx="290" cy="808" r="14" fill="#ff1744" fill-opacity="0.2"/><text x="290" y="813" font-size="14" text-anchor="middle">🔒</text>
-  <text x="420" y="807" font-family="Arial,sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="700">8. ADMIN AUTHORIZES &amp; FILES</text>
-  <text x="420" y="827" font-family="monospace" font-size="9" fill="#ff1744" text-anchor="middle">+6 → Total: 89/100 · Filed to DC Balangir</text>
-  <rect x="620" y="792" width="180" height="40" rx="8" fill="#111318" stroke="#9c27b0" stroke-width="1"/>
-  <text x="710" y="809" font-family="monospace" font-size="8" fill="#9c27b0" text-anchor="middle" font-weight="600">BLOCKCHAIN #6-7</text>
-  <text x="710" y="825" font-family="monospace" font-size="9" fill="#8892a4" text-anchor="middle">f3c7d9e1... ✓</text>
-  <line x1="580" y1="812" x2="620" y2="812" stroke="#9c27b0" stroke-width="1" stroke-dasharray="3,2"/>
-
-  <line x1="420" y1="842" x2="420" y2="878" stroke="#00c853" stroke-width="2.5" marker-end="url(#fg)"/>
-
-  <!-- ═══ STEP 9 ═══ -->
-  <rect x="210" y="883" width="420" height="75" rx="16" fill="#181c24" stroke="#00c853" stroke-width="3"/>
-  <circle cx="245" cy="914" r="16" fill="#00c853" fill-opacity="0.2"/><text x="245" y="919" font-size="16" text-anchor="middle">🏛</text>
-  <text x="420" y="907" font-family="Arial,sans-serif" font-size="14" fill="#e8eaf0" text-anchor="middle" font-weight="800">9. AUTHORITY TRACKED</text>
-  <text x="420" y="928" font-family="Arial,sans-serif" font-size="10" fill="#00c853" text-anchor="middle">72-hour public response window · Accountability scorecard</text>
-  <text x="420" y="948" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">No response in 96h? → Auto-escalate to State Civil Supplies Commissioner</text>
-
-  <!-- Bottom summary -->
-  <rect x="170" y="980" width="500" height="60" rx="12" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <text x="420" y="1003" font-family="Arial,sans-serif" font-size="10" fill="#e8eaf0" text-anchor="middle" font-weight="700">RESULT: 47 scattered complaints become 1 structured case</text>
-  <text x="420" y="1020" font-family="monospace" font-size="8" fill="#ff4d1c" text-anchor="middle">89/100 strength · 7 blockchain entries · AI 91% confidence · 72hr timer</text>
-  <text x="420" y="1034" font-family="monospace" font-size="8" fill="#4a5568" text-anchor="middle">DC response rate: 31% — permanent public record</text>
-</svg>
-</div>
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- CASE LIFECYCLE -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 📊 Case Lifecycle — State Machine
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="300" viewBox="0 0 840 300">
-  <defs><marker id="la" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4a5568"/></marker></defs>
-  <rect width="840" height="300" fill="#0a0c0f" rx="14"/>
-  <text x="420" y="28" font-family="Arial,sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="2">CASE LIFECYCLE STATE MACHINE</text>
-  <text x="420" y="44" font-family="monospace" font-size="8" fill="#4a5568" text-anchor="middle">Every transition is blockchain-logged · Immutable · Publicly verifiable</text>
-
-  <!-- Main flow -->
-  <rect x="25" y="70" width="110" height="55" rx="12" fill="#181c24" stroke="#ff4d1c" stroke-width="2"/>
-  <text x="80" y="92" font-family="Arial,sans-serif" font-size="11" fill="#ff4d1c" text-anchor="middle" font-weight="700">SIGNAL</text>
-  <text x="80" y="108" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">1-35 pts</text>
-
-  <line x1="135" y1="97" x2="185" y2="97" stroke="#4a5568" stroke-width="1.5" marker-end="url(#la)"/>
-  <text x="160" y="89" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">claims</text>
-
-  <rect x="190" y="70" width="130" height="55" rx="12" fill="#181c24" stroke="#ffd740" stroke-width="2"/>
-  <text x="255" y="92" font-family="Arial,sans-serif" font-size="11" fill="#ffd740" text-anchor="middle" font-weight="700">INVESTIGATING</text>
-  <text x="255" y="108" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">journalist claimed</text>
-
-  <line x1="320" y1="97" x2="370" y2="97" stroke="#4a5568" stroke-width="1.5" marker-end="url(#la)"/>
-  <text x="345" y="89" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">verified</text>
-
-  <rect x="375" y="70" width="110" height="55" rx="12" fill="#181c24" stroke="#00c853" stroke-width="2"/>
-  <text x="430" y="92" font-family="Arial,sans-serif" font-size="11" fill="#00c853" text-anchor="middle" font-weight="700">VERIFIED</text>
-  <text x="430" y="108" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">70+ pts</text>
-
-  <line x1="485" y1="97" x2="535" y2="97" stroke="#4a5568" stroke-width="1.5" marker-end="url(#la)"/>
-  <text x="510" y="89" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">admin OK</text>
-
-  <rect x="540" y="70" width="100" height="55" rx="12" fill="#181c24" stroke="#2196f3" stroke-width="2"/>
-  <text x="590" y="92" font-family="Arial,sans-serif" font-size="11" fill="#2196f3" text-anchor="middle" font-weight="700">FILED</text>
-  <text x="590" y="108" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">72hr timer</text>
-
-  <line x1="640" y1="97" x2="695" y2="97" stroke="#4a5568" stroke-width="1.5" marker-end="url(#la)"/>
-  <text x="668" y="89" font-family="monospace" font-size="7" fill="#4a5568" text-anchor="middle">action</text>
-
-  <rect x="700" y="70" width="110" height="55" rx="12" fill="#00c853" fill-opacity="0.15" stroke="#00c853" stroke-width="2.5"/>
-  <text x="755" y="95" font-family="Arial,sans-serif" font-size="12" fill="#00c853" text-anchor="middle" font-weight="800">RESOLVED ✓</text>
-
-  <!-- Branch: COUNTER -->
-  <line x1="80" y1="125" x2="80" y2="170" stroke="#9c27b0" stroke-width="1.5" marker-end="url(#la)"/>
-  <text x="105" y="153" font-family="monospace" font-size="7" fill="#9c27b0">disputed</text>
-  <rect x="25" y="175" width="110" height="45" rx="10" fill="#181c24" stroke="#9c27b0" stroke-width="1.5"/>
-  <text x="80" y="197" font-family="Arial,sans-serif" font-size="10" fill="#9c27b0" text-anchor="middle" font-weight="700">COUNTER</text>
-  <text x="80" y="212" font-family="monospace" font-size="7" fill="#8892a4" text-anchor="middle">evidence required</text>
-
-  <!-- Branch: ESCALATED -->
-  <line x1="590" y1="125" x2="590" y2="170" stroke="#ff1744" stroke-width="1.5" marker-end="url(#la)"/>
-  <text x="620" y="153" font-family="monospace" font-size="7" fill="#ff1744">no response 96h</text>
-  <rect x="535" y="175" width="110" height="45" rx="10" fill="#181c24" stroke="#ff1744" stroke-width="2"/>
-  <text x="590" y="197" font-family="Arial,sans-serif" font-size="10" fill="#ff1744" text-anchor="middle" font-weight="700">ESCALATED</text>
-  <text x="590" y="212" font-family="monospace" font-size="7" fill="#8892a4" text-anchor="middle">→ state level</text>
-
-  <!-- Legend -->
-  <rect x="100" y="245" width="640" height="36" rx="8" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="120" y="253" width="70" height="20" rx="4" fill="#00c853" fill-opacity="0.12"/><text x="155" y="267" font-family="monospace" font-size="8" fill="#00c853" text-anchor="middle">VERIFIED</text>
-  <rect x="200" y="253" width="90" height="20" rx="4" fill="#ffd740" fill-opacity="0.12"/><text x="245" y="267" font-family="monospace" font-size="8" fill="#ffd740" text-anchor="middle">INVESTIGATING</text>
-  <rect x="300" y="253" width="70" height="20" rx="4" fill="#8892a4" fill-opacity="0.12"/><text x="335" y="267" font-family="monospace" font-size="8" fill="#8892a4" text-anchor="middle">PENDING</text>
-  <rect x="380" y="253" width="70" height="20" rx="4" fill="#9c27b0" fill-opacity="0.12"/><text x="415" y="267" font-family="monospace" font-size="8" fill="#9c27b0" text-anchor="middle">COUNTER</text>
-  <rect x="460" y="253" width="80" height="20" rx="4" fill="#ff1744" fill-opacity="0.12"/><text x="500" y="267" font-family="monospace" font-size="8" fill="#ff1744" text-anchor="middle">ESCALATED</text>
-  <rect x="550" y="253" width="80" height="20" rx="4" fill="#2196f3" fill-opacity="0.12"/><text x="590" y="267" font-family="monospace" font-size="8" fill="#2196f3" text-anchor="middle">FILED</text>
-  <rect x="640" y="253" width="80" height="20" rx="4" fill="#00c853" fill-opacity="0.15"/><text x="680" y="267" font-family="monospace" font-size="8" fill="#00c853" text-anchor="middle">RESOLVED</text>
-</svg>
-</div>
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- TRUST MODEL -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 🛡 Trust &amp; Verification Model
-
-### Signal Strength Algorithm
-
-> How a signal goes from **0 to 89/100** — the math behind credibility.
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="260" viewBox="0 0 840 260">
-  <rect width="840" height="260" fill="#0a0c0f" rx="14"/>
-  <text x="420" y="25" font-family="monospace" font-size="10" fill="#8892a4" text-anchor="middle" font-weight="600" letter-spacing="1">SIGNAL STRENGTH COMPOSITION — CIN-2026-BLG-047-LPG</text>
-
-  <text x="60" y="62" font-family="Arial,sans-serif" font-size="10" fill="#8892a4">Citizens (47 confirms)</text>
-  <rect x="240" y="48" width="420" height="20" rx="5" fill="#181c24"/>
-  <rect x="240" y="48" width="252" height="20" rx="5" fill="#ff4d1c" fill-opacity="0.6"/>
-  <text x="502" y="62" font-family="monospace" font-size="10" fill="#ff4d1c" font-weight="700">+35 pts</text>
-  <text x="690" y="62" font-family="monospace" font-size="8" fill="#4a5568">max 35 · diminishing returns after 20</text>
-
-  <text x="60" y="100" font-family="Arial,sans-serif" font-size="10" fill="#8892a4">Primary Verifier (Master)</text>
-  <rect x="240" y="86" width="420" height="20" rx="5" fill="#181c24"/>
-  <rect x="240" y="86" width="201" height="20" rx="5" fill="#ffd740" fill-opacity="0.6"/>
-  <text x="451" y="100" font-family="monospace" font-size="10" fill="#ffd740" font-weight="700">+28 pts</text>
-  <text x="690" y="100" font-family="monospace" font-size="8" fill="#4a5568">weight = accuracy × tier multiplier</text>
-
-  <text x="60" y="138" font-family="Arial,sans-serif" font-size="10" fill="#8892a4">Supporting (independent)</text>
-  <rect x="240" y="124" width="420" height="20" rx="5" fill="#181c24"/>
-  <rect x="240" y="124" width="144" height="20" rx="5" fill="#2196f3" fill-opacity="0.6"/>
-  <text x="394" y="138" font-family="monospace" font-size="10" fill="#2196f3" font-weight="700">+20 pts</text>
-  <text x="690" y="138" font-family="monospace" font-size="8" fill="#4a5568">independent confirmation bonus ×1.3</text>
-
-  <text x="60" y="176" font-family="Arial,sans-serif" font-size="10" fill="#8892a4">NGO + Admin</text>
-  <rect x="240" y="162" width="420" height="20" rx="5" fill="#181c24"/>
-  <rect x="240" y="162" width="43" height="20" rx="5" fill="#00c853" fill-opacity="0.6"/>
-  <text x="293" y="176" font-family="monospace" font-size="10" fill="#00c853" font-weight="700">+6 pts</text>
-  <text x="690" y="176" font-family="monospace" font-size="8" fill="#4a5568">institutional endorsement</text>
-
-  <line x1="60" y1="196" x2="780" y2="196" stroke="#1e2530" stroke-width="1"/>
-  <text x="240" y="216" font-family="monospace" font-size="9" fill="#8892a4">Filing threshold: 70/100</text>
-  <text x="660" y="216" font-family="monospace" font-size="13" fill="#00c853" font-weight="800">TOTAL: 89/100 ✓</text>
-
-  <rect x="60" y="230" width="720" height="18" rx="4" fill="#111318"/>
-  <text x="420" y="243" font-family="monospace" font-size="8" fill="#ff4d1c" text-anchor="middle">MFI = Violation Rate (40%) + Avg Price Deviation (35%) + Severity Index (15%) + Report Volume (10%)</text>
-</svg>
-</div>
-
-### Partner Verification Tiers
-
-| Tier | Requirements | Weight | Example |
-|:---|:---|:---:|:---|
-| **MASTER** ★ | 200+ verifications · 93%+ accuracy | `×1.6` | Ramesh Panda, Sambad |
-| **SENIOR** | 50+ verifications · 90%+ accuracy | `×1.3` | Sunita Kar, OTV Digital |
-| **NGO PARTNER** | Institutional registration | `×1.2` | PRADAN Balangir |
-| **ACTIVE** | 10+ verifications · 85%+ accuracy | `×1.0` | Biswajit Rath, Dharitri |
-| **NEW** | Less than 10 verifications | `×0.5` | Amrita Kulkarni, Freelance |
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- 6 SCREENS -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 🖥 Platform Screens — 6 Views
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="350" viewBox="0 0 840 350">
-  <rect width="840" height="350" fill="#0a0c0f" rx="14"/>
-  <!-- Screen 1 -->
-  <rect x="20" y="20" width="250" height="140" rx="10" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="20" y="20" width="250" height="5" rx="3" fill="#ff1744"/>
-  <text x="145" y="55" font-family="monospace" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">01</text>
-  <text x="145" y="78" font-family="Arial,sans-serif" font-size="15" fill="#e8eaf0" text-anchor="middle" font-weight="700">Dashboard</text>
-  <text x="145" y="96" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Crisis alerts · MFI scores · AI insights</text>
-  <text x="145" y="112" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Live signals · Rumor buster · Hotspots</text>
-  <text x="145" y="132" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Official price reference table</text>
-  <text x="145" y="152" font-family="monospace" font-size="10" fill="#ff1744" text-anchor="middle" font-weight="700">MFI: 38/100 CRITICAL</text>
-  <!-- Screen 2 -->
-  <rect x="295" y="20" width="250" height="140" rx="10" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="295" y="20" width="250" height="5" rx="3" fill="#00c853"/>
-  <text x="420" y="55" font-family="monospace" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">02</text>
-  <text x="420" y="78" font-family="Arial,sans-serif" font-size="15" fill="#e8eaf0" text-anchor="middle" font-weight="700">Citizen Report</text>
-  <text x="420" y="96" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Anonymous · 30-second submit</text>
-  <text x="420" y="112" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Smart dedup · Live price diff calc</text>
-  <text x="420" y="132" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Confirmation flow · Strength animation</text>
-  <text x="420" y="152" font-family="monospace" font-size="10" fill="#00c853" text-anchor="middle" font-weight="700">NO ACCOUNT REQUIRED</text>
-  <!-- Screen 3 -->
-  <rect x="570" y="20" width="250" height="140" rx="10" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="570" y="20" width="250" height="5" rx="3" fill="#2196f3"/>
-  <text x="695" y="55" font-family="monospace" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">03</text>
-  <text x="695" y="78" font-family="Arial,sans-serif" font-size="15" fill="#e8eaf0" text-anchor="middle" font-weight="700">Case Board</text>
-  <text x="695" y="96" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Filtered case list · Live countdowns</text>
-  <text x="695" y="112" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Authority accountability scorecards</text>
-  <text x="695" y="132" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Status pills · Resolution tracking</text>
-  <text x="695" y="152" font-family="monospace" font-size="10" fill="#2196f3" text-anchor="middle" font-weight="700">DC RESPONSE: 31%</text>
-  <!-- Screen 4 -->
-  <rect x="20" y="185" width="250" height="140" rx="10" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="20" y="185" width="250" height="5" rx="3" fill="#ff8c42"/>
-  <text x="145" y="220" font-family="monospace" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">04</text>
-  <text x="145" y="243" font-family="Arial,sans-serif" font-size="15" fill="#e8eaf0" text-anchor="middle" font-weight="700">Case Detail</text>
-  <text x="145" y="261" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Evidence timeline · Contributor cards</text>
-  <text x="145" y="277" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Blockchain audit trail verification</text>
-  <text x="145" y="293" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Live countdown to authority deadline</text>
-  <text x="145" y="317" font-family="monospace" font-size="10" fill="#ff8c42" text-anchor="middle" font-weight="700">7 CHAIN ENTRIES</text>
-  <!-- Screen 5 -->
-  <rect x="295" y="185" width="250" height="140" rx="10" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="295" y="185" width="250" height="5" rx="3" fill="#ffd740"/>
-  <text x="420" y="220" font-family="monospace" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">05</text>
-  <text x="420" y="243" font-family="Arial,sans-serif" font-size="15" fill="#e8eaf0" text-anchor="middle" font-weight="700">Journalist Panel</text>
-  <text x="420" y="261" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Signal queue · Sealed verification</text>
-  <text x="420" y="277" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Gamified badges · Track 2 publishing</text>
-  <text x="420" y="293" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Points · Accuracy · Leaderboard</text>
-  <text x="420" y="317" font-family="monospace" font-size="10" fill="#ffd740" text-anchor="middle" font-weight="700">MASTER: 94% ACCURACY</text>
-  <!-- Screen 6 -->
-  <rect x="570" y="185" width="250" height="140" rx="10" fill="#111318" stroke="#1e2530" stroke-width="1"/>
-  <rect x="570" y="185" width="250" height="5" rx="3" fill="#ff1744"/>
-  <text x="695" y="220" font-family="monospace" font-size="12" fill="#ff4d1c" text-anchor="middle" font-weight="700">06</text>
-  <text x="695" y="243" font-family="Arial,sans-serif" font-size="15" fill="#e8eaf0" text-anchor="middle" font-weight="700">Admin Dashboard</text>
-  <text x="695" y="261" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Critical alerts · AI complaint drafter</text>
-  <text x="695" y="277" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Formal complaint filing modal</text>
-  <text x="695" y="293" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Weekly digest · Partner management</text>
-  <text x="695" y="317" font-family="monospace" font-size="10" fill="#ff1744" text-anchor="middle" font-weight="700">AI CONFIDENCE: 91%</text>
-</svg>
-</div>
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- MARKET DATA -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 💰 Live Market Data
-
-> Mock data for Balangir District — real prices, real pain.
-
-| | Commodity | Official MRP | Black Market | Deviation | Status |
-|:---|:---|---:|---:|:---:|:---|
-| 🔥 | **LPG Cylinder (14.2kg)** | ₹939 | ₹2,500 | **+166%** | 🔴 Critical |
-| 🫘 | **Toor Dal (1kg)** | ₹155 | ₹220 | **+42%** | 🟠 High |
-| 🧅 | **Onion (1kg)** | ₹40 | ₹65 | **+63%** | 🟠 High |
-| 🫙 | **Mustard Oil (1L)** | ₹145 | ₹210 | **+45%** | 🟠 High |
-| 🍚 | **Sugar (1kg)** | ₹42 | ₹58 | **+38%** | 🟡 Watch |
-| 🌾 | **Wheat Atta (1kg)** | ₹35 | ₹36 | +3% | 🟢 Safe |
-| 🌾 | **Rice (1kg)** | ₹38 | ₹38 | 0% | 🟢 Safe |
-| ⛽ | **Petrol (1L)** | ₹105 | ₹105 | 0% | 🟢 Safe |
-
-### Hotspot Areas — Balangir District
-
-| Area | Active Signals | Threat Level |
-|:---|:---:|:---|
-| Gandhi Chowk | **18** | 🔴 **Critical** |
-| Bus Stand Area | **14** | 🟠 **High** |
-| Cantonment Road | **11** | 🟠 **High** |
-| Court Road | 7 | 🟡 Medium |
-| Titilagarh Road | 6 | 🟡 Medium |
-| Sargipali | 2 | 🟢 Low |
-| Bibhutipara | 1 | 🟢 Low |
-| Nehru Nagar | 1 | 🟢 Low |
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- IDEATION JOURNEY -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 💡 Ideation Journey
-
-> From personal pain to civic platform — every phase solved a real problem discovered in the previous one.
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="440" viewBox="0 0 840 440">
-  <rect width="840" height="440" fill="#0a0c0f" rx="14"/>
-  <text x="420" y="28" font-family="Arial,sans-serif" font-size="13" fill="#e8eaf0" text-anchor="middle" font-weight="800" letter-spacing="2">FROM PERSONAL PAIN TO CIVIC PLATFORM</text>
-
-  <line x1="80" y1="55" x2="80" y2="420" stroke="#1e2530" stroke-width="3"/>
-
-  <!-- Phase 0 -->
-  <circle cx="80" cy="75" r="12" fill="#ff1744" stroke="#ff1744" stroke-width="2"/>
-  <text x="80" y="79" font-family="Arial,sans-serif" font-size="9" fill="#fff" text-anchor="middle" font-weight="800">0</text>
-  <text x="106" y="70" font-family="monospace" font-size="10" fill="#ff1744" font-weight="700">THE SPARK</text>
-  <text x="106" y="86" font-family="Arial,sans-serif" font-size="11" fill="#e8eaf0">Paid ₹2,500 for a ₹939 LPG cylinder in Balangir.</text>
-  <text x="106" y="100" font-family="Arial,sans-serif" font-size="9" fill="#8892a4">No system to verify, report, or fight back.</text>
-  <rect x="580" y="62" width="230" height="44" rx="8" fill="#181c24" stroke="#ff1744" stroke-width="1"/>
-  <text x="695" y="80" font-family="monospace" font-size="8" fill="#ff1744" text-anchor="middle" font-weight="700">INSIGHT</text>
-  <text x="695" y="96" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">One angry citizen = ignored.</text>
-
-  <!-- Phase 1 -->
-  <circle cx="80" cy="145" r="12" fill="#ff8c42" stroke="#ff8c42" stroke-width="2"/>
-  <text x="80" y="149" font-family="Arial,sans-serif" font-size="9" fill="#fff" text-anchor="middle" font-weight="800">1</text>
-  <text x="106" y="140" font-family="monospace" font-size="10" fill="#ff8c42" font-weight="700">SUPPLYSSENTINEL v0.1</text>
-  <text x="106" y="156" font-family="Arial,sans-serif" font-size="11" fill="#e8eaf0">Built an LPG-only price tracker. Single commodity, single district.</text>
-  <text x="106" y="170" font-family="Arial,sans-serif" font-size="9" fill="#8892a4">Problem: Citizen reports alone are unverifiable.</text>
-  <rect x="580" y="132" width="230" height="44" rx="8" fill="#181c24" stroke="#ff8c42" stroke-width="1"/>
-  <text x="695" y="150" font-family="monospace" font-size="8" fill="#ff8c42" text-anchor="middle" font-weight="700">PROBLEM FOUND</text>
-  <text x="695" y="166" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Reports without verification = noise.</text>
-
-  <!-- Phase 2 -->
-  <circle cx="80" cy="218" r="12" fill="#ffd740" stroke="#ffd740" stroke-width="2"/>
-  <text x="80" y="222" font-family="Arial,sans-serif" font-size="9" fill="#111" text-anchor="middle" font-weight="800">2</text>
-  <text x="106" y="213" font-family="monospace" font-size="10" fill="#ffd740" font-weight="700">VERIFICATION LAYER</text>
-  <text x="106" y="229" font-family="Arial,sans-serif" font-size="11" fill="#e8eaf0">Added journalist + NGO verification with trust scoring.</text>
-  <text x="106" y="243" font-family="Arial,sans-serif" font-size="9" fill="#8892a4">Signal Strength algorithm born: citizens + verifiers = credible evidence.</text>
-  <rect x="580" y="205" width="230" height="44" rx="8" fill="#181c24" stroke="#ffd740" stroke-width="1"/>
-  <text x="695" y="223" font-family="monospace" font-size="8" fill="#ffd740" text-anchor="middle" font-weight="700">BREAKTHROUGH</text>
-  <text x="695" y="239" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Structured evidence > angry emails.</text>
-
-  <!-- Phase 3 -->
-  <circle cx="80" cy="292" r="12" fill="#2196f3" stroke="#2196f3" stroke-width="2"/>
-  <text x="80" y="296" font-family="Arial,sans-serif" font-size="9" fill="#fff" text-anchor="middle" font-weight="800">3</text>
-  <text x="106" y="287" font-family="monospace" font-size="10" fill="#2196f3" font-weight="700">AI + BLOCKCHAIN</text>
-  <text x="106" y="303" font-family="Arial,sans-serif" font-size="11" fill="#e8eaf0">AI drafts formal legal complaints. Blockchain makes records immutable.</text>
-  <text x="106" y="317" font-family="Arial,sans-serif" font-size="9" fill="#8892a4">Authority accountability scores: public, permanent, irrefutable.</text>
-  <rect x="580" y="279" width="230" height="44" rx="8" fill="#181c24" stroke="#2196f3" stroke-width="1"/>
-  <text x="695" y="297" font-family="monospace" font-size="8" fill="#2196f3" text-anchor="middle" font-weight="700">KEY DECISION</text>
-  <text x="695" y="313" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Accountability, not confrontation.</text>
-
-  <!-- Phase 4 -->
-  <circle cx="80" cy="365" r="12" fill="#00c853" stroke="#00c853" stroke-width="2"/>
-  <text x="80" y="369" font-family="Arial,sans-serif" font-size="9" fill="#fff" text-anchor="middle" font-weight="800">4</text>
-  <text x="106" y="360" font-family="monospace" font-size="10" fill="#00c853" font-weight="700">CIVIC INTELLIGENCE NETWORK (NOW)</text>
-  <text x="106" y="376" font-family="Arial,sans-serif" font-size="11" fill="#e8eaf0">Multi-commodity, multi-area. 8 commodities. 8 areas. Odia support.</text>
-  <text x="106" y="390" font-family="Arial,sans-serif" font-size="9" fill="#8892a4">Full 6-screen interactive prototype. Open source. Ready for contributors.</text>
-  <rect x="580" y="352" width="230" height="44" rx="8" fill="#181c24" stroke="#00c853" stroke-width="1"/>
-  <text x="695" y="370" font-family="monospace" font-size="8" fill="#00c853" text-anchor="middle" font-weight="700">STATUS</text>
-  <text x="695" y="386" font-family="Arial,sans-serif" font-size="9" fill="#8892a4" text-anchor="middle">Prototype live on GitHub Pages.</text>
-
-  <!-- Bottom -->
-  <rect x="120" y="410" width="600" height="20" rx="6" fill="#111318"/>
-  <text x="420" y="424" font-family="monospace" font-size="8" fill="#ff4d1c" text-anchor="middle">SupplySentinel → Verification Layer → AI + Blockchain → Civic Intelligence Network</text>
-</svg>
-</div>
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- ROADMAP -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 🗺 Future Vision &amp; Roadmap
-
-> Every milestone is an opportunity to contribute. We're building in public.
-
-| Phase | Timeline | Status | What's Being Built |
-|:---|:---|:---:|:---|
-| **Prototype** | Q2 2026 | ✅ Done | Single-file app, 6 screens, all interactions, mock data |
-| **Backend** | Q3 2026 | 🟡 Next | Node.js API, PostgreSQL, real price APIs, WhatsApp/SMS reporting |
-| **AI/ML** | Q4 2026 | ⬜ Planned | GPT/Claude complaint drafting, anomaly detection, rumor NLP |
-| **Multi-District** | Q1 2027 | ⬜ Vision | All 30 Odisha districts, 100+ journalists, state-level dashboard |
-| **National** | Q2 2027+ | ⬜ Vision | Open-source template for any district in India |
-
-### What Each Phase Needs
-
-| Phase | Skills Needed |
+| Missing Piece | CivicWatch Provides |
 |:---|:---|
-| **Backend** | Node.js / Python · PostgreSQL · REST APIs · Twilio · Blockchain (Polygon/Solana) |
-| **AI/ML** | Claude API · Anomaly detection · NLP · Supply chain prediction |
-| **Expansion** | District coordinators · Journalist partnerships · Policy advisors |
-| **National** | Localization (Hindi, Telugu, Bengali) · Government relations · Funding |
+| 🔒 **Anonymity** | Zero-login reporting. No account. No tracking. 30 seconds. |
+| ✅ **Verification** | Journalist + NGO field verification with trust scoring |
+| 🤖 **AI Intelligence** | Pattern detection, hoarding identification, legal complaint drafting |
+| 🔗 **Immutability** | Blockchain audit trail — every entry cryptographically chained |
+| 📊 **Accountability** | Public authority response rates that can never be deleted |
+| 📡 **Deduplication** | 47 reports merge into 1 strong signal, not 47 weak ones |
+
+> [!IMPORTANT]
+> **This is NOT a complaint box.** CivicWatch is a **civic intelligence system** — it turns noise into signal, signal into evidence, evidence into formal legal cases, and cases into public accountability records. The same approach that intelligence agencies use to process scattered data, applied to citizen protection.
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- QUICK START -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+## 🚀 Quick Start
 
-## ⚡ Quick Start
+### 10-Second Setup
 
 ```bash
-# Clone
+# Clone the repo
 git clone https://github.com/Ab-aswini/civic-intelligence-network.git
-cd civic-intelligence-network
 
 # Open directly — no build step, no npm, no dependencies
 open index.html            # macOS
@@ -886,142 +152,583 @@ npx serve .
 python -m http.server 8000
 ```
 
-### Project Structure
+### What You Get
 
 ```
 civic-intelligence-network/
-├── index.html            ← Complete app (all 6 screens, single file)
-├── architecture.html     ← Interactive architecture diagrams
+├── index.html            ← Complete app (6 screens, single file, zero deps)
+├── architecture.html     ← Interactive architecture & data flow diagrams
 ├── README.md             ← This file
 ├── LICENSE               ← MIT License
 └── .claude/
     └── launch.json       ← Dev server config
 ```
 
-### Tech Stack
+### The 5-Minute Demo
 
 ```
-Pure HTML5 + CSS3 + Vanilla JavaScript (ES6+)
-No frameworks · No build step · No npm · Zero dependencies
-Google Fonts CDN (Syne, IBM Plex Sans, Space Mono)
-Hosted on GitHub Pages
+MINUTE 1  │  Dashboard     →  38/100 MFI · Crisis banner · "FALSE" rumor card
+           │                   "This is what a citizen in Balangir sees right now."
+           │
+MINUTE 2  │  Submit Report →  Gandhi Chowk + LPG → Dedup fires → YES → 89→92
+           │                   "30 seconds. No account. The case got stronger."
+           │
+MINUTE 3  │  Case Detail   →  Evidence timeline → [Verify Integrity] → hashes ✓
+           │                   "47 citizens. 2 journalists. 1 NGO. Tamper-proof."
+           │
+MINUTE 4  │  Admin Panel   →  [Review & File] → AI complaint letter → [Authorize]
+           │                   "1 structured report. Not 47 separate complaints."
+           │
+MINUTE 5  │  Case Board    →  DC Balangir: 31% response rate
+           │                   "Permanent. Public. Irrefutable. This is accountability."
 ```
+
+> [!TIP]
+> **Show this to investors, journalists, or citizens.** Every interaction is designed to feel real. The countdown ticks. The bars animate. The blockchain hashes compute visually.
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- CONTRIBUTING -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+## 🏗️ How It Works — Architecture
 
-## 🤝 How to Contribute
+### The CivicWatch Pipeline
 
-We welcome contributors at every skill level. Pick what matches you:
+```
+  CITIZEN ──→ DEDUP ──→ VERIFY ──→ AI DRAFT ──→ ADMIN ──→ AUTHORITY
+    👤          📡         📰         🤖          🔒         🏛
+  anonymous   merge or   journalist  pattern     review    72-hour
+  signal      create     + NGO       analysis    & file    public timer
+  (30 sec)    (+3 str)   (+28 str)   (91% conf)  (+6 str)  (31% rate)
+```
 
-| Role | What You'd Work On | Skills |
+### The Governance Model
+
+Every data point flows through **structured layers** with clear accountability at each tier:
+
+<table>
+<tr><td>
+
+### 👤 Top: CITIZEN (Anonymous Reporter)
+
+The system starts with one anonymous citizen seeing an overpriced commodity.
+No login. No account. 30-second signal submission. This is the spark.
+
+</td></tr>
+</table>
+
+### Tier 1 — Core Pipeline
+
+| Module | ID | What It Does |
 |:---|:---|:---|
-| **Frontend** | UI/UX polish, animations, mobile, accessibility, PWA | HTML · CSS · JS |
-| **Backend** | REST API, database, real price API integration | Node.js · Python · PostgreSQL |
-| **AI/ML** | Anomaly detection, complaint drafting, rumor NLP | Python · Claude API · TensorFlow |
-| **Blockchain** | On-chain audit logging, verification | Solidity · Polygon · Solana |
-| **Domain** | Legal (ECA 1955), gov filing, supply chain economics | Policy · Law |
-| **Localization** | Odia, Hindi, Telugu, Bengali translations | i18n · Linguistics |
-| **Community** | Bug reports, testing, outreach, journalist connections | Advocacy |
+| 📡 **Signal Engine** | `SE-001` | Intake + deduplication — merges matching area+commodity signals |
+| ✅ **Verification Hub** | `VH-001` | Trust scoring — journalist claims, sealed verification, tier weights |
+| 🤖 **AI Analyst** | `AI-001` | Pattern detection, hoarding identification, confidence scoring |
+| 📋 **Case Manager** | `CM-001` | Admin review, complaint authorization, authority filing, tracking |
 
-### Steps
+### Tier 2 — 9 Specialized Modules
 
-```bash
-# 1. Fork → 2. Clone → 3. Branch → 4. Code → 5. PR
-git checkout -b feature/your-feature
-# Make changes — test by opening index.html in browser
-git commit -m "feat: description of change"
-git push origin feature/your-feature
-# Open a Pull Request on GitHub
-```
+| Module | Color | Purpose |
+|:---|:---:|:---|
+| 📡 **Dedup Engine** | 🔴 | Area + commodity matching, signal merging, +3 strength on merge |
+| ⚡ **Strength Scorer** | 🟠 | Citizens (max 35) + Journalists (max 48) + NGO (max 15) + Admin (max 6) |
+| 🛡 **Rumor Buster** | 🟡 | FALSE / UNVERIFIED / PARTIALLY TRUE classification |
+| 💰 **Price Oracle** | 🔵 | Official MRP from IOCL, FCI, PDS, Mandi vs reported prices |
+| 📝 **Complaint Drafter** | 🟢 | AI-generated ECA 1955 formal complaint letters |
+| 🔗 **Blockchain Logger** | 🟣 | Cryptographic chaining of every event — tamper = chain break |
+| 🔔 **Notification** | 🔴 | Toast system, crisis alerts, countdown timers |
+| 📊 **Analytics** | 🔵 | MFI calculation, hotspot mapping, authority scorecards |
+| 🌐 **i18n** | ⚪ | English ↔ Odia toggle on all UI text |
 
-### Rules
+> Every task flows: **Signal → Dedup → Score → Verify → AI Draft → Admin Review → File → Track**
 
-1. **Issues first** — open or claim an issue before starting
-2. **Small PRs** — one feature/fix per PR
-3. **No frameworks** — prototype stays as a single HTML file
-4. **Test locally** — all 6 screens must work
-5. **Odia support** — include `data-or` translations for new text
+### Tier 3 — Data Layer
 
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- SECURITY & PRIVACY -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 🔒 Security &amp; Privacy
-
-| Principle | Implementation |
+| Layer | What It Contains |
 |:---|:---|
-| **Anonymous by default** | No login, no account, no tracking. Citizens can never be identified. |
-| **Sealed verification** | Journalists verify independently — they cannot see each other's notes. |
-| **Blockchain immutability** | Every entry is cryptographically chained. Tampering breaks the chain. |
-| **Public accountability** | Authority response rates are permanent public records. |
-| **No PII stored** | Signals contain commodity + area + price only. No personal data. |
-| **Open source** | All code is public. No hidden data collection. MIT licensed. |
+| 🔗 **Blockchain + State** | Immutable audit trail, case state, permission records |
+| 🌐 **External Intelligence** | Gov APIs (IOCL, FCI, PDS), Mandi prices, 8 data sources |
 
----
+### Output — Authority Accountability
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- 5 MINUTE DEMO -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+| Authority | Cases | Responded | Response Rate | Status |
+|:---|:---:|:---:|:---:|:---:|
+| **DC Balangir** | 47 | 14 | **31%** | 🔴 Critical |
+| **CSO Balangir** | 18 | 13 | **72%** | 🟢 Good |
+| **State Commissioner** | — | — | — | ⏳ Escalation target |
 
-## 🎬 5-Minute Demo Flow
-
-```
-MIN 1  │  Dashboard     →  38/100 MFI · Crisis banner · "FALSE" rumor card
-       │                   "This is what a citizen in Balangir sees right now."
-       │
-MIN 2  │  Submit Report →  Gandhi Chowk + LPG → Dedup fires → YES → 89→92
-       │                   "30 seconds. No account. The case got stronger."
-       │
-MIN 3  │  Case Detail   →  Evidence timeline → [Verify Integrity] → hashes ✓
-       │                   "47 citizens. 2 journalists. 1 NGO. Tamper-proof."
-       │
-MIN 4  │  Admin Panel   →  [Review & File] → Complaint letter → [Authorize]
-       │                   "1 structured report. Not 47 separate complaints."
-       │
-MIN 5  │  Case Board    →  DC Balangir: 31% response rate scorecard
-       │                   "Permanent. Public. Irrefutable. This is accountability."
-```
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- LICENSE -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 📜 License
-
-**MIT License** — Copyright 2026 Aswini Behera
-
-Free to use, modify, and distribute. See [LICENSE](./LICENSE) for full text.
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- FOOTER -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+<br>
 
 <div align="center">
 
-<br/>
+```
+  ┌─────────────────────────────────────────────────────────────┐
+  │                                                             │
+  │   8 Commodities · 8 Areas · 3 Tiers · 9 Modules            │
+  │   5 Actors · Blockchain Audit · AI-Powered · Open Source    │
+  │                                                             │
+  │   ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐      │
+  │   │Zero Login│ │Tamper-   │ │AI-Powered│ │  Open    │      │
+  │   │          │ │  Proof   │ │          │ │ Source   │      │
+  │   └──────────┘ └──────────┘ └──────────┘ └──────────┘      │
+  │                                                             │
+  └─────────────────────────────────────────────────────────────┘
+```
 
-**Built by [Aswini Behera](https://github.com/Ab-aswini)** · Balangir, Odisha, India · [aswinibehera666@gmail.com](mailto:aswinibehera666@gmail.com)
+</div>
 
-<sub>
+---
 
-[GitHub](https://github.com/Ab-aswini/civic-intelligence-network) · [Live Demo](https://ab-aswini.github.io/civic-intelligence-network) · [Architecture](https://ab-aswini.github.io/civic-intelligence-network/architecture.html) · MIT License
+## 👥 Meet Your Actors — 5 Roles
 
-</sub>
+<table>
+<tr><td>
 
-<br/>
+### 👤 Citizens (Anonymous Reporters)
 
-<sub>Built for Balangir, Odisha. Designed for the world. Open source forever.</sub>
+| Capability | Detail |
+|:---|:---|
+| **Submit signals** | Area + commodity + price seen → 30-second anonymous report |
+| **Confirm existing** | Dedup merges matching reports → +3 strength each |
+| **Report rumors** | Submit rumors for journalist fact-checking |
+| **Track cases** | View case board, timelines, authority response rates |
 
-<sub>Because citizens are paying ₹2,500 for a ₹939 LPG cylinder right now.</sub>
+> **Zero login. Zero tracking. Zero identification. Always.**
+
+</td></tr>
+</table>
+
+### 📰 Verification Partners — 5 Tiers
+
+| Tier | Badge | Requirements | Weight | Example |
+|:---|:---:|:---|:---:|:---|
+| 👑 **Master Verifier** | ★ | 200+ verifications · 93%+ accuracy | `×1.6` | Ramesh Panda, Sambad |
+| 🥇 **Senior Verifier** | — | 50+ verifications · 90%+ accuracy | `×1.3` | Sunita Kar, OTV Digital |
+| 🏢 **NGO Partner** | — | Institutional registration | `×1.2` | PRADAN Balangir |
+| ✅ **Active Verifier** | — | 10+ verifications · 85%+ accuracy | `×1.0` | Biswajit Rath, Dharitri |
+| 🆕 **New Partner** | — | Less than 10 verifications | `×0.5` | Amrita Kulkarni, Freelance |
+
+### 🤖 AI Engine
+
+| Capability | What It Does |
+|:---|:---|
+| **Pattern Detection** | Identifies coordinated hoarding vs genuine shortage |
+| **Confidence Scoring** | 0-100% AI confidence based on signal consistency |
+| **Supply Explainer** | Real-time context: _"Strait of Hormuz conflict blocked 62% of LPG imports"_ |
+| **Complaint Drafting** | Formal ECA 1955 letter with evidence summary, legal citations |
+| **Rumor Analysis** | FALSE / UNVERIFIED / PARTIALLY TRUE classification with source citation |
+
+### 🔒 Admin & 🏛 Authority
+
+| Role | Responsibility |
+|:---|:---|
+| **Admin** | Reviews AI draft, edits complaint, authorizes filing to government |
+| **Authority** | Receives formal complaint, 72-hour response window, public scorecard |
+
+---
+
+## 🔄 End-to-End Data Flow — 9 Steps
+
+> Every signal follows a **deterministic path**. No manual gaps. Every step blockchain-logged.
+
+| Step | Actor | What Happens | Blockchain | Strength |
+|:---:|:---:|:---|:---:|:---:|
+| **1** | 👤 Citizen | Submits anonymous signal (area + commodity + price) | `#1 a3f9c2d1...` | 1/100 |
+| **2** | 📡 Dedup | Checks if matching signal exists → merge or create new | — | — |
+| **3** | 👥 Citizens | 47 confirmations pile up over 8 hours | `#2 b7d4e1f2...` | **35**/100 |
+| **4** | 📰 Primary | Ramesh Panda (Master, 94%, ×1.6) visits 3 dealers | `#3 c2a8f789...` | **63**/100 |
+| **5** | 📰 Supporting | Sunita Kar (Senior) confirms independently | `#4 d9b3c4a5...` | **74**/100 |
+| **6** | 🏢 NGO | PRADAN Balangir co-signs (14 households) | `#5 e5f1a2b3...` | **83**/100 |
+| **7** | 🤖 AI | Drafts formal complaint — 91% confidence | — | — |
+| **8** | 🔒 Admin | Reviews, edits, authorizes filing | `#6-7 f3c7d9e1...` | **89**/100 |
+| **9** | 🏛 Authority | Filed to DC Balangir — 72hr response timer starts | `pending...` | — |
+
+### The Dedup Decision
+
+```
+When a citizen selects an area + commodity that already has an active signal:
+
+  ┌─────────────────────────────────────────────────┐
+  │  🔍 We found an active report for this issue.   │
+  │                                                  │
+  │  CIN-2026-BLG-047-LPG · Gandhi Chowk            │
+  │  ₹939 → ₹2,500 (+166%) · 47 confirms            │
+  │  Strength: 89/100 ████████████████████░ 89%      │
+  │                                                  │
+  │  [✓ YES — THIS IS WHAT I SAW]  [No, different]  │
+  └─────────────────────────────────────────────────┘
+
+  YES → Strength animates 89 → 92 (+3)
+        "You are the 48th person to confirm this."
+
+  NO  → Normal form opens for new signal submission
+```
+
+### The Result
+
+```
+  ┌─────────────────────────────────────────────────┐
+  │  47 scattered complaints  →  1 structured case   │
+  │                                                  │
+  │  89/100 strength · 7 blockchain entries           │
+  │  AI 91% confidence · 72hr response timer          │
+  │  DC response rate: 31% — permanent public record  │
+  └─────────────────────────────────────────────────┘
+```
+
+---
+
+## 📊 Case Lifecycle — State Machine
+
+Every case moves through a deterministic state machine. Every transition is blockchain-logged.
+
+```
+                    ┌──────────┐     claims     ┌───────────────┐     verified    ┌──────────┐
+                    │  SIGNAL  │ ──────────────→ │ INVESTIGATING │ ──────────────→ │ VERIFIED │
+                    │  1-35pts │                 │  journalist   │                 │   70+pts │
+                    └──────────┘                 └───────────────┘                 └──────────┘
+                         │                                                              │
+                    disputed                                                        admin OK
+                         ↓                                                              ↓
+                    ┌──────────┐                                                  ┌──────────┐
+                    │ COUNTER  │                                                  │  FILED   │
+                    │ disputed │                                                  │ 72hr tmr │
+                    └──────────┘                                                  └──────────┘
+                                                                                       │
+                                                                          ┌────────────┼────────────┐
+                                                                     action taken   no response    resolved
+                                                                          ↓            ↓              ↓
+                                                                    ┌──────────┐ ┌───────────┐ ┌──────────┐
+                                                                    │  ACTION  │ │ ESCALATED │ │ RESOLVED │
+                                                                    │  TAKEN   │ │  → state  │ │    ✓     │
+                                                                    └──────────┘ └───────────┘ └──────────┘
+```
+
+### Status Badges
+
+| Badge | Color | Meaning |
+|:---|:---:|:---|
+| `JOURNALIST VERIFIED ✓` | 🟢 | At least one journalist confirmed |
+| `UNDER INVESTIGATION` | 🟡 | Journalist has claimed the signal |
+| `PENDING VERIFICATION` | ⚪ | Awaiting journalist attention |
+| `COUNTER-REPORTED` | 🟣 | Another citizen disputes the report |
+| `FILED — PENDING RESPONSE` | 🔵 | Sent to government authority |
+| `ESCALATED` | 🔴 | No response in 96h → sent to higher authority |
+| `RESOLVED` | 🟢 | Authority took action, verified by journalist |
+
+---
+
+## 🛡 Trust & Verification Model
+
+### Signal Strength Algorithm
+
+> How a signal goes from **0 to 89/100** — the math behind credibility.
+
+| Source | Points | Cap | Calculation |
+|:---|:---:|:---:|:---|
+| **Citizens** (47 confirms) | +35 | 35 | Diminishing returns after 20 — first 20 = 1.5 pts each, rest = 0.33 |
+| **Primary Verifier** (Master) | +28 | 48 | `base_points × accuracy × tier_multiplier` = 18 × 0.94 × 1.6 |
+| **Supporting Verifier** (Senior, independent) | +20 | 48 | Independent confirmation bonus — didn't see primary's notes |
+| **NGO Co-signature** | +15 | 15 | Institutional endorsement — 14 households confirmed shortage |
+| **Admin Authorization** | +6 | 6 | Final review + legal authorization |
+| **TOTAL** | **89** | **100** | **Filing threshold: 70/100** |
+
+### Market Fairness Index (MFI) Formula
+
+```
+MFI = Violation Rate (40%) + Avg Price Deviation (35%) + Severity Index (15%) + Report Volume (10%)
+
+Current Balangir MFI: 38/100 — CRITICAL
+```
+
+### The Sealed Verification Rule
+
+> [!IMPORTANT]
+> **Journalists verify independently.** When a journalist claims a signal, they enter a **sealed verification view** — they cannot see other journalists' notes. This prevents groupthink and ensures each verification is truly independent. That's why two journalists confirming the same thing scores higher than two journalists seeing each other's work.
+
+---
+
+## 🖥 The 6 Screens
+
+| # | Screen | Key Features | Highlight |
+|:---:|:---|:---|:---|
+| 01 | **Dashboard** | Crisis banner, MFI/SHS scores, AI supply explainer, rumor buster, signal feed, hotspot grid, price table | `MFI: 38/100 CRITICAL` |
+| 02 | **Citizen Report** | Anonymous form, auto-fill MRP, live diff calculator, dedup flow, confirmation animation | `NO ACCOUNT REQUIRED` |
+| 03 | **Case Board** | Filtered case list, live countdown timers, authority scorecards | `DC RESPONSE: 31%` |
+| 04 | **Case Detail** | Evidence timeline (8 entries), contributor cards, blockchain verification animation | `7 CHAIN ENTRIES VERIFIED` |
+| 05 | **Journalist Panel** | Signal queue, sealed verification form, Track 2 publishing, gamified badges | `MASTER: 94% ACCURACY` |
+| 06 | **Admin Dashboard** | Critical alert queue, AI analysis, complaint letter modal, weekly digest, partner management | `AI CONFIDENCE: 91%` |
+
+<details>
+<summary><b>Screen 1 — Dashboard (detailed)</b></summary>
+
+- **Crisis Banner**: Red, pulsing dot, slide-in animation — _"ACTIVE CRISIS: LPG black market detected in 4 areas"_
+- **4 Score Cards**: MFI (38/100 RED), Supply Health (52/100 AMBER), Active Cases (12), Authority Response (31% RED)
+- **AI Supply Explainer**: _"Strait of Hormuz conflict blocked 62% of India's LPG imports..."_ — refreshable
+- **Rumor Buster**: 3 cards — FALSE (red), UNVERIFIED (yellow), PARTIALLY TRUE (orange)
+- **Official Price Table**: 8 commodities with official vs market price and % deviation chips
+- **Live Signal Feed**: 5 signal cards with tracking IDs, strength bars, status badges
+- **Hotspot Grid**: 8 area cards with colored dots and mini bars
+
+</details>
+
+<details>
+<summary><b>Screen 2 — Citizen Report (detailed)</b></summary>
+
+- **Form**: District → Area → Commodity (auto-fills MRP) → Price You Saw → Live Diff → Severity → Note → Photo
+- **Dedup**: Gandhi Chowk + LPG → shows existing signal → [YES/No] → strength animation 89→92
+- **Submit Success**: Tracking ID + 5-step timeline + _"You will never be identified"_
+- **Validation**: Toast if commodity/area/price missing
+
+</details>
+
+<details>
+<summary><b>Screen 4 — Case Detail (detailed)</b></summary>
+
+- **Header**: Giant strength number (89, Syne 800, 52px) + live countdown HH:MM:SS
+- **Evidence Timeline**: 8 entries with green/yellow/grey dots, blockchain hashes, strength deltas
+- **Contributors**: 4 cards with avatar, tier badge, accuracy, weight
+- **Blockchain Verification**: Click [Verify Integrity] → amber pending → ○ become ✓ one by one (300ms stagger) → green success
+
+</details>
+
+<details>
+<summary><b>Screen 6 — Admin Dashboard (detailed)</b></summary>
+
+- **Critical Alert Queue**: Red border, _"⚠ CRITICAL THRESHOLD CROSSED"_, AI analysis box
+- **Review Modal**: Dark blur overlay, scrollable AI-drafted complaint letter (Space Mono), [Authorize & File]
+- **Weekly Digest**: AI summary, 4 section pills, [Preview Full] / [Send Now]
+- **Partner Management**: 5-row table with tier badges and accuracy
+- **Price Manager**: 8-row table with [Edit] buttons → audit trail toast
+
+</details>
+
+---
+
+## 💰 Market Intelligence — Balangir
+
+### Official MRP vs Black Market
+
+| | Commodity | Official | Market | Deviation | Threat |
+|:---|:---|---:|---:|:---:|:---:|
+| 🔥 | **LPG Cylinder (14.2kg)** | ₹939 | ₹2,500 | **+166%** | 🔴 |
+| 🫘 | **Toor Dal (1kg)** | ₹155 | ₹220 | **+42%** | 🟠 |
+| 🧅 | **Onion (1kg)** | ₹40 | ₹65 | **+63%** | 🟠 |
+| 🫙 | **Mustard Oil (1L)** | ₹145 | ₹210 | **+45%** | 🟠 |
+| 🍚 | **Sugar (1kg)** | ₹42 | ₹58 | **+38%** | 🟡 |
+| 🌾 | **Wheat Atta (1kg)** | ₹35 | ₹36 | +3% | 🟢 |
+| 🌾 | **Rice (1kg)** | ₹38 | ₹38 | 0% | 🟢 |
+| ⛽ | **Petrol (1L)** | ₹105 | ₹105 | 0% | 🟢 |
+
+### Hotspot Areas
+
+| Area | Signals | Threat | Active Cases |
+|:---|:---:|:---:|:---|
+| **Gandhi Chowk** | 18 | 🔴 Critical | LPG +166%, Oil +45% |
+| **Bus Stand Area** | 14 | 🟠 High | Oil +45%, Dal +42% |
+| **Cantonment Road** | 11 | 🟠 High | LPG +134% |
+| **Court Road** | 7 | 🟡 Medium | Sugar +38% |
+| **Titilagarh Road** | 6 | 🟡 Medium | Dal +42% |
+| **Sargipali** | 2 | 🟢 Low | — |
+| **Bibhutipara** | 1 | 🟢 Low | — |
+| **Nehru Nagar** | 1 | 🟢 Low | — |
+
+---
+
+## 💡 Ideation Journey
+
+> Each phase solved a real problem discovered in the previous one.
+
+| Phase | Name | What We Built | Problem Discovered |
+|:---:|:---|:---|:---|
+| 🔴 **0** | **The Spark** | Paid ₹2,500 for a ₹939 LPG cylinder | One angry citizen = ignored |
+| 🟠 **1** | **SupplySentinel v0.1** | LPG-only price tracker for Balangir | Citizen reports alone = unverifiable |
+| 🟡 **2** | **Verification Layer** | Journalist + NGO verification with trust scoring | Structured evidence > angry emails |
+| 🔵 **3** | **AI + Blockchain** | AI complaint drafting, immutable audit trail | Accountability, not confrontation |
+| 🟢 **4** | **Civic Intelligence Network** | 8 commodities, 8 areas, 6 screens, Odia support | **You are here** |
+
+### The Design Philosophy
+
+> [!IMPORTANT]
+> **Accountability, not confrontation.** CivicWatch doesn't attack authorities — it gives them structured, verified, AI-analyzed evidence and a public timer. The 31% response rate isn't an accusation; it's a fact. The system builds pressure through transparency, not anger.
+
+---
+
+## 🗺️ Roadmap
+
+| Phase | Timeline | Status | What's Being Built | Contributors Needed |
+|:---|:---|:---:|:---|:---|
+| **Prototype** | Q2 2026 | ✅ Done | Single-file app, 6 screens, all interactions, mock data | Bug reports, UX feedback |
+| **Backend** | Q3 2026 | 🔜 Next | Node.js API, PostgreSQL, real price APIs, WhatsApp/SMS | Backend devs, DevOps |
+| **AI/ML** | Q4 2026 | 💡 Planned | Claude/GPT complaint drafting, anomaly detection, NLP | ML engineers, NLP |
+| **Multi-District** | Q1 2027 | 💡 Planned | All 30 Odisha districts, 100+ journalists | District coordinators |
+| **National** | Q2 2027+ | 💡 Vision | Open-source template for any Indian district | Everyone |
+
+<details>
+<summary><b>Detailed Phase Breakdown</b></summary>
+
+### Q3 2026 — Backend + Real Data
+
+- Node.js/Python backend with PostgreSQL
+- Real IOCL, FCI, PDS API integration for live official prices
+- WhatsApp/SMS reporting via Twilio (low-connectivity areas)
+- Actual blockchain logging (Polygon/Solana — low gas fees)
+- JWT authentication for journalists + admin
+
+### Q4 2026 — AI/ML Pipeline
+
+- Claude API / GPT-powered complaint drafting with ECA 1955 templates
+- Anomaly detection for price spikes across commodities/areas
+- Predictive supply chain analysis — forecast shortages before they hit
+- NLP-based rumor classification from social media feeds
+
+### Q1 2027 — Multi-District
+
+- Expand from Balangir → all 30 Odisha districts
+- Partner network: 100+ journalists, 50+ NGOs
+- State-level authority accountability dashboard
+- Public API for researchers and media
+
+### Q2 2027+ — National Platform
+
+- Open-source district template — deploy for any region
+- Hindi, Telugu, Bengali, Tamil localization
+- Government partnership track
+- International replication model
+
+</details>
+
+---
+
+## ⚙️ Tech Stack
+
+| Layer | Technology | Why |
+|:---:|:---|:---|
+| 📝 **Markup** | Semantic HTML5 | Zero dependencies, works everywhere |
+| 🎨 **Styling** | CSS3 with Custom Properties | Dark intelligence theme, CSS-only animations |
+| ⚡ **Logic** | Vanilla JavaScript (ES6+) | No framework overhead, instant load |
+| 🔤 **Fonts** | Google Fonts CDN | Syne (headings), IBM Plex Sans (body), Space Mono (data) |
+| 🌐 **Hosting** | GitHub Pages | Free, fast, always-on |
+| 📱 **Design** | Mobile-first (360px min) | Accessible on any device |
+
+> [!TIP]
+> **Why single-file?** The prototype is designed to be shown to investors, journalists, and citizens. No build step = no excuses. Open the file. It works. Everywhere.
+
+---
+
+## 🛡️ Security & Privacy
+
+| # | Principle | How It's Enforced |
+|:-:|:---|:---|
+| 1 | 🔒 **Anonymous by default** | No login, no account, no cookies, no tracking. Zero PII collected. |
+| 2 | 🔐 **Sealed verification** | Journalists can't see each other's notes — prevents groupthink |
+| 3 | 🔗 **Blockchain immutability** | Every entry cryptographically chained — tampering breaks the chain |
+| 4 | 📊 **Public accountability** | Authority response rates are permanent records — cannot be deleted |
+| 5 | 🚫 **No PII in signals** | Signals contain only: commodity + area + price. Nothing personal. |
+| 6 | 🌐 **Open source** | All code is public. No hidden data collection. Full transparency. |
+| 7 | 🇮🇳 **Odia language** | Local language support so literacy isn't a barrier |
+
+<details>
+<summary><b>Anonymity Architecture</b></summary>
+
+```
+Citizen's device
+    │
+    ├── No login required
+    ├── No account created
+    ├── No IP logged (in production: Tor-friendly)
+    ├── No browser fingerprinting
+    ├── Signal contains ONLY: area + commodity + price + optional note
+    │
+    └── Result: The system literally cannot identify who submitted a signal.
+                Even under court order, there is nothing to hand over.
+```
+
+</details>
+
+---
+
+## 🤝 Contributing
+
+CivicWatch is fully modular — every screen, every interaction, every data point is open.
+
+| Role | What You'd Work On | Skills Needed |
+|:---|:---|:---|
+| 🎨 **Frontend** | UI polish, animations, mobile responsiveness, PWA | HTML · CSS · JS |
+| ⚙️ **Backend** | REST API, database, real price API integration | Node.js · Python · PostgreSQL |
+| 🤖 **AI/ML** | Anomaly detection, complaint drafting, rumor NLP | Python · Claude API |
+| 🔗 **Blockchain** | On-chain audit logging, verification | Solidity · Polygon |
+| ⚖️ **Domain** | Legal (ECA 1955), gov filing processes | Policy · Law |
+| 🌐 **Localization** | Odia, Hindi, Telugu, Bengali translations | i18n · Linguistics |
+| 📢 **Community** | Bug reports, testing, journalist outreach | Advocacy |
+
+<details>
+<summary><b>How to Add a New Feature</b></summary>
+
+```bash
+# 1. Fork the repo
+# 2. Clone your fork
+git clone https://github.com/YOUR-USERNAME/civic-intelligence-network.git
+
+# 3. Create a feature branch
+git checkout -b feature/your-feature
+
+# 4. Make changes — test by opening index.html
+# 5. Commit
+git commit -m "feat: description of change"
+
+# 6. Push and open a PR
+git push origin feature/your-feature
+```
+
+</details>
+
+<details>
+<summary><b>Contribution Rules</b></summary>
+
+1. **Issues first** — Check existing issues or open one before starting
+2. **Small PRs** — One feature or fix per pull request
+3. **No frameworks** — The prototype stays as a single HTML file with zero deps
+4. **Test locally** — Open `index.html` in a browser, verify all 6 screens work
+5. **Odia support** — Include `data-or` translations for any new text
+6. **No PII** — Never add real names, locations, or identifying information to mock data
+
+</details>
+
+```
+Fork → Branch → Implement → Test → PR → Review → Merge
+```
+
+---
+
+## 📄 License
+
+**MIT** — see [LICENSE](LICENSE) for details.
+
+---
+
+<div align="center">
+
+### 🏛 Built for citizens who deserve a fair market.
+
+**8 commodities · 8 areas · 6 screens · 9 modules · 5 actors**
+
+**Blockchain audit · AI complaint drafting · Signal strength algorithm · Odia support**
+
+<br>
+
+[![Live Demo](https://img.shields.io/badge/▶_Live_Demo-ff4d1c?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ab-aswini.github.io/civic-intelligence-network)
+[![Star on GitHub](https://img.shields.io/badge/⭐_Star_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ab-aswini/civic-intelligence-network)
+[![Report Issue](https://img.shields.io/badge/🐛_Report_Issue-ff1744?style=for-the-badge)](https://github.com/Ab-aswini/civic-intelligence-network/issues)
+
+<br>
+
+<sub>If CivicWatch resonates with you, **give it a ⭐** — it helps others discover it.</sub>
+
+<br>
+
+<img src="https://img.shields.io/badge/Made_with-❤️_in_Balangir,_Odisha-ff4d1c?style=flat-square" alt="Made in Balangir" />
+
+<br>
+
+<sub>Built by <a href="https://github.com/Ab-aswini">Aswini Behera</a> · <a href="mailto:aswinibehera666@gmail.com">aswinibehera666@gmail.com</a> · MIT License · Open Source Forever</sub>
 
 </div>
