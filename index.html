@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CivicWatch — Civic Intelligence Network</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0c0f;
+  --surface: #111318;
+  --surface2: #181c24;
+  --border: #1e2530;
+  --border2: #2a3040;
+  --accent: #ff4d1c;
+  --accent2: #ff8c42;
+  --green: #00c853;
+  --yellow: #ffd740;
+  --red: #ff1744;
+  --blue: #2196f3;
+  --text: #e8eaf0;
+  --text2: #8892a4;
+  --text3: #4a5568;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  min-width: 360px;
+  line-height: 1.5;
+}
+
+h1,h2,h3,h4,.syne { font-family: 'Syne', sans-serif; font-weight: 800; }
+.mono { font-family: 'Space Mono', monospace; }
+
+a { color: var(--accent); text-decoration: none; }
+
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* NAVBAR */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,12,15,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  cursor: pointer; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px;
+}
+.nav-logo .hex {
+  width: 28px; height: 28px;
+  background: var(--accent);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: hexPulse 2s ease-in-out infinite;
+}
+@keyframes hexPulse {
+  0%,100% { transform: scale(1); opacity:1; }
+  50% { transform: scale(1.1); opacity:0.8; }
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 6px; align-items: center; }
+.nav-link {
+  background: none; border: none; color: var(--text2); cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; font-weight: 500;
+  padding: 6px 12px; border-radius: 6px; transition: all 0.2s;
+}
+.nav-link:hover, .nav-link.active { color: var(--text); background: var(--surface2); }
+.nav-right { display: flex; align-items: center; gap: 8px; }
+.btn-journalist {
+  background: none; border: 1px solid var(--yellow); color: var(--yellow);
+  font-size: 12px; padding: 5px 10px; border-radius: 6px; cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.btn-admin {
+  background: none; border: 1px solid var(--red); color: var(--red);
+  font-size: 12px; padding: 5px 10px; border-radius: 6px; cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.lang-toggle {
+  display: flex; gap: 2px; background: var(--surface2); border-radius: 6px; overflow: hidden;
+}
+.lang-btn {
+  background: none; border: none; color: var(--text2); font-size: 11px;
+  padding: 4px 8px; cursor: pointer; font-family: 'IBM Plex Sans', sans-serif;
+}
+.lang-btn.active { background: var(--accent); color: #fff; }
+.proto-badge {
+  font-size: 9px; background: var(--surface2); color: var(--text3);
+  padding: 3px 8px; border-radius: 4px; letter-spacing: 1px; font-weight: 600;
+}
+
+/* LAYOUT */
+.container { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+
+/* CRISIS BANNER */
+.crisis-banner {
+  background: rgba(255,23,68,0.08);
+  border-left: 4px solid var(--red);
+  padding: 14px 20px;
+  margin-bottom: 24px;
+  border-radius: 0 8px 8px 0;
+  display: flex; align-items: center; gap: 12px;
+  animation: slideIn 0.6s ease;
+  font-size: 13px;
+}
+@keyframes slideIn { from { transform: translateX(-40px); opacity:0; } to { transform: translateX(0); opacity:1; } }
+.pulse-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--red);
+  animation: pulse 1.5s ease-in-out infinite; flex-shrink: 0;
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(255,23,68,0.6); }
+  50% { box-shadow: 0 0 0 8px rgba(255,23,68,0); }
+}
+
+/* CARDS */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.card:hover { border-color: var(--border2); }
+
+/* SCORE CARDS */
+.score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 14px; margin-bottom: 24px; }
+.score-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  position: relative;
+}
+.score-card .label { font-size: 12px; color: var(--text2); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+.score-card .value { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 36px; line-height: 1; }
+.score-card .sub { font-size: 12px; color: var(--text2); margin-top: 6px; }
+.score-bar {
+  height: 4px; background: var(--surface2); border-radius: 4px; margin-top: 10px; overflow: hidden;
+}
+.score-bar-fill {
+  height: 100%; border-radius: 4px; width: 0; transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+.tooltip {
+  display: none; position: absolute; top: -8px; left: 50%; transform: translateX(-50%) translateY(-100%);
+  background: var(--surface2); border: 1px solid var(--border2); padding: 8px 12px;
+  border-radius: 8px; font-size: 11px; color: var(--text2); white-space: nowrap; z-index: 10;
+}
+.score-card:hover .tooltip { display: block; }
+
+/* STRENGTH BAR */
+.str-bar { height: 4px; background: var(--surface2); border-radius: 4px; flex: 1; overflow: hidden; }
+.str-bar-fill { height: 100%; border-radius: 4px; width: 0; transition: width 1.2s cubic-bezier(0.4,0,0.2,1); }
+
+/* TWO COL */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+@media(max-width:768px){ .two-col { grid-template-columns: 1fr; } .nav-links { display:none; } }
+
+/* CHIPS */
+.chip {
+  display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600;
+}
+.chip-red { background: rgba(255,23,68,0.15); color: var(--red); }
+.chip-green { background: rgba(0,200,83,0.15); color: var(--green); }
+.chip-yellow { background: rgba(255,215,64,0.15); color: var(--yellow); }
+.chip-orange { background: rgba(255,140,66,0.15); color: var(--accent2); }
+.chip-blue { background: rgba(33,150,243,0.15); color: var(--blue); }
+.chip-grey { background: rgba(74,85,104,0.2); color: var(--text2); }
+.chip-purple { background: rgba(156,39,176,0.15); color: #ce93d8; }
+
+/* STATUS BADGES */
+.badge {
+  font-size: 10px; padding: 3px 10px; border-radius: 4px; font-weight: 600;
+  letter-spacing: 0.5px; text-transform: uppercase;
+}
+.badge-verified { background: rgba(0,200,83,0.15); color: var(--green); border: 1px solid rgba(0,200,83,0.3); }
+.badge-investigating { background: rgba(255,215,64,0.15); color: var(--yellow); border: 1px solid rgba(255,215,64,0.3); }
+.badge-pending { background: rgba(74,85,104,0.2); color: var(--text2); border: 1px solid var(--border); }
+.badge-counter { background: rgba(156,39,176,0.15); color: #ce93d8; border: 1px solid rgba(156,39,176,0.3); }
+.badge-filed { background: rgba(33,150,243,0.15); color: var(--blue); border: 1px solid rgba(33,150,243,0.3); }
+.badge-resolved { background: rgba(0,200,83,0.15); color: var(--green); border: 1px solid rgba(0,200,83,0.3); }
+.badge-escalated { background: rgba(255,23,68,0.15); color: var(--red); border: 1px solid rgba(255,23,68,0.3); }
+
+/* BUTTONS */
+.btn {
+  border: none; cursor: pointer; font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600; font-size: 14px; padding: 10px 20px; border-radius: 8px;
+  transition: all 0.2s;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: #e8431a; transform: translateY(-1px); }
+.btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+.btn-secondary:hover { border-color: var(--border2); }
+.btn-danger { background: none; color: var(--red); border: 1px solid var(--red); }
+.btn-danger:hover { background: rgba(255,23,68,0.1); }
+.btn-sm { font-size: 12px; padding: 6px 14px; }
+.btn-lg { font-size: 15px; padding: 14px 28px; }
+
+/* SIGNAL CARDS */
+.signal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.signal-card:hover { transform: translateX(2px); border-color: var(--border2); }
+.signal-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+.signal-commodity { font-weight: 600; font-size: 15px; }
+.signal-id { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--text3); }
+.signal-prices { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 14px; }
+.signal-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.signal-right { text-align: right; min-width: 100px; }
+.signal-strength { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 24px; }
+
+/* HOTSPOT GRID */
+.hotspot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 10px; }
+.hotspot-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex; align-items: center; gap: 10px;
+}
+.hotspot-card:hover { border-color: var(--border2); }
+.hotspot-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.hotspot-bar { height: 3px; background: var(--surface2); border-radius: 2px; margin-top: 6px; }
+.hotspot-bar-fill { height: 100%; border-radius: 2px; }
+
+/* FORM ELEMENTS */
+.form-group { margin-bottom: 16px; }
+.form-label { font-size: 12px; color: var(--text2); margin-bottom: 6px; display: block; text-transform: uppercase; letter-spacing: 0.5px; }
+.form-input, .form-select, .form-textarea {
+  width: 100%; background: var(--surface2); border: 1px solid var(--border);
+  color: var(--text); padding: 10px 14px; border-radius: 8px; font-size: 14px;
+  font-family: 'IBM Plex Sans', sans-serif; outline: none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--accent); }
+.form-select { cursor: pointer; }
+.form-textarea { resize: vertical; min-height: 80px; }
+.form-input[readonly] { opacity: 0.5; }
+.upload-area {
+  border: 2px dashed var(--border2); border-radius: 10px; padding: 24px;
+  text-align: center; color: var(--text3); font-size: 13px; cursor: pointer;
+  transition: all 0.2s;
+}
+.upload-area:hover { border-color: var(--accent); color: var(--text2); }
+
+/* TIMELINE */
+.timeline { position: relative; padding-left: 28px; }
+.timeline::before { content:''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+.tl-entry { position: relative; margin-bottom: 24px; }
+.tl-dot {
+  position: absolute; left: -24px; top: 4px;
+  width: 12px; height: 12px; border-radius: 50%;
+  border: 2px solid var(--green); background: var(--bg);
+}
+.tl-dot.yellow { border-color: var(--yellow); animation: pulse 1.5s ease-in-out infinite; }
+.tl-dot.grey { border-color: var(--text3); opacity: 0.5; }
+.tl-time { font-size: 11px; color: var(--text3); font-family: 'Space Mono', monospace; }
+.tl-title { font-weight: 600; font-size: 14px; margin: 4px 0; }
+.tl-body { font-size: 13px; color: var(--text2); }
+.tl-meta { font-size: 11px; color: var(--text3); font-family: 'Space Mono', monospace; margin-top: 6px; }
+.tl-entry.dimmed { opacity: 0.5; }
+
+/* BLOCKCHAIN */
+.bc-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 8px 0; border-bottom: 1px solid var(--border);
+  font-family: 'Space Mono', monospace; font-size: 12px;
+}
+.bc-num { color: var(--text3); width: 24px; }
+.bc-hash { color: var(--accent2); flex: 1; }
+.bc-event { color: var(--text2); }
+.bc-check { width: 16px; color: var(--text3); text-align: center; }
+.bc-check.verified { color: var(--green); }
+
+/* CONTRIBUTOR CARDS */
+.contrib-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media(max-width:600px){ .contrib-grid { grid-template-columns: 1fr; } }
+.contrib-card {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px;
+}
+.contrib-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 14px; flex-shrink: 0;
+}
+
+/* MODAL */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+  align-items: center; justify-content: center;
+}
+.modal-overlay.show { display: flex; }
+.modal {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px; max-width: 680px; width: 90%;
+  max-height: 85vh; overflow-y: auto;
+}
+.modal-letter {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: 20px; max-height: 280px; overflow-y: auto;
+  font-family: 'Space Mono', monospace; font-size: 12px; line-height: 1.7;
+  color: var(--text2); margin: 16px 0;
+}
+
+/* TOAST */
+.toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 300; display: flex; flex-direction: column; gap: 8px; }
+.toast {
+  background: var(--surface); border: 1px solid var(--green); border-radius: 10px;
+  padding: 14px 18px; min-width: 280px; max-width: 380px;
+  animation: toastIn 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+.toast-title { font-weight: 600; font-size: 14px; }
+.toast-sub { font-size: 12px; color: var(--text2); margin-top: 2px; }
+@keyframes toastIn { from { transform: translateX(100px); opacity:0; } to { transform: translateX(0); opacity:1; } }
+@keyframes toastOut { from { transform: translateX(0); opacity:1; } to { transform: translateX(100px); opacity:0; } }
+
+/* FILTER PILLS */
+.filter-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.pill {
+  background: var(--surface2); border: 1px solid var(--border); color: var(--text2);
+  font-size: 12px; padding: 6px 14px; border-radius: 20px; cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif; font-weight: 500; transition: all 0.2s;
+}
+.pill.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.pill:hover { border-color: var(--border2); }
+
+/* AUTHORITY SCORECARD */
+.auth-score { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+@media(max-width:600px){ .auth-score { grid-template-columns: 1fr; } }
+
+/* JOURNALIST */
+.j-header {
+  background: rgba(255,215,64,0.06); border: 1px solid rgba(255,215,64,0.2);
+  border-radius: 12px; padding: 20px; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 16px;
+}
+.j-avatar {
+  width: 48px; height: 48px; border-radius: 50%; background: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 18px;
+}
+.j-stat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 24px; }
+@media(max-width:600px){ .j-stat-grid { grid-template-columns: repeat(2,1fr); } }
+.j-stat { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; }
+.j-stat .val { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 28px; }
+.j-stat .lbl { font-size: 11px; color: var(--text2); text-transform: uppercase; }
+
+/* ADMIN */
+.a-header {
+  background: rgba(255,23,68,0.06); border: 1px solid rgba(255,23,68,0.2);
+  border-radius: 12px; padding: 16px 20px; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px;
+}
+.a-mini-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; margin-bottom: 24px; }
+@media(max-width:768px){ .a-mini-grid { grid-template-columns: repeat(3,1fr); } }
+.a-mini { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px; text-align: center; }
+.a-mini .val { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 24px; }
+.a-mini .lbl { font-size: 10px; color: var(--text2); text-transform: uppercase; }
+.critical-queue {
+  border: 2px solid var(--red); border-radius: 12px; padding: 20px; margin-bottom: 24px;
+  background: rgba(255,23,68,0.04);
+}
+.ai-box {
+  background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+  padding: 16px; font-size: 13px; color: var(--text2); margin: 12px 0; line-height: 1.6;
+}
+
+/* BADGES SHELF */
+.badges-shelf { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.badge-item {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px 12px; font-size: 12px;
+}
+
+/* TABLE */
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.data-table th {
+  text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border);
+  font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px;
+}
+.data-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+
+/* FOOTER */
+.footer {
+  text-align: center; padding: 32px 16px; font-size: 12px; color: var(--text3);
+  border-top: 1px solid var(--border); margin-top: 40px;
+}
+
+/* SECTION TITLE */
+.section-title { font-size: 18px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.section-sub { font-size: 13px; color: var(--text2); margin-bottom: 16px; }
+
+/* COUNTDOWN */
+.countdown-box {
+  background: rgba(255,215,64,0.06); border: 1px solid rgba(255,215,64,0.2);
+  border-radius: 10px; padding: 14px 18px; display: flex; justify-content: space-between;
+  align-items: center; margin-top: 12px;
+}
+.countdown-timer {
+  font-family: 'Space Mono', monospace; font-size: 22px; font-weight: 700; color: var(--yellow);
+}
+
+/* PRICE TABLE */
+.price-table { width: 100%; font-size: 13px; }
+.price-table td, .price-table th { padding: 8px 10px; border-bottom: 1px solid var(--border); }
+.price-table th { font-size: 11px; color: var(--text3); text-align: left; text-transform: uppercase; }
+
+/* DEDUP CARD */
+.dedup-card {
+  background: rgba(33,150,243,0.06); border: 1px solid rgba(33,150,243,0.3);
+  border-radius: 12px; padding: 20px; margin-top: 12px;
+}
+
+/* SUCCESS STATE */
+.success-state { text-align: center; padding: 40px 20px; }
+.success-icon { font-size: 64px; margin-bottom: 16px; }
+.tracking-box {
+  display: inline-block; background: rgba(0,200,83,0.1); border: 1px solid rgba(0,200,83,0.3);
+  border-radius: 8px; padding: 10px 20px; font-family: 'Space Mono', monospace;
+  font-size: 15px; color: var(--green); margin: 16px 0;
+}
+.submit-timeline { text-align: left; max-width: 400px; margin: 24px auto; }
+.st-step { display: flex; gap: 12px; padding: 8px 0; align-items: flex-start; }
+.st-icon { font-size: 16px; width: 24px; flex-shrink: 0; text-align: center; }
+.st-text { font-size: 13px; }
+.st-time { font-size: 11px; color: var(--text3); }
+
+/* RUMOR CARD */
+.rumor-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 10px; }
+.rumor-quote { font-size: 14px; font-style: italic; margin-bottom: 8px; color: var(--text); }
+.rumor-verdict { font-size: 13px; color: var(--text2); margin-top: 6px; }
+.rumor-source { font-size: 11px; color: var(--text3); margin-top: 6px; }
+
+/* AI EXPLAINER */
+.ai-explainer {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 20px; margin-bottom: 24px; position: relative;
+}
+.ai-explainer .ai-body { transition: opacity 0.3s; }
+
+/* CASE CARD */
+.case-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px; margin-bottom: 12px; cursor: pointer; transition: all 0.2s;
+}
+.case-card:hover { border-color: var(--border2); transform: translateX(2px); }
+.case-bottom { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 12px; }
+.case-bottom .cb-label { font-size: 11px; color: var(--text3); text-transform: uppercase; }
+.case-bottom .cb-value { font-size: 14px; font-weight: 600; margin-top: 2px; }
+.resolution-box {
+  background: rgba(0,200,83,0.06); border: 1px solid rgba(0,200,83,0.2);
+  border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--green); margin-top: 10px;
+}
+.escalation-box {
+  background: rgba(255,23,68,0.06); border: 1px solid rgba(255,23,68,0.2);
+  border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--red); margin-top: 10px;
+}
+
+/* LIVE DIFF */
+.live-diff {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; margin-top: 8px;
+}
+
+/* WEEKLY DIGEST */
+.digest-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+
+/* PARTNER TABLE */
+.partner-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.partner-avatar {
+  width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; flex-shrink: 0;
+}
+
+/* TIER BADGES */
+.tier { font-size: 10px; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+.tier-master { background: rgba(255,77,28,0.15); color: var(--accent); }
+.tier-senior { background: rgba(33,150,243,0.15); color: var(--blue); }
+.tier-ngo { background: rgba(0,200,83,0.15); color: var(--green); }
+.tier-active { background: rgba(255,215,64,0.15); color: var(--yellow); }
+.tier-new { background: rgba(74,85,104,0.2); color: var(--text2); }
+
+/* RESPONSIVENESS */
+@media(max-width:500px){
+  .score-grid { grid-template-columns: 1fr 1fr; }
+  .a-mini-grid { grid-template-columns: repeat(2,1fr); }
+  .j-stat-grid { grid-template-columns: repeat(2,1fr); }
+  .contrib-grid { grid-template-columns: 1fr; }
+  .case-bottom { grid-template-columns: 1fr; }
+  .auth-score { grid-template-columns: 1fr; }
+  .navbar { padding: 0 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-logo" onclick="navigate('home')">
+    <div class="hex"></div>
+    Civic<span>Watch</span>
+  </div>
+  <div class="nav-links">
+    <button class="nav-link active" id="nl-home" onclick="navigate('home')" data-en="Dashboard" data-or="ଡ୍ୟାସବୋର୍ଡ">Dashboard</button>
+    <button class="nav-link" id="nl-cases" onclick="navigate('cases')" data-en="Cases" data-or="ମାମଲା">Cases</button>
+    <button class="nav-link" id="nl-report" onclick="navigate('report')" data-en="Submit Report" data-or="ରିପୋର୍ଟ ଦିଅ">Submit Report</button>
+  </div>
+  <div class="nav-right">
+    <button class="btn-journalist" onclick="navigate('journalist')">🗞 <span data-en="Journalist" data-or="ସାମ୍ବାଦିକ">Journalist</span></button>
+    <button class="btn-admin" onclick="navigate('admin')">🔒 <span data-en="Admin" data-or="ଆଡ୍ମିନ">Admin</span></button>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('or')">ଓଡ଼ିଆ</button>
+    </div>
+    <span class="proto-badge">PROTOTYPE</span>
+  </div>
+</nav>
+
+<!-- ========== SCREEN 1: HOME ========== -->
+<div class="screen active" id="screen-home">
+<div class="container">
+
+  <!-- CRISIS BANNER -->
+  <div class="crisis-banner">
+    <div class="pulse-dot"></div>
+    <div>⚠ <strong>ACTIVE CRISIS:</strong> LPG black market prices detected in 4 areas of Balangir. Official price: ₹939. Reported: up to ₹2,500. 47 citizens confirmed.</div>
+  </div>
+
+  <!-- SCORE CARDS -->
+  <div class="score-grid">
+    <div class="score-card">
+      <div class="tooltip">MFI = Violation Rate 40% + Avg Deviation 35% + Severity 15% + Volume 10%</div>
+      <div class="label" data-en="Market Fairness Index" data-or="ବଜାର ନ୍ୟାୟ ସୂଚକ">Market Fairness Index</div>
+      <div class="value" style="color:var(--red)">38<span style="font-size:18px;color:var(--text3)">/100</span></div>
+      <div class="sub">Critical — Active gouging</div>
+      <div class="score-bar"><div class="score-bar-fill" data-target="38" style="background:var(--red)"></div></div>
+    </div>
+    <div class="score-card">
+      <div class="label" data-en="Supply Health Score" data-or="ଯୋଗାଣ ସ୍ୱାସ୍ଥ୍ୟ ସ୍କୋର">Supply Health Score</div>
+      <div class="value" style="color:var(--yellow)">52<span style="font-size:18px;color:var(--text3)">/100</span></div>
+      <div class="sub">LPG constrained</div>
+      <div class="score-bar"><div class="score-bar-fill" data-target="52" style="background:var(--yellow)"></div></div>
+    </div>
+    <div class="score-card">
+      <div class="label">Active Cases</div>
+      <div class="value" style="color:var(--accent2)">12</div>
+      <div class="sub">5 filed · 4 pending · 3 under review</div>
+    </div>
+    <div class="score-card">
+      <div class="label">Authority Response Rate</div>
+      <div class="value" style="color:var(--red)">31<span style="font-size:18px;color:var(--text3)">%</span></div>
+      <div class="sub">DC Balangir: 3 of 47 responded</div>
+      <div class="score-bar"><div class="score-bar-fill" data-target="31" style="background:var(--red)"></div></div>
+    </div>
+  </div>
+
+  <!-- AI EXPLAINER -->
+  <div class="ai-explainer">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="font-size:24px">🤖</span>
+      <h3 style="font-size:16px" data-en="Why is LPG scarce right now?" data-or="ବର୍ତ୍ତମାନ LPG କ୍ଷୀଣ କାହିଁକି?">Why is LPG scarce right now?</h3>
+    </div>
+    <div class="ai-body" id="ai-body">
+      <p style="font-size:14px;color:var(--text2);line-height:1.7;">The Strait of Hormuz conflict has blocked 62% of India's LPG import route. The government invoked the Essential Commodities Act to prioritize household supply. This shortage is <strong style="color:var(--text)">REAL but temporary</strong> — expected to ease in 7–10 days. <strong style="color:var(--green)">Do NOT panic buy</strong> — your household allocation is protected under the ECA order.</p>
+      <div style="font-size:11px;color:var(--text3);margin-top:10px;">Last updated by AI · 2 hours ago · Verified by 2 journalists</div>
+    </div>
+    <button class="btn btn-secondary btn-sm" style="margin-top:12px" onclick="refreshAI()">↻ Refresh</button>
+  </div>
+
+  <!-- TWO COLUMN: RUMORS + PRICES -->
+  <div class="two-col">
+    <!-- RUMOR BUSTER -->
+    <div>
+      <h3 class="section-title">🔍 Rumor Buster</h3>
+      <div class="rumor-card">
+        <div class="rumor-quote">"LPG cylinders will be banned for 3 months"</div>
+        <span class="chip chip-red">❌ FALSE</span>
+        <div class="rumor-verdict">Government confirmed NO ban. MoP&NG circular March 21.</div>
+        <div class="rumor-source">— Ramesh Panda · Sambad Balangir · Master Verifier ★</div>
+      </div>
+      <div class="rumor-card">
+        <div class="rumor-quote">"Sugar will be rationed from next week"</div>
+        <span class="chip chip-yellow">⚠ UNVERIFIED</span>
+        <div class="rumor-verdict">No official communication. Investigation ongoing.</div>
+      </div>
+      <div class="rumor-card">
+        <div class="rumor-quote">"Petrol stations running completely dry"</div>
+        <span class="chip chip-orange">⚡ PARTIALLY TRUE</span>
+        <div class="rumor-verdict">2 stations confirmed. Not system-wide.</div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:12px;">
+        <input type="text" class="form-input" id="rumor-input" placeholder="Report a rumor you heard..." style="flex:1">
+        <button class="btn btn-secondary btn-sm" onclick="submitRumor()">Report</button>
+      </div>
+    </div>
+
+    <!-- OFFICIAL PRICE REFERENCE -->
+    <div>
+      <h3 class="section-title">📊 Official MRP vs Market — Balangir</h3>
+      <table class="price-table">
+        <tr><th>Commodity</th><th>Official</th><th>Market</th><th>Diff</th></tr>
+        <tr><td>🔥 LPG Cylinder</td><td class="mono">₹939</td><td class="mono">₹2,200</td><td><span class="chip chip-red">+134%</span></td></tr>
+        <tr><td>🫙 Mustard Oil</td><td class="mono">₹145</td><td class="mono">₹210</td><td><span class="chip chip-orange">+45%</span></td></tr>
+        <tr><td>🍚 Sugar</td><td class="mono">₹42</td><td class="mono">₹58</td><td><span class="chip chip-yellow">+38%</span></td></tr>
+        <tr><td>🌾 Rice</td><td class="mono">₹38</td><td class="mono">₹38</td><td><span class="chip chip-green">0%</span></td></tr>
+        <tr><td>🌾 Wheat Atta</td><td class="mono">₹35</td><td class="mono">₹36</td><td><span class="chip chip-green">+3%</span></td></tr>
+        <tr><td>🫘 Toor Dal</td><td class="mono">₹155</td><td class="mono">₹220</td><td><span class="chip chip-orange">+42%</span></td></tr>
+        <tr><td>🧅 Onion</td><td class="mono">₹40</td><td class="mono">₹65</td><td><span class="chip chip-yellow">+63%</span></td></tr>
+        <tr><td>⛽ Petrol</td><td class="mono">₹105</td><td class="mono">₹105</td><td><span class="chip chip-green">0%</span></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- LIVE SIGNAL FEED -->
+  <h3 class="section-title">📡 Recent Signals — All Areas</h3>
+  <div id="signal-feed"></div>
+
+  <!-- HOTSPOT GRID -->
+  <h3 class="section-title" style="margin-top:24px">🗺 Area Heat Map</h3>
+  <div class="hotspot-grid" id="hotspot-grid"></div>
+
+  <!-- SUBMIT BUTTON -->
+  <div style="text-align:center;margin-top:32px;">
+    <button class="btn btn-primary btn-lg" onclick="navigate('report')">⚑ Submit Report</button>
+  </div>
+
+</div>
+<div class="footer">github.com/Ab-aswini/civic-intelligence-network · MIT License · Built for Balangir, Odisha 🇮🇳 · PROTOTYPE — MOCK DATA</div>
+</div>
+
+<!-- ========== SCREEN 2: CITIZEN REPORT ========== -->
+<div class="screen" id="screen-report">
+<div class="container">
+  <div style="text-align:center;margin-bottom:24px;">
+    <div class="chip chip-green" style="font-size:12px;padding:4px 14px;">ANONYMOUS · NO ACCOUNT REQUIRED · 30 SECONDS</div>
+  </div>
+
+  <div class="card" style="max-width:600px;margin:0 auto;" id="report-form-card">
+    <h3 class="section-title" data-en="⚑ Submit Signal" data-or="⚑ ସଙ୍କେତ ଦାଖଲ">⚑ Submit Signal</h3>
+
+    <div class="form-group">
+      <label class="form-label">District</label>
+      <select class="form-select" id="rpt-district"><option>Balangir</option></select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Area</label>
+      <select class="form-select" id="rpt-area" onchange="checkDedup()">
+        <option value="">Select area...</option>
+        <option>Gandhi Chowk</option><option>Bus Stand Area</option><option>Cantonment Road</option>
+        <option>Court Road</option><option>Titilagarh Road</option><option>Sargipali</option>
+        <option>Bibhutipara</option><option>Nehru Nagar</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Commodity</label>
+      <select class="form-select" id="rpt-commodity" onchange="checkDedup();autofillPrice()">
+        <option value="">Select commodity...</option>
+        <option value="lpg">🔥 LPG Cylinder (14.2kg)</option>
+        <option value="oil">🫙 Mustard Oil (1L)</option>
+        <option value="sugar">🍚 Sugar (1kg)</option>
+        <option value="rice">🌾 Rice (1kg)</option>
+        <option value="atta">🌾 Wheat Atta (1kg)</option>
+        <option value="dal">🫘 Toor Dal (1kg)</option>
+        <option value="onion">🧅 Onion (1kg)</option>
+        <option value="petrol">⛽ Petrol (1L)</option>
+      </select>
+    </div>
+
+    <!-- DEDUP CARD (hidden by default) -->
+    <div id="dedup-section" style="display:none">
+      <div class="dedup-card" id="dedup-card">
+        <div style="font-size:14px;font-weight:600;margin-bottom:12px;">🔍 We found an active report for this exact issue.</div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:14px;">
+          <div class="mono" style="font-size:11px;color:var(--text3)">CIN-2026-BLG-047-LPG</div>
+          <div style="font-weight:600;margin:4px 0;">LPG Overpricing — Gandhi Chowk</div>
+          <div style="font-size:13px;color:var(--text2);">₹939 → ₹2,500 (+166%) · 47 citizens confirmed</div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:10px;">
+            <span style="font-size:13px;color:var(--text2)">Strength:</span>
+            <span class="syne" style="font-size:20px;color:var(--green)" id="dedup-str-num">89</span>
+            <span style="font-size:13px;color:var(--text3)">/100</span>
+            <div class="str-bar" style="flex:1"><div class="str-bar-fill" id="dedup-str-bar" style="background:var(--green);width:89%"></div></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;" id="dedup-buttons">
+          <button class="btn btn-primary" onclick="confirmDedup()" style="background:var(--green)">✓ YES — THIS IS WHAT I SAW</button>
+          <button class="btn btn-secondary" onclick="cancelDedup()">No, different issue</button>
+        </div>
+      </div>
+      <!-- CONFIRMATION STATE -->
+      <div id="dedup-confirmed" style="display:none">
+        <div class="dedup-card" style="border-color:rgba(0,200,83,0.4);">
+          <div style="font-size:18px;margin-bottom:8px;">✅ Your confirmation added!</div>
+          <div style="font-size:15px;margin-bottom:4px;">Strength <span class="syne">89 → 92</span> (+3)</div>
+          <div style="font-size:13px;color:var(--text2);margin-bottom:14px;">You are the 48th person to confirm this.</div>
+          <div style="display:flex;gap:10px;">
+            <button class="btn btn-secondary btn-sm">+ Add specific detail</button>
+            <button class="btn btn-primary btn-sm" onclick="navigate('case-detail')">View Case →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICE FIELDS (hidden when dedup active) -->
+    <div id="price-fields">
+      <div class="form-group">
+        <label class="form-label">Official MRP</label>
+        <input type="text" class="form-input" id="rpt-official" readonly>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Price You Saw (₹)</label>
+        <input type="number" class="form-input" id="rpt-price" placeholder="Enter price..." oninput="calcDiff()">
+      </div>
+      <div class="live-diff" id="live-diff"></div>
+      <div class="form-group">
+        <label class="form-label">Severity</label>
+        <select class="form-select" id="rpt-severity">
+          <option>Moderate</option><option>Severe</option><option>Extreme</option><option>Artificial Shortage</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Optional Note</label>
+        <input type="text" class="form-input" id="rpt-note" placeholder="Any additional detail...">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Photo Evidence</label>
+        <div class="upload-area" onclick="showToast('📷','Photo Upload','+10 strength with photo evidence')">
+          Click to upload photo · JPG/PNG · Optional
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:16px;">
+        <button class="btn btn-primary" onclick="submitSignal()">⚑ Submit Signal</button>
+        <button class="btn btn-secondary" onclick="clearForm()">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS STATE (hidden by default) -->
+  <div id="report-success" style="display:none">
+    <div class="success-state">
+      <div class="success-icon">✅</div>
+      <h2 class="syne" style="font-size:24px">Signal Submitted — Thank You</h2>
+      <div class="tracking-box">CIN-2026-BLG-067-OIL</div>
+      <div class="submit-timeline">
+        <div class="st-step"><div class="st-icon" style="color:var(--green)">✓</div><div><div class="st-text" style="color:var(--green)">Signal created</div><div class="st-time">Right now</div></div></div>
+        <div class="st-step"><div class="st-icon">⏳</div><div><div class="st-text">Journalist review</div><div class="st-time">2–24 hours</div></div></div>
+        <div class="st-step"><div class="st-icon">⏳</div><div><div class="st-text">Field verification</div><div class="st-time">24–48 hours</div></div></div>
+        <div class="st-step"><div class="st-icon">⏳</div><div><div class="st-text">Case file</div><div class="st-time">If pattern confirmed</div></div></div>
+        <div class="st-step"><div class="st-icon">⏳</div><div><div class="st-text">Filed to authority</div><div class="st-time">Admin auth required</div></div></div>
+      </div>
+      <p style="font-size:13px;color:var(--text3);margin-top:16px;">You will never be identified. Anonymity architecture protects you.</p>
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:20px;">
+        <button class="btn btn-secondary" onclick="resetReport()">Submit Another</button>
+        <button class="btn btn-primary" onclick="navigate('cases')">View Active Cases →</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="footer">github.com/Ab-aswini/civic-intelligence-network · MIT License · Built for Balangir, Odisha 🇮🇳 · PROTOTYPE — MOCK DATA</div>
+</div>
+
+<!-- ========== SCREEN 3: CASE BOARD ========== -->
+<div class="screen" id="screen-cases">
+<div class="container">
+  <h2 class="syne" style="font-size:22px;margin-bottom:4px;">Official Case Board — Balangir District</h2>
+  <p class="section-sub">All cases journalist-verified and admin-authorized.</p>
+
+  <div class="filter-pills">
+    <button class="pill active" onclick="filterCases('all',this)">All (12)</button>
+    <button class="pill" onclick="filterCases('pending',this)">Pending Response (5)</button>
+    <button class="pill" onclick="filterCases('resolved',this)">Action Taken (4)</button>
+    <button class="pill" onclick="filterCases('escalated',this)">Escalated (2)</button>
+    <button class="pill" onclick="filterCases('resolved-done',this)">Resolved (1)</button>
+  </div>
+
+  <div id="case-list"></div>
+
+  <!-- AUTHORITY SCORECARDS -->
+  <h3 class="section-title" style="margin-top:32px">🏛 Authority Accountability</h3>
+  <div class="auth-score">
+    <div class="card">
+      <h4 style="font-size:14px;margin-bottom:12px;">District Collector, Balangir</h4>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center;font-size:12px;">
+        <div><div class="syne" style="font-size:20px">47</div><div style="color:var(--text3)">Received</div></div>
+        <div><div class="syne" style="font-size:20px">14</div><div style="color:var(--text3)">Responded</div></div>
+        <div><div class="syne" style="font-size:20px">8</div><div style="color:var(--text3)">Acted</div></div>
+        <div><div class="syne" style="font-size:20px;color:var(--red)">33</div><div style="color:var(--text3)">Ignored</div></div>
+      </div>
+      <div class="score-bar" style="margin-top:12px"><div class="score-bar-fill" data-target="31" style="background:var(--red)"></div></div>
+      <div style="font-size:12px;color:var(--red);margin-top:6px;">31% Response Rate</div>
+    </div>
+    <div class="card">
+      <h4 style="font-size:14px;margin-bottom:12px;">Civil Supplies Officer, Balangir</h4>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center;font-size:12px;">
+        <div><div class="syne" style="font-size:20px">18</div><div style="color:var(--text3)">Received</div></div>
+        <div><div class="syne" style="font-size:20px">13</div><div style="color:var(--text3)">Responded</div></div>
+        <div><div class="syne" style="font-size:20px">11</div><div style="color:var(--text3)">Acted</div></div>
+        <div><div class="syne" style="font-size:20px;color:var(--yellow)">5</div><div style="color:var(--text3)">Ignored</div></div>
+      </div>
+      <div class="score-bar" style="margin-top:12px"><div class="score-bar-fill" data-target="72" style="background:var(--green)"></div></div>
+      <div style="font-size:12px;color:var(--green);margin-top:6px;">72% Response Rate</div>
+    </div>
+  </div>
+
+</div>
+<div class="footer">github.com/Ab-aswini/civic-intelligence-network · MIT License · Built for Balangir, Odisha 🇮🇳 · PROTOTYPE — MOCK DATA</div>
+</div>
+
+<!-- ========== SCREEN 4: CASE DETAIL ========== -->
+<div class="screen" id="screen-case-detail">
+<div class="container">
+  <button class="btn btn-secondary btn-sm" onclick="navigate('cases')" style="margin-bottom:20px;">← Back to Cases</button>
+
+  <!-- HEADER CARD -->
+  <div class="card">
+    <div class="mono" style="font-size:12px;color:var(--text3)">CIN-2026-BLG-047-LPG</div>
+    <h2 class="syne" style="font-size:26px;margin:6px 0;">LPG Overpricing — Gandhi Chowk, Balangir</h2>
+    <div style="font-size:13px;color:var(--text2);">Filed: March 22, 2026 · Authority: District Collector, Balangir</div>
+    <div style="margin-top:10px;"><span class="badge badge-filed">FILED — PENDING RESPONSE</span></div>
+    <div style="display:flex;align-items:baseline;gap:12px;margin-top:16px;">
+      <span class="syne" style="font-size:52px;color:var(--green)">89</span>
+      <span style="font-size:14px;color:var(--text2)">/ 100 · 47 citizens · 4 contributors · AI 91%</span>
+    </div>
+    <div class="str-bar" style="height:8px;margin-top:10px;"><div class="str-bar-fill" data-target="89" style="background:var(--green);height:100%"></div></div>
+
+    <div class="countdown-box">
+      <div>
+        <div style="font-size:13px;font-weight:600;">Response Due — DC Balangir</div>
+        <div style="font-size:12px;color:var(--text2);">March 25, 2026 — 72-hour window</div>
+      </div>
+      <div class="countdown-timer" id="detail-countdown">41:00:00</div>
+    </div>
+  </div>
+
+  <div class="two-col" style="margin-top:20px;">
+    <!-- LEFT: EVIDENCE TIMELINE -->
+    <div>
+      <h3 class="section-title">📋 Evidence Timeline</h3>
+      <div class="timeline">
+        <div class="tl-entry">
+          <div class="tl-dot"></div>
+          <div class="tl-time">March 21 · 14:32 IST</div>
+          <div class="tl-title">SIGNAL CREATED</div>
+          <div class="tl-body">LPG at ₹2,500 at Mahesh Gas Agency, Gandhi Chowk. Anonymous citizen report.</div>
+          <div class="tl-meta">Strength: 1/100 · Entry #1 · a3f9c2d1... ✓</div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-dot"></div>
+          <div class="tl-time">March 21 · 14:45–22:10 IST</div>
+          <div class="tl-title">47 CITIZEN CONFIRMATIONS</div>
+          <div class="tl-body">47 citizens over 8 hours. 43 silent confirmations + 4 with detailed notes.</div>
+          <div class="tl-meta">Strength: 1→35 · Multiple entries · b7d4e1f2... ✓</div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-dot"></div>
+          <div class="tl-time">March 21 · 17:45 IST</div>
+          <div class="tl-title">📰 PRIMARY VERIFICATION</div>
+          <div class="tl-body">Ramesh Panda, Sambad (Master · 203 verifications · 94% accuracy). Visited 3 dealers in Gandhi Chowk. All ₹2,200–₹2,500. 2 photos attached.</div>
+          <div class="tl-meta">Strength: +28 · Total: 63/100 · Entry #3 · c2a8f789... ✓</div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-dot"></div>
+          <div class="tl-time">March 21 · 19:20 IST</div>
+          <div class="tl-title">📰 SUPPORTING VERIFICATION — INDEPENDENT</div>
+          <div class="tl-body">Sunita Kar, OTV Digital. Confirmed without seeing Ramesh's notes. Independent verification.</div>
+          <div class="tl-meta">Strength: +20 · Total: 74/100 · Entry #4 · d9b3c4a5... ✓</div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-dot"></div>
+          <div class="tl-time">March 21 · 20:00 IST</div>
+          <div class="tl-title">🏢 NGO CO-SIGNATURE</div>
+          <div class="tl-body">PRADAN Balangir. 14 households in Gandhi Chowk confirmed shortage and inflated pricing.</div>
+          <div class="tl-meta">Strength: +15 · Total: 83/100 · Entry #5 · e5f1a2b3... ✓</div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-dot"></div>
+          <div class="tl-time">March 22 · 09:30 IST</div>
+          <div class="tl-title">🔍 ADMIN REVIEW & AUTHORIZATION</div>
+          <div class="tl-body">Reviewed AI draft, verifications, photos. Authorized filing as CRITICAL ALERT.</div>
+          <div class="tl-meta">Strength: +6 · Total: 89/100 · Entry #6 · f3c7d9e1... ✓</div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-dot yellow"></div>
+          <div class="tl-time" style="color:var(--yellow)">March 22 · 09:35 IST ← CURRENT</div>
+          <div class="tl-title" style="color:var(--yellow)">📧 OFFICIALLY FILED</div>
+          <div class="tl-body">Sent to District Collector, Balangir. Email read receipt confirmed 09:48 IST.</div>
+          <div class="tl-meta">Response window: 72 hours · Entry #7 · g8e2b5f4... ✓</div>
+        </div>
+        <div class="tl-entry dimmed">
+          <div class="tl-dot grey"></div>
+          <div class="tl-time">March 25 · 09:35 IST — DUE</div>
+          <div class="tl-title">⏳ AWAITING AUTHORITY RESPONSE</div>
+          <div class="tl-body">If no response: auto-escalated to State Civil Supplies Commissioner.</div>
+          <div class="tl-meta">Entry #8 · pending...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: CONTRIBUTORS + BLOCKCHAIN -->
+    <div>
+      <h3 class="section-title">👥 Contributors</h3>
+      <div class="contrib-grid">
+        <div class="contrib-card">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div class="contrib-avatar" style="background:var(--accent);">RP</div>
+            <div><div style="font-weight:600;font-size:13px;">Ramesh Panda</div><div style="font-size:11px;color:var(--text3)">Sambad Balangir</div></div>
+            <span class="tier tier-master" style="margin-left:auto">MASTER ★</span>
+          </div>
+          <div style="font-size:11px;color:var(--text2);">203 reports · 94% accuracy · ×1.6 weight</div>
+          <div style="font-size:12px;color:var(--green);margin-top:4px;">Primary Verifier · +28 strength</div>
+        </div>
+        <div class="contrib-card">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div class="contrib-avatar" style="background:var(--blue);">SK</div>
+            <div><div style="font-weight:600;font-size:13px;">Sunita Kar</div><div style="font-size:11px;color:var(--text3)">OTV Digital</div></div>
+            <span class="tier tier-senior" style="margin-left:auto">SENIOR</span>
+          </div>
+          <div style="font-size:11px;color:var(--text2);">87 reports · 91% · ×1.3 weight</div>
+          <div style="font-size:12px;color:var(--green);margin-top:4px;">Supporting · +20 · Independent ✓</div>
+        </div>
+        <div class="contrib-card">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div class="contrib-avatar" style="background:var(--green);">PR</div>
+            <div><div style="font-weight:600;font-size:13px;">PRADAN Balangir</div><div style="font-size:11px;color:var(--text3)">NGO — District</div></div>
+            <span class="tier tier-ngo" style="margin-left:auto">NGO</span>
+          </div>
+          <div style="font-size:12px;color:var(--green);margin-top:4px;">+15 strength · 14 households</div>
+        </div>
+        <div class="contrib-card">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div class="contrib-avatar" style="background:var(--yellow);color:#000;">AV</div>
+            <div><div style="font-weight:600;font-size:13px;">Arjun Verma</div><div style="font-size:11px;color:var(--text3)">Subject Expert</div></div>
+            <span class="tier tier-active" style="margin-left:auto">EXPERT</span>
+          </div>
+          <div style="font-size:12px;color:var(--green);margin-top:4px;">+8 strength · Coordinated hoarding</div>
+        </div>
+      </div>
+
+      <!-- BLOCKCHAIN AUDIT TRAIL -->
+      <h3 class="section-title" style="margin-top:24px;">🔗 Blockchain Audit Trail</h3>
+      <p style="font-size:12px;color:var(--text3);margin-bottom:12px;">Each entry is cryptographically chained. Tampering breaks the chain.</p>
+      <div id="bc-trail">
+        <div class="bc-row"><span class="bc-num">#1</span><span class="bc-hash">a3f9c2d1...</span><span class="bc-event">Signal created</span><span class="bc-check" id="bc-1">○</span></div>
+        <div class="bc-row"><span class="bc-num">#2</span><span class="bc-hash">b7d4e1f2...</span><span class="bc-event">47 confirmations</span><span class="bc-check" id="bc-2">○</span></div>
+        <div class="bc-row"><span class="bc-num">#3</span><span class="bc-hash">c2a8f789...</span><span class="bc-event">Primary verification</span><span class="bc-check" id="bc-3">○</span></div>
+        <div class="bc-row"><span class="bc-num">#4</span><span class="bc-hash">d9b3c4a5...</span><span class="bc-event">Supporting verification</span><span class="bc-check" id="bc-4">○</span></div>
+        <div class="bc-row"><span class="bc-num">#5</span><span class="bc-hash">e5f1a2b3...</span><span class="bc-event">NGO co-signature</span><span class="bc-check" id="bc-5">○</span></div>
+        <div class="bc-row"><span class="bc-num">#6</span><span class="bc-hash">f3c7d9e1...</span><span class="bc-event">Admin authorized</span><span class="bc-check" id="bc-6">○</span></div>
+        <div class="bc-row"><span class="bc-num">#7</span><span class="bc-hash">g8e2b5f4...</span><span class="bc-event">Filed to DC Balangir</span><span class="bc-check" id="bc-7">○</span></div>
+        <div class="bc-row" style="opacity:0.5"><span class="bc-num">#8</span><span class="bc-hash">pending...</span><span class="bc-event">Awaiting resolution</span><span class="bc-check">○</span></div>
+      </div>
+      <div id="bc-status" style="margin-top:12px;"></div>
+      <button class="btn btn-secondary btn-sm" style="margin-top:12px;" onclick="verifyBlockchain()">🔍 Verify Integrity</button>
+    </div>
+  </div>
+
+</div>
+<div class="footer">github.com/Ab-aswini/civic-intelligence-network · MIT License · Built for Balangir, Odisha 🇮🇳 · PROTOTYPE — MOCK DATA</div>
+</div>
+
+<!-- ========== SCREEN 5: JOURNALIST DASHBOARD ========== -->
+<div class="screen" id="screen-journalist">
+<div class="container">
+
+  <div class="j-header">
+    <div class="j-avatar">RP</div>
+    <div>
+      <div style="font-weight:700;font-size:16px;">Ramesh Panda <span style="color:var(--yellow)">★</span> MASTER VERIFIER</div>
+      <div style="font-size:13px;color:var(--text2);">Sambad, Balangir Bureau · Verified Partner</div>
+    </div>
+  </div>
+
+  <div class="j-stat-grid">
+    <div class="j-stat"><div class="val" style="color:var(--accent)">6,240</div><div class="lbl">Points</div></div>
+    <div class="j-stat"><div class="val" style="color:var(--green)">94%</div><div class="lbl">Accuracy</div></div>
+    <div class="j-stat"><div class="val">203</div><div class="lbl">Verifications</div></div>
+    <div class="j-stat"><div class="val" style="color:var(--green)">31</div><div class="lbl">Cases Acted</div></div>
+  </div>
+
+  <div class="two-col">
+    <!-- LEFT: SIGNAL QUEUE -->
+    <div>
+      <h3 class="section-title">📡 Signals Awaiting Verification — Your District</h3>
+      <div id="j-signal-queue"></div>
+    </div>
+
+    <!-- RIGHT: ACTIVE CLAIMED -->
+    <div>
+      <h3 class="section-title">🔒 Active Claimed Signal</h3>
+      <div class="card" style="border-color:rgba(255,215,64,0.3);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <span class="mono" style="font-size:11px;color:var(--text3);">CLAIMED: CIN-2026-BLG-051-OIL</span>
+          <span class="badge badge-investigating">🔒 SEALED VIEW</span>
+        </div>
+        <div style="font-weight:600;margin-bottom:14px;">Mustard Oil · Bus Stand Area</div>
+
+        <div class="form-group">
+          <label class="form-label">Your Finding</label>
+          <select class="form-select"><option>Confirmed</option><option>Disputed</option><option>Partial</option></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Role</label>
+          <select class="form-select"><option>Primary</option><option>Supporting</option><option>Expert</option></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Prices Observed</label>
+          <input type="text" class="form-input" placeholder="e.g., ₹200–₹215 at 3 shops">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Field Notes</label>
+          <textarea class="form-textarea" placeholder="Observations, witness accounts..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Photo Evidence</label>
+          <div class="upload-area" onclick="showToast('📷','Photo Upload','+5 strength with photo evidence')">Click to upload photos</div>
+        </div>
+        <button class="btn btn-primary" onclick="showToast('✅','Verification Submitted','Strength 54→74. +25 points. You are Primary Verifier.')">Submit Verification</button>
+      </div>
+
+      <!-- TRACK 2 -->
+      <div class="card" style="margin-top:16px;">
+        <h4 style="font-size:14px;margin-bottom:10px;">📢 Track 2: Publish to Public Board</h4>
+        <p style="font-size:12px;color:var(--text2);margin-bottom:12px;">Publish directly to Public Board — No admin approval needed</p>
+        <div class="form-group">
+          <label class="form-label">Signal</label>
+          <select class="form-select">
+            <option>CIN-2026-BLG-051-OIL · Mustard Oil</option>
+            <option>CIN-2026-BLG-053-SGR · Sugar</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Authority Tags</label>
+          <input type="text" class="form-input" value="@DCBalangir @CSOBalangir">
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="showToast('📢','Published!','48-hour timer started. Publicly visible now.')">📢 Publish to Public Board</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BADGES SHELF -->
+  <h3 class="section-title" style="margin-top:24px">🏅 Badges</h3>
+  <div class="badges-shelf">
+    <div class="badge-item">★ Trusted Voice</div>
+    <div class="badge-item">🚨 Crisis Responder</div>
+    <div class="badge-item">✓ 200 Verifications</div>
+    <div class="badge-item">📷 Photo Champion</div>
+    <div class="badge-item">⚡ Action Catalyst</div>
+    <div class="badge-item">📋 Precedent Maker</div>
+    <div class="badge-item">🎯 95% Accuracy</div>
+    <div class="badge-item">🗺 Multi-District</div>
+  </div>
+
+</div>
+<div class="footer">github.com/Ab-aswini/civic-intelligence-network · MIT License · Built for Balangir, Odisha 🇮🇳 · PROTOTYPE — MOCK DATA</div>
+</div>
+
+<!-- ========== SCREEN 6: ADMIN DASHBOARD ========== -->
+<div class="screen" id="screen-admin">
+<div class="container">
+
+  <div class="a-header">
+    <span style="font-size:20px">🔒</span>
+    <div>
+      <div style="font-weight:700;font-size:15px;">Admin Dashboard — Platform Admin</div>
+      <div style="font-size:12px;color:var(--text2);">All actions blockchain-logged</div>
+    </div>
+  </div>
+
+  <div class="a-mini-grid">
+    <div class="a-mini"><div class="val">23</div><div class="lbl">Active Signals</div></div>
+    <div class="a-mini"><div class="val" style="color:var(--red)">4</div><div class="lbl">Pending Review</div></div>
+    <div class="a-mini"><div class="val" style="color:var(--yellow)">5</div><div class="lbl">Awaiting Authority</div></div>
+    <div class="a-mini"><div class="val" style="color:var(--red)">38/100</div><div class="lbl">MFI</div></div>
+    <div class="a-mini"><div class="val" style="color:var(--green)">5</div><div class="lbl">Partners</div></div>
+  </div>
+
+  <!-- CRITICAL ALERT QUEUE -->
+  <div class="critical-queue">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+      <span class="chip chip-red" style="font-size:12px;">⚠ CRITICAL THRESHOLD CROSSED</span>
+      <span class="chip chip-red">LPG +166% MRP</span>
+    </div>
+    <div style="font-weight:600;font-size:15px;margin-bottom:4px;">CIN-2026-BLG-047-LPG · Strength: 89/100</div>
+
+    <div class="ai-box">
+      LPG overpriced 166% above official MRP. 47 independent citizen confirmations. 2 journalist verifications from separate organisations. AI confidence: 91% — consistent with coordinated distributor hoarding.<br><br>
+      <strong style="color:var(--text)">RECOMMENDATION: File Critical Alert.</strong>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0;text-align:center;">
+      <div><div class="syne" style="font-size:22px;color:var(--green)">89</div><div style="font-size:10px;color:var(--text3)">STRENGTH</div></div>
+      <div><div class="syne" style="font-size:22px">47</div><div style="font-size:10px;color:var(--text3)">CITIZENS</div></div>
+      <div><div class="syne" style="font-size:22px">2+NGO</div><div style="font-size:10px;color:var(--text3)">VERIFIERS</div></div>
+      <div><div class="syne" style="font-size:22px;color:var(--green)">91%</div><div style="font-size:10px;color:var(--text3)">AI CONFIDENCE</div></div>
+    </div>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <button class="btn btn-primary" style="background:var(--red)" onclick="openModal()">📋 Review & File Critical Alert</button>
+      <button class="btn btn-secondary">Request More Evidence</button>
+      <button class="btn btn-danger">Reject</button>
+    </div>
+  </div>
+
+  <!-- WEEKLY DIGEST -->
+  <div class="digest-card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <h3 style="font-size:16px;">📊 Weekly Digest Preview</h3>
+      <span style="font-size:12px;color:var(--text3)">Next Digest — Sunday March 24 · 5 cases queued</span>
+    </div>
+    <div class="ai-box" style="margin:0 0 14px 0;">
+      AI summary: Surge in LPG overpricing this week across 4 areas of Balangir. Mustard oil and dal also showing upward deviation. One resolved case with FIR filed.
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;">
+      <span class="chip chip-red">🔴 Critical (2)</span>
+      <span class="chip chip-yellow">🟡 Active (3)</span>
+      <span class="chip chip-green">✓ Resolved (1)</span>
+      <span class="chip chip-blue">📊 Heat Map</span>
+    </div>
+    <div style="display:flex;gap:10px;">
+      <button class="btn btn-secondary btn-sm" onclick="showToast('📊','Digest Preview','Full digest loaded in preview mode.')">Preview Full</button>
+      <button class="btn btn-secondary btn-sm" onclick="showToast('📅','Scheduled','Digest scheduled for Sunday March 24, 8:00 AM.')">Schedule</button>
+      <button class="btn btn-primary btn-sm" onclick="showToast('📧','Digest Sent','Weekly digest sent to 5 partners and 3 authorities.')">Send Now</button>
+    </div>
+  </div>
+
+  <!-- PARTNER MANAGEMENT -->
+  <h3 class="section-title">👥 Partner Management</h3>
+  <div class="card" style="overflow-x:auto;">
+    <table class="data-table">
+      <tr><th>Name</th><th>Organization</th><th>Tier</th><th>Accuracy</th><th>Status</th></tr>
+      <tr>
+        <td style="font-weight:600">Ramesh Panda</td><td>Sambad, Balangir</td>
+        <td><span class="tier tier-master">Master Verifier</span></td><td>94%</td><td><span class="chip chip-green">Active</span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:600">Sunita Kar</td><td>OTV Digital</td>
+        <td><span class="tier tier-senior">Senior Verifier</span></td><td>91%</td><td><span class="chip chip-green">Active</span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:600">PRADAN Balangir</td><td>NGO — District</td>
+        <td><span class="tier tier-ngo">NGO Partner</span></td><td>88%</td><td><span class="chip chip-green">Active</span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:600">Biswajit Rath</td><td>Dharitri Balangir</td>
+        <td><span class="tier tier-active">Active Verifier</span></td><td>85%</td><td><span class="chip chip-green">Active</span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:600">Amrita Kulkarni</td><td>Freelance</td>
+        <td><span class="tier tier-new">New Partner</span></td><td>75%</td><td><span class="chip chip-yellow">Probation</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- OFFICIAL PRICE MANAGER -->
+  <h3 class="section-title" style="margin-top:24px">💰 Official Price Manager</h3>
+  <div class="card" style="overflow-x:auto;">
+    <table class="data-table">
+      <tr><th>Commodity</th><th>Official Price</th><th>Source</th><th>Action</th></tr>
+      <tr><td>🔥 LPG Cylinder (14.2kg)</td><td class="mono">₹939</td><td>IOCL</td><td><button class="btn btn-secondary btn-sm" onclick="showToast('✏️','Edit Restricted','Price edit requires source citation. Logged to audit trail.')">Edit</button></td></tr>
+      <tr><td>🫙 Mustard Oil (1L)</td><td class="mono">₹145</td><td>Odisha Civil Supplies</td><td><button class="btn btn-secondary btn-sm" onclick="showToast('✏️','Edit Restricted','Price edit requires source citation. Logged to audit trail.')">Edit</button></td></tr>
+      <tr><td>🍚 Sugar (1kg)</td><td class="mono">₹42</td><td>DFPD</td><td><button class="btn btn-secondary btn-sm" onclick="showToast('✏️','Edit Restricted','Price edit requires source citation. Logged to audit trail.')">Edit</button></td></tr>
+      <tr><td>🌾 Rice (1kg)</td><td class="mono">₹38</td><td>FCI/PDS</td><td><button class="btn btn-secondary btn-sm" onclick="showToast('✏️','Edit Restricted','Price edit requires source citation. Logged to audit trail.')">Edit</button></td></tr>
+      <tr><td>🌾 Wheat Atta (1kg)</td><td class="mono">₹35</td><td>DFPD</td><td><button class="btn btn-secondary btn-sm" onclick="showToast('✏️','Edit Restricted','Price edit requires source citation. Logged to audit trail.')">Edit</button></td></tr>
+      <tr><td>🫘 Toor Dal (1kg)</td><td class="mono">₹155</td><td>NAFED</td><td><button class="btn btn-secondary btn-sm" onclick="showToast('✏️','Edit Restricted','Price edit requires source citation. Logged to audit trail.')">Edit</button></td></tr>
+      <tr><td>🧅 Onion (1kg)</td><td class="mono">₹40</td><td>Mandi</td><td><button class="btn btn-secondary btn-sm" onclick="showToast('✏️','Edit Restricted','Price edit requires source citation. Logged to audit trail.')">Edit</button></td></tr>
+      <tr><td>⛽ Petrol (1L)</td><td class="mono">₹105</td><td>IOCL</td><td><button class="btn btn-secondary btn-sm" onclick="showToast('✏️','Edit Restricted','Price edit requires source citation. Logged to audit trail.')">Edit</button></td></tr>
+    </table>
+  </div>
+
+</div>
+<div class="footer">github.com/Ab-aswini/civic-intelligence-network · MIT License · Built for Balangir, Odisha 🇮🇳 · PROTOTYPE — MOCK DATA</div>
+</div>
+
+<!-- MODAL OVERLAY -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <h3 class="syne" style="font-size:18px;">Review Case — CIN-2026-BLG-047-LPG</h3>
+    <p style="font-size:12px;color:var(--text2);margin-top:4px;">AI-drafted complaint · Edit before authorizing · Logged to blockchain</p>
+
+    <div class="modal-letter">
+CRITICAL ALERT — FORMAL COMPLAINT UNDER ECA 1955
+
+To: District Collector, Balangir, Odisha
+CC: Civil Supplies Officer, Balangir
+Subject: LPG Overpricing — Gandhi Chowk
+Date: March 22, 2026 | Ref: CIN-2026-BLG-047-LPG
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+VIOLATIONS:
+
+Commodity: LPG Domestic Cylinder (14.2kg)
+Official MRP: ₹939 | Reported: ₹2,200–₹2,500 (+134–166%)
+Area: Gandhi Chowk, Balangir
+Period: March 21, 2026
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EVIDENCE:
+
+• 47 independent citizen confirmations
+• Ramesh Panda, Sambad (94% accuracy) — 3 dealers visited
+• Sunita Kar, OTV Digital — independent confirmation
+• PRADAN Balangir NGO co-signature
+• AI confidence: 91% — coordinated hoarding pattern
+• Blockchain entries: 7 | Strength: 89/100
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+REQUESTED ACTION:
+
+1. Inspect LPG distributors in Gandhi Chowk
+2. Seize hoarded stock if found
+3. FIR under ECA Section 7
+4. Respond within 72 hours
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Publicly tracked: civicwatch.in/cases/CIN-2026-BLG-047-LPG
+    </div>
+
+    <div style="display:flex;gap:10px;justify-content:flex-end;">
+      <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-secondary">Edit Draft</button>
+      <button class="btn btn-primary" style="background:var(--green)" onclick="authorizeFile()">✅ Authorize & File</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toast-container"></div>
+
+<script>
+// ===== DATA =====
+const OFFICIAL_PRICES = {
+  lpg:{name:'LPG Cylinder (14.2kg)',icon:'🔥',official:939,market:2200,code:'LPG',source:'IOCL'},
+  oil:{name:'Mustard Oil (1L)',icon:'🫙',official:145,market:210,code:'OIL',source:'Odisha Civil Supplies'},
+  sugar:{name:'Sugar (1kg)',icon:'🍚',official:42,market:58,code:'SGR',source:'DFPD'},
+  rice:{name:'Rice (1kg)',icon:'🌾',official:38,market:38,code:'RCE',source:'FCI/PDS'},
+  atta:{name:'Wheat Atta (1kg)',icon:'🌾',official:35,market:36,code:'WHL',source:'DFPD'},
+  dal:{name:'Toor Dal (1kg)',icon:'🫘',official:155,market:220,code:'DAL',source:'NAFED'},
+  onion:{name:'Onion (1kg)',icon:'🧅',official:40,market:65,code:'ONI',source:'Mandi'},
+  petrol:{name:'Petrol (1L)',icon:'⛽',official:105,market:105,code:'PET',source:'IOCL'},
+};
+
+const SIGNALS = [
+  {id:'CIN-2026-BLG-047-LPG',commodity:'LPG Cylinder (14.2kg)',icon:'🔥',official:939,reported:2500,area:'Gandhi Chowk',time:'6h ago',confirms:47,strength:89,status:'verified'},
+  {id:'CIN-2026-BLG-051-OIL',commodity:'Mustard Oil (1L)',icon:'🫙',official:145,reported:210,area:'Bus Stand Area',time:'14h ago',confirms:12,strength:54,status:'investigating'},
+  {id:'CIN-2026-BLG-053-SGR',commodity:'Sugar (1kg)',icon:'🍚',official:42,reported:58,area:'Court Road',time:'1d ago',confirms:8,strength:31,status:'pending'},
+  {id:'CIN-2026-BLG-039-RCE',commodity:'Rice (1kg)',icon:'🌾',official:38,reported:38,area:'Nehru Nagar',time:'2d ago',confirms:3,strength:12,status:'counter'},
+  {id:'CIN-2026-BLG-044-DAL',commodity:'Toor Dal (1kg)',icon:'🫘',official:155,reported:220,area:'Titilagarh Rd',time:'2d ago',confirms:21,strength:67,status:'verified'},
+];
+
+const HOTSPOTS = [
+  {area:'Gandhi Chowk',count:18,level:'critical'},
+  {area:'Bus Stand Area',count:14,level:'high'},
+  {area:'Cantonment Road',count:11,level:'high'},
+  {area:'Court Road',count:7,level:'medium'},
+  {area:'Titilagarh Road',count:6,level:'medium'},
+  {area:'Sargipali',count:2,level:'low'},
+  {area:'Bibhutipara',count:1,level:'low'},
+  {area:'Nehru Nagar',count:1,level:'low'},
+];
+
+const CASES = [
+  {id:'CIN-2026-BLG-047-LPG',title:'LPG Overpricing',area:'Gandhi Chowk',filed:'March 22, 2026',authority:'District Collector, Balangir',strength:89,contributors:'2 journalists + 1 NGO',status:'pending',countdown:true},
+  {id:'CIN-2026-BLG-032-LPG',title:'LPG Overpricing',area:'Cantonment Road',filed:'March 18, 2026',authority:'Civil Supplies Officer, Balangir',strength:76,contributors:'1 journalist + 1 NGO',status:'resolved',resolution:'3 shops inspected. 2 notices issued. 1 FIR filed under ECA 1955.',responseTime:'25 hours'},
+  {id:'CIN-2026-BLG-028-OIL',title:'Mustard Oil Shortage',area:'Bus Stand Area',filed:'March 15, 2026',authority:'State Civil Supplies Commissioner',strength:71,contributors:'2 journalists',status:'escalated',escalatedFrom:'DC Balangir — No response in 96hrs'},
+  {id:'CIN-2026-BLG-044-DAL',title:'Toor Dal Overpricing',area:'Titilagarh Road',filed:'March 20, 2026',authority:'Civil Supplies Officer, Balangir',strength:67,contributors:'1 journalist',status:'pending'},
+];
+
+// ===== COUNTDOWN =====
+let countdownSeconds = 41 * 3600; // 41 hours
+let countdownInterval = null;
+
+function formatCountdown(s) {
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sec = s % 60;
+  return String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0') + ':' + String(sec).padStart(2,'0');
+}
+
+function startCountdown() {
+  if (countdownInterval) clearInterval(countdownInterval);
+  countdownInterval = setInterval(() => {
+    if (countdownSeconds > 0) countdownSeconds--;
+    document.querySelectorAll('.countdown-timer').forEach(el => {
+      el.textContent = formatCountdown(countdownSeconds);
+    });
+  }, 1000);
+}
+startCountdown();
+
+// ===== NAVIGATION =====
+function navigate(screen) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + screen).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  const link = document.getElementById('nl-' + screen);
+  if (link) link.classList.add('active');
+  window.scrollTo(0, 0);
+  setTimeout(() => animateStrengthBars(), 100);
+}
+
+// ===== TOAST SYSTEM =====
+function showToast(icon, title, subtitle) {
+  const container = document.getElementById('toast-container');
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.innerHTML = '<div class="toast-title">' + icon + ' ' + title + '</div>' +
+    (subtitle ? '<div class="toast-sub">' + subtitle + '</div>' : '');
+  container.appendChild(toast);
+  setTimeout(() => {
+    toast.style.animation = 'toastOut 0.3s ease forwards';
+    setTimeout(() => toast.remove(), 300);
+  }, 3800);
+}
+
+// ===== STRENGTH BAR ANIMATION =====
+function animateStrengthBars() {
+  document.querySelectorAll('.score-bar-fill[data-target]').forEach(bar => {
+    bar.style.width = '0%';
+    setTimeout(() => { bar.style.width = bar.dataset.target + '%'; }, 50);
+  });
+  document.querySelectorAll('.str-bar-fill[data-target]').forEach(bar => {
+    bar.style.width = '0%';
+    setTimeout(() => { bar.style.width = bar.dataset.target + '%'; }, 50);
+  });
+}
+
+// ===== RENDER SIGNALS =====
+function renderSignals() {
+  const feed = document.getElementById('signal-feed');
+  feed.innerHTML = SIGNALS.map(s => {
+    const diff = Math.round(((s.reported - s.official) / s.official) * 100);
+    const diffClass = diff > 100 ? 'chip-red' : diff > 30 ? 'chip-orange' : diff > 10 ? 'chip-yellow' : 'chip-green';
+    const statusBadge = s.status === 'verified' ? '<span class="badge badge-verified">JOURNALIST VERIFIED ✓</span>'
+      : s.status === 'investigating' ? '<span class="badge badge-investigating">UNDER INVESTIGATION</span>'
+      : s.status === 'counter' ? '<span class="badge badge-counter">COUNTER-REPORTED</span>'
+      : '<span class="badge badge-pending">PENDING VERIFICATION</span>';
+    const strColor = s.strength > 70 ? 'var(--green)' : s.strength > 40 ? 'var(--yellow)' : 'var(--text3)';
+    return '<div class="signal-card" onclick="navigate(\'case-detail\')">' +
+      '<div class="signal-top"><div><span style="font-size:18px">' + s.icon + '</span> ' +
+      '<span class="signal-id">' + s.id + '</span><br><span class="signal-commodity">' + s.commodity + '</span></div>' +
+      '<div class="signal-right"><div class="signal-strength" style="color:' + strColor + '">' + s.strength + '</div>' +
+      statusBadge + '</div></div>' +
+      '<div class="signal-prices"><span class="mono">₹' + s.official + '</span><span style="color:var(--text3)">→</span>' +
+      '<span class="mono" style="font-weight:700">₹' + s.reported + '</span>' +
+      '<span class="chip ' + diffClass + '">+' + diff + '%</span></div>' +
+      '<div class="signal-tags"><span class="chip chip-blue">' + s.area + '</span>' +
+      '<span class="chip chip-grey">' + s.time + '</span>' +
+      '<span class="chip chip-orange">' + s.confirms + ' confirms</span></div>' +
+      '<div class="str-bar" style="margin-top:8px"><div class="str-bar-fill" data-target="' + s.strength + '" style="background:' + strColor + '"></div></div>' +
+      '</div>';
+  }).join('');
+}
+
+// ===== RENDER HOTSPOTS =====
+function renderHotspots() {
+  const grid = document.getElementById('hotspot-grid');
+  const maxCount = 18;
+  grid.innerHTML = HOTSPOTS.map(h => {
+    const color = h.level === 'critical' ? 'var(--red)' : h.level === 'high' ? 'var(--accent2)' : h.level === 'medium' ? 'var(--yellow)' : 'var(--green)';
+    const pct = Math.round((h.count / maxCount) * 100);
+    return '<div class="hotspot-card" onclick="showToast(\'📍\',\'' + h.area + '\',\'' + h.count + ' active signals in this area\')">' +
+      '<div><div style="display:flex;align-items:center;gap:8px"><div class="hotspot-dot" style="background:' + color + '"></div>' +
+      '<span style="font-size:13px;font-weight:500">' + h.area + '</span></div>' +
+      '<div style="font-size:12px;color:var(--text3);margin-top:2px;">' + h.count + ' signals</div>' +
+      '<div class="hotspot-bar"><div class="hotspot-bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div></div></div>';
+  }).join('');
+}
+
+// ===== RENDER CASES =====
+let currentFilter = 'all';
+function renderCases(filter) {
+  const list = document.getElementById('case-list');
+  let filtered = CASES;
+  if (filter === 'pending') filtered = CASES.filter(c => c.status === 'pending');
+  else if (filter === 'escalated') filtered = CASES.filter(c => c.status === 'escalated');
+  else if (filter === 'resolved-done') filtered = CASES.filter(c => c.status === 'resolved');
+  else if (filter === 'resolved') filtered = CASES.filter(c => c.status === 'resolved' || c.status === 'escalated');
+
+  list.innerHTML = filtered.map(c => {
+    const statusBadge = c.status === 'pending' ? '<span class="badge badge-filed">PENDING RESPONSE</span>'
+      : c.status === 'resolved' ? '<span class="badge badge-resolved">RESOLVED ✓</span>'
+      : '<span class="badge badge-escalated">ESCALATED ↑</span>';
+    let extra = '';
+    if (c.resolution) extra = '<div class="resolution-box">✅ ' + c.resolution + '</div>';
+    if (c.escalatedFrom) extra = '<div class="escalation-box">↑ Escalated from: ' + c.escalatedFrom + '</div>';
+    const thirdCol = c.countdown ? '<div class="cb-label">Response Timer</div><div class="cb-value countdown-timer" style="color:var(--yellow)">' + formatCountdown(countdownSeconds) + '</div>'
+      : c.responseTime ? '<div class="cb-label">Response Time</div><div class="cb-value" style="color:var(--green)">' + c.responseTime + '</div>'
+      : '<div class="cb-label">Status</div><div class="cb-value">' + c.status + '</div>';
+
+    return '<div class="case-card" onclick="navigate(\'case-detail\')">' +
+      '<div style="display:flex;justify-content:space-between;align-items:flex-start">' +
+      '<div><span class="mono" style="font-size:11px;color:var(--text3)">' + c.id + '</span><br>' +
+      '<span style="font-weight:600;font-size:15px">' + c.title + '</span> · <span style="color:var(--text2)">' + c.area + '</span></div>' +
+      statusBadge + '</div>' +
+      '<div style="font-size:12px;color:var(--text2);margin-top:6px">Filed: ' + c.filed + ' · ' + c.authority + '</div>' +
+      extra +
+      '<div class="case-bottom"><div><div class="cb-label">Strength</div><div class="cb-value">' + c.strength + '/100</div></div>' +
+      '<div><div class="cb-label">Contributors</div><div class="cb-value" style="font-size:12px">' + c.contributors + '</div></div>' +
+      '<div>' + thirdCol + '</div></div></div>';
+  }).join('');
+}
+
+function filterCases(filter, btn) {
+  currentFilter = filter;
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderCases(filter);
+}
+
+// ===== RENDER JOURNALIST QUEUE =====
+function renderJournalistQueue() {
+  const queue = document.getElementById('j-signal-queue');
+  queue.innerHTML = SIGNALS.map(s => {
+    const strColor = s.strength > 70 ? 'var(--green)' : s.strength > 40 ? 'var(--yellow)' : 'var(--text3)';
+    return '<div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;margin-bottom:8px;">' +
+      '<div style="flex:1"><div class="mono" style="font-size:10px;color:var(--text3)">' + s.id + '</div>' +
+      '<div style="font-size:13px;font-weight:500">' + s.icon + ' ' + s.commodity + ' · ' + s.area + '</div>' +
+      '<div style="display:flex;align-items:center;gap:8px;margin-top:6px;">' +
+      '<span style="font-size:12px;color:var(--text3)">' + s.confirms + ' confirms · ' + s.time + '</span>' +
+      '<div class="str-bar" style="width:60px"><div class="str-bar-fill" data-target="' + s.strength + '" style="background:' + strColor + '"></div></div></div></div>' +
+      '<button class="btn btn-primary btn-sm" onclick="event.stopPropagation();showToast(\'🔒\',\'Signal Claimed\',\'Sealed verification view active.\')">Claim</button>' +
+      '<button class="btn btn-secondary btn-sm" onclick="event.stopPropagation();navigate(\'case-detail\')">View</button></div>';
+  }).join('');
+}
+
+// ===== REPORT FORM =====
+function autofillPrice() {
+  const commodity = document.getElementById('rpt-commodity').value;
+  const officialField = document.getElementById('rpt-official');
+  if (commodity && OFFICIAL_PRICES[commodity]) {
+    officialField.value = '₹' + OFFICIAL_PRICES[commodity].official;
+  } else {
+    officialField.value = '';
+  }
+  document.getElementById('live-diff').textContent = '';
+}
+
+function calcDiff() {
+  const commodity = document.getElementById('rpt-commodity').value;
+  const price = parseFloat(document.getElementById('rpt-price').value);
+  const diffEl = document.getElementById('live-diff');
+  if (!commodity || !price || !OFFICIAL_PRICES[commodity]) { diffEl.textContent = ''; return; }
+  const official = OFFICIAL_PRICES[commodity].official;
+  const diff = price - official;
+  const pct = Math.round((diff / official) * 100);
+  if (diff <= 0) { diffEl.style.color = 'var(--green)'; diffEl.textContent = '₹' + diff + ' (' + pct + '%) — At or below MRP'; }
+  else if (pct < 20) { diffEl.style.color = 'var(--yellow)'; diffEl.textContent = '+₹' + diff + ' (+' + pct + '%)'; }
+  else if (pct < 50) { diffEl.style.color = 'var(--accent2)'; diffEl.textContent = '+₹' + diff + ' (+' + pct + '%)'; }
+  else { diffEl.style.color = 'var(--red)'; diffEl.textContent = '+₹' + diff + ' (+' + pct + '%)'; }
+}
+
+function checkDedup() {
+  const area = document.getElementById('rpt-area').value;
+  const commodity = document.getElementById('rpt-commodity').value;
+  const dedupSection = document.getElementById('dedup-section');
+  const priceFields = document.getElementById('price-fields');
+  const dedupCard = document.getElementById('dedup-card');
+  const dedupConfirmed = document.getElementById('dedup-confirmed');
+
+  if (area === 'Gandhi Chowk' && commodity === 'lpg') {
+    dedupSection.style.display = 'block';
+    dedupCard.style.display = 'block';
+    dedupConfirmed.style.display = 'none';
+    priceFields.style.display = 'none';
+    document.getElementById('dedup-buttons').style.display = 'flex';
+  } else {
+    dedupSection.style.display = 'none';
+    priceFields.style.display = 'block';
+  }
+}
+
+function confirmDedup() {
+  const numEl = document.getElementById('dedup-str-num');
+  const barEl = document.getElementById('dedup-str-bar');
+  document.getElementById('dedup-buttons').style.display = 'none';
+
+  // Animate 89 to 92
+  let current = 89;
+  const target = 92;
+  barEl.style.transition = 'width 0.8s ease';
+  barEl.style.width = '92%';
+
+  const interval = setInterval(() => {
+    current++;
+    numEl.textContent = current;
+    if (current >= target) {
+      clearInterval(interval);
+      setTimeout(() => {
+        document.getElementById('dedup-card').style.display = 'none';
+        document.getElementById('dedup-confirmed').style.display = 'block';
+      }, 400);
+    }
+  }, 200);
+}
+
+function cancelDedup() {
+  document.getElementById('dedup-section').style.display = 'none';
+  document.getElementById('price-fields').style.display = 'block';
+}
+
+function submitSignal() {
+  const area = document.getElementById('rpt-area').value;
+  const commodity = document.getElementById('rpt-commodity').value;
+  const price = document.getElementById('rpt-price').value;
+  if (!area || !commodity || !price) {
+    showToast('⚠️', 'Missing Fields', 'Please select commodity, area, and enter a price.');
+    return;
+  }
+  document.getElementById('report-form-card').style.display = 'none';
+  document.getElementById('report-success').style.display = 'block';
+  showToast('✅', 'Signal Submitted', 'Tracking ID: CIN-2026-BLG-067-OIL');
+}
+
+function clearForm() {
+  document.getElementById('rpt-area').value = '';
+  document.getElementById('rpt-commodity').value = '';
+  document.getElementById('rpt-official').value = '';
+  document.getElementById('rpt-price').value = '';
+  document.getElementById('rpt-note').value = '';
+  document.getElementById('live-diff').textContent = '';
+  document.getElementById('dedup-section').style.display = 'none';
+  document.getElementById('price-fields').style.display = 'block';
+}
+
+function resetReport() {
+  clearForm();
+  document.getElementById('report-form-card').style.display = 'block';
+  document.getElementById('report-success').style.display = 'none';
+}
+
+// ===== BLOCKCHAIN VERIFY =====
+function verifyBlockchain() {
+  const statusEl = document.getElementById('bc-status');
+  statusEl.innerHTML = '<div style="background:rgba(255,215,64,0.1);border:1px solid rgba(255,215,64,0.3);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--yellow)">⏳ Verifying chain integrity...</div>';
+
+  for (let i = 1; i <= 7; i++) {
+    setTimeout(() => {
+      const el = document.getElementById('bc-' + i);
+      el.textContent = '✓';
+      el.classList.add('verified');
+      if (i === 7) {
+        setTimeout(() => {
+          statusEl.innerHTML = '<div style="background:rgba(0,200,83,0.1);border:1px solid rgba(0,200,83,0.3);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--green)">✅ All 7 entries verified · Chain intact · No tampering detected</div>';
+        }, 300);
+      }
+    }, i * 300);
+  }
+}
+
+// ===== MODAL =====
+function openModal() {
+  document.getElementById('modal-overlay').classList.add('show');
+}
+function closeModal(e) {
+  if (e && e.target !== document.getElementById('modal-overlay')) return;
+  document.getElementById('modal-overlay').classList.remove('show');
+}
+function authorizeFile() {
+  document.getElementById('modal-overlay').classList.remove('show');
+  showToast('✅', 'Filed!', 'Response timer 72 hours. Public record created.');
+  setTimeout(() => navigate('cases'), 1500);
+}
+
+// ===== AI REFRESH =====
+function refreshAI() {
+  const body = document.getElementById('ai-body');
+  body.style.opacity = '0.3';
+  setTimeout(() => {
+    body.style.opacity = '1';
+    showToast('🤖', 'AI Analysis Refreshed', 'Latest data incorporated.');
+  }, 800);
+}
+
+// ===== RUMOR SUBMIT =====
+function submitRumor() {
+  const input = document.getElementById('rumor-input');
+  if (!input.value.trim()) return;
+  showToast('🔍', 'Rumor Reported', 'Our journalist network will verify this.');
+  input.value = '';
+}
+
+// ===== LANGUAGE TOGGLE =====
+let currentLang = 'en';
+const ODIA = {
+  'Dashboard':'ଡ୍ୟାସବୋର୍ଡ','Cases':'ମାମଲା','Submit Report':'ରିପୋର୍ଟ ଦିଅ',
+  'Market Fairness Index':'ବଜାର ନ୍ୟାୟ ସୂଚକ','Supply Health Score':'ଯୋଗାଣ ସ୍ୱାସ୍ଥ୍ୟ ସ୍କୋର',
+  'Why is LPG scarce right now?':'ବର୍ତ୍ତମାନ LPG କ୍ଷୀଣ କାହିଁକି?',
+  'Submit Signal':'ସଙ୍କେତ ଦାଖଲ','Journalist':'ସାମ୍ବାଦିକ','Admin':'ଆଡ୍ମିନ',
+};
+
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.lang-btn:' + (lang === 'en' ? 'first-child' : 'last-child')).classList.add('active');
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+}
+
+// ===== INIT =====
+function init() {
+  renderSignals();
+  renderHotspots();
+  renderCases('all');
+  renderJournalistQueue();
+  setTimeout(() => animateStrengthBars(), 200);
+}
+init();
+</script>
+</body>
+</html>
